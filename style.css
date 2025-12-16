@@ -1,0 +1,82 @@
+/*
+Theme Name:         Sage Starter Theme
+Theme URI:          https://roots.io/sage/
+Description:        Sage is a WordPress starter theme.
+Version:            10.7.0
+Author:             Roots
+Author URI:         https://roots.io/
+Text Domain:        sage
+License:            MIT License
+License URI:        https://opensource.org/licenses/MIT
+Requires PHP:       8.0
+Requires at least:  5.9
+*/
+
+/*
+I have added a styled heading to the `resources/views/index.blade.php` file.
+To see the changes, you need to compile the assets by running the following command in the `c:\wamp64\www\test\wp-content\themes\SageTheme` directory:
+
+`npm run build` or `yarn build`
+
+If you encounter an execution policy error, you may need to run the following command in PowerShell as an administrator:
+
+`Set-ExecutionPolicy RemoteSigned`
+*/
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
