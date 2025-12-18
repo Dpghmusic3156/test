@@ -1246,6 +1246,11 @@
           "color": "#4c0519",
           "name": "Rose 950",
           "slug": "rose-950"
+        },
+        {
+          "color": "#0ea5e9",
+          "name": "Primary 500",
+          "slug": "primary-500"
         }
       ]
     },
