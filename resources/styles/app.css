@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+@import 'swiper/swiper-bundle.css';
+@import 'aos/dist/aos.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   background-color: #f8f9fa;
   color: #212529;
-  font-family: sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   line-height: 1.5;
   margin: 0;
 }
@@ -65,8 +73,9 @@ h6 {
 
 .banner .container {
   display: flex;
-  align-items: stretch;
-  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .banner nav {
@@ -75,6 +84,8 @@ h6 {
   justify-content: center;
   gap: 20px;
   padding: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .banner nav ul {
@@ -106,6 +117,7 @@ nav ul li a {
   align-items: center;
   display: flex;
   padding: 16px;
+  white-space: nowrap;
 }
 
 nav ul li::after {
@@ -115,7 +127,7 @@ nav ul li::after {
   left: 0;
   width: 0;
   height: 0.25rem;
-  background-color: rgb(46, 133, 67);
+  background-color: var(--primary-color-1);
   transition: none;
 }
 
@@ -125,7 +137,7 @@ nav ul li:hover::after {
 
 nav ul li a:hover {
   --tw-text-opacity: 1;
-  color: rgba(46, 133, 67, var(--tw-text-opacity));
+  color: var(--primary-color-1);
 }
 
 nav ul .sub-menu {
@@ -177,13 +189,15 @@ nav ul .sub-menu li::after {
 .brand {
   display: flex;
   align-items: center;
-  margin: 10;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-left: 0;
+  flex-shrink: 0;
 }
 
 .btn-login {
@@ -191,4 +205,219 @@ nav ul .sub-menu li::after {
   color: rgb(55, 65, 81);
   padding: 8px 20px;
   border-radius: 1.5rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .banner .container {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .banner nav,
+  .banner nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Swiper Slider Styles */
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb;
+  font-size: 2rem;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+#banner-title1 {
+  color: var(--primary-color-1);
+}
+#banner-title2 {
+  color: var(--primary-color-2);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.swiper-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.674);
+  z-index: 1;
+}
+
+.slide-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0); /* Màu nền trắng mờ */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: left;
+  z-index: 10;
+  max-width: 1140px; /* Giới hạn chiều rộng để nội dung không bị quá xa nhau */
+  gap: 40px;
+}
+
+.banner-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.banner-left h2 {
+  font-size: 3rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-left p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.banner-btn1 {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--primary-color-1);
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+.banner-btn2 {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--primary-color-2);
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.banner-btn1:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-color-3);
+}
+.banner-btn2:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-color-3);
+}
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.banner-right img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .slide-banner {
+    flex-direction: column;
+    height: 80%;
+    gap: 20px;
+  }
+
+  .banner-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-left h2 {
+    font-size: 2rem;
+  }
+
+  .banner-right {
+    height: auto;
+    width: 100%;
+  }
+
+  .banner-right img {
+    max-width: 60%;
+  }
+}
+
+/* Top Bar Styles */
+.top-bar-wrapper {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 0.875rem;
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar-item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.lang-switch {
+  padding-left: 20px;
+  border-left: 1px solid #4b5563;
+}
+#card1 {
+  background-color: var(--primary-color-1);
+}
+#card2 {
+  background-color: var(--primary-color-2);
 }
