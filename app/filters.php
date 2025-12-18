@@ -56,22 +56,24 @@ add_action('wp_head', function () {
     $primary_color = get_theme_mod('primary_color', '#2271b1');
     $logo_width = get_theme_mod('logo_width', 150);
 ?>
-    <style type="text/css">
-        :root {
-            --body-bg-color: <?php echo esc_attr($primary_color); ?>;
-        }
+<style type="text/css">
+:root {
+    --body-bg-color: <?php echo esc_attr($primary_color);
+    ?>;
+}
 
-        body {
-            background-color: var(--body-bg-color);
-        }
+body {
+    background-color: var(--body-bg-color);
+}
 
-        /* Áp dụng kích thước cho logo */
-        .custom-logo-link img,
-        .custom-logo {
-            width: <?php echo intval($logo_width); ?>px;
-            height: auto;
-            max-width: 100%;
-        }
-    </style>
+/* Áp dụng kích thước cho logo */
+.custom-logo-link img,
+.custom-logo {
+    width: <?php echo intval($logo_width);
+    ?>px;
+    height: auto;
+    max-width: 100%;
+}
+</style>
 <?php
 });
