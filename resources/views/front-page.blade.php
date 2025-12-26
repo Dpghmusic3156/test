@@ -11,19 +11,19 @@
                 Giải pháp #1 tại Việt Nam
             </div>
 
-            <div class="md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6" data-aos="fade-right" data-aos-delay="200">
-                <span class="text-5xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700">vDentalLab</span>
-                <span class="text-4xl block text-gray-900">Phần mềm Quản lý</span>
-                <span class="text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-accent-600">Labo Dental</span>
+            <div class="font-extrabold leading-tight mb-6" data-aos="fade-right" data-aos-delay="200">
+                <span class="text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-orange-500">vDentalLab</span>
+                <span class="text-4xl block mb-2 text-gray-900">Phần mềm Quản lý</span>
+                <span class="text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Labo Dental</span>
             </div>
 
             <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed" data-aos="fade-right" data-aos-delay="300">
-                Hơn <span class="font-bold text-primary-600">200+ Lab</span> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
+                Hơn <span class="font-bold text-accent-500">200+ Lab</span> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
             </p>
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="400">
                 <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/"
-                    class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
+                    class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
                     <span>Dùng thử miễn phí</span>
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -31,7 +31,7 @@
                 </a>
 
                 <button id="openFeaturesBtn"
-                    class="inline-flex items-center justify-center gap-2 px-8 py-5 border-2 border-primary-200 text-primary-700 rounded-xl hover:bg-primary-50 hover:border-primary-300 transition-all duration-300 font-semibold">
+                    class="inline-flex items-center justify-center gap-2 px-8 py-5 border-2 border-accent-300 text-accent-600 rounded-xl hover:bg-accent-100 hover:border-accent-400 transition-all duration-300 font-semibold">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
                     </svg>
@@ -49,13 +49,13 @@
                 <div>
                     <div class="flex items-center gap-1 mb-1">
                         @for($i = 0; $i < 5; $i++)
-                            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
                             @endfor
                             <span class="ml-2 font-bold text-gray-900">5.0</span>
                     </div>
-                    <p class="text-sm text-gray-600 font-medium">Được <span class="text-primary-600 font-bold">200+ labs</span> tin dùng</p>
+                    <p class="text-sm text-gray-600 font-medium">Được <span class="text-accent-500 font-bold">200+ labs</span> tin dùng</p>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     Phản hồi từ khách hàng
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Được <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">200+ Labs</span> tin cậy
+                    Được <span class="text-accent-500">200+ Labs</span> <br class="hidden md:block"> tin cậy
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Chúng tôi muốn đóng góp vào sự phát triển của ngành Labo Nha khoa Việt Nam
@@ -125,10 +125,10 @@
                 </div>
 
                 {{-- Testimonial 2 --}}
-                <div class="bg-gradient-to-br from-white to-amber-50/50 rounded-2xl p-8 border border-amber-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gradient-to-br from-white to-accent-50/50 rounded-2xl p-8 border border-accent-100 hover:shadow-2xl hover:border-accent-200 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex gap-1 mb-6">
                         @for($i = 0; $i < 5; $i++)
-                            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
                             @endfor
@@ -136,8 +136,8 @@
                     <p class="text-gray-700 mb-6 leading-relaxed">
                         "Tôi sử dụng phần mềm này ngay từ ngày đầu thành lập Labo. Nó giúp tôi quản lý đơn hàng sản xuất rất dễ dàng. Đặc biệt là khả năng tra cứu lịch sử hàng bảo hành và kiểm soát tốt vấn đề trễ hàng."
                     </p>
-                    <div class="flex items-center gap-4 pt-6 border-t border-amber-100">
-                        <img class="w-14 h-14 rounded-full object-cover ring-4 ring-amber-100" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
+                    <div class="flex items-center gap-4 pt-6 border-t border-accent-100">
+                        <img class="w-14 h-14 rounded-full object-cover ring-4 ring-accent-100" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
                         <div>
                             <p class="font-bold text-gray-900">Alan Nguyễn</p>
                             <p class="text-sm text-gray-600">CEO, Labo Thành Tuấn</p>
@@ -149,7 +149,7 @@
                 <div class="bg-gradient-to-br from-white to-cyan-50/50 rounded-2xl p-8 border border-cyan-100 hover:shadow-2xl hover:border-cyan-200 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex gap-1 mb-6">
                         @for($i = 0; $i < 5; $i++)
-                            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
                             @endfor
@@ -172,7 +172,7 @@
     {{-- CTA Section --}}
     <section class="py-20 bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 relative overflow-hidden">
         {{-- Background decoration --}}
-        <div class="absolute top-20 right-20 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-20 w-64 h-64 bg-accent-400/10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-20 left-20 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
@@ -183,7 +183,7 @@
                 Tham gia cùng 200+ Lab hàng đầu đang sử dụng vDentalLab mỗi ngày
             </p>
             <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-lg">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -349,7 +349,7 @@
         offset: 100
     });
 
-    // Features Modal - Vanilla JavaScript
+    // Script chuc nang noi bat
     document.addEventListener('DOMContentLoaded', function() {
         const openBtn = document.getElementById('openFeaturesBtn');
         const modal = document.getElementById('featuresModal');

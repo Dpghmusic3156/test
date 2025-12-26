@@ -23,12 +23,10 @@
                 {{-- Main Heading --}}
                 <div class="space-y-4 animate-fade-in-up">
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-white/90">
-                        Phần mềm Quản lý Labo Nha khoa
+                        Phần mềm Quản lý<br class="md:hidden"> Labo Nha khoa
                     </h2>
                     <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight">
-                        <span class="bg-gradient-to-r from-accent-300 via-accent-400 to-accent-400 bg-clip-text text-transparent">
-                            vDentalLab
-                        </span>
+                        <span class="text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-orange-300">vDentalLab</span>
                     </h1>
                 </div>
 
@@ -46,12 +44,6 @@
                         </svg>
                     </a>
 
-                    <a href="#demo" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path>
-                        </svg>
-                        <span>Dùng thử miễn phí</span>
-                    </a>
                 </div>
 
             </div>
@@ -155,55 +147,55 @@
                     {{-- Quản lý Khách hàng --}}
                     <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="relative w-12 h-12 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-500/20">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-primary-600 transition-colors">Quản lý Khách hàng</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Quản lý Khách hàng</h3>
                         </div>
                     </div>
 
                     {{-- Giao nhận --}}
                     <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="relative w-12 h-12 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-500/20">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-secondary-600 transition-colors">Giao nhận</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Giao nhận</h3>
                         </div>
                     </div>
 
                     {{-- Điều phối --}}
                     <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="relative w-12 h-12 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-500/20">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Điều phối</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Điều phối</h3>
                         </div>
                     </div>
 
                     {{-- KCS --}}
                     <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="relative w-12 h-12 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-500/20">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-purple-600 transition-colors">KCS (Kiểm soát chất lượng)</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">KCS (Kiểm soát chất lượng)</h3>
                         </div>
                     </div>
 
                     {{-- Các công đoạn sản xuất --}}
                     <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="relative w-12 h-12 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-500/20">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -216,12 +208,12 @@
                     {{-- Tài chính --}}
                     <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="relative w-12 h-12 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-500/20">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-green-600 transition-colors">Tài chính</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Tài chính</h3>
                         </div>
                     </div>
                 </div>
@@ -247,7 +239,7 @@
             <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-2xl flex items-center justify-center mb-6">
+                        <div class="relative w-16 h-16 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-accent-500/25">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
@@ -255,11 +247,11 @@
                         <h3 class="text-3xl font-bold text-gray-800 mb-4">Quản lý sản xuất chặt chẽ</h3>
                         <ul class="space-y-3 text-gray-600">
                             <li class="flex items-start gap-2">
-                                <span class="text-primary-600 mt-1">✓</span>
+                                <span class="text-accent-600 mt-1">✓</span>
                                 <span>Tạo ra môi trường làm việc công bằng hơn khi năng suất được tính toán tự động</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <span class="text-primary-600 mt-1">✓</span>
+                                <span class="text-accent-600 mt-1">✓</span>
                                 <span>Theo dõi tiến độ sản xuất từng đơn hàng. Kiểm soát chất lượng sản phẩm đầu ra tại từng công đoạn</span>
                             </li>
                         </ul>
@@ -283,7 +275,7 @@
                             class="zoom-image w-full drop-shadow-2xl">
                     </div>
                     <div class="order-1 lg:order-2">
-                        <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+                        <div class="relative w-16 h-16 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-accent-500/25">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
@@ -309,7 +301,7 @@
             <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                        <div class="relative w-16 h-16 bg-gradient-to-br from-accent-400/90 to-accent-600/80 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-accent-500/25">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                             </svg>
@@ -317,11 +309,11 @@
                         <h3 class="text-3xl font-bold text-gray-800 mb-4">Chăm sóc khách hàng tốt hơn</h3>
                         <ul class="space-y-3 text-gray-600">
                             <li class="flex items-start gap-2">
-                                <span class="text-purple-600 mt-1">✓</span>
+                                <span class="text-accent-600 mt-1">✓</span>
                                 <span>Kho dữ liệu tập trung từ tất cả các bộ phận: sản xuất, tài chính, bảo hành... Giúp dễ dàng tra cứu và giải đáp ngay các thắc mắc của khách hàng</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <span class="text-purple-600 mt-1">✓</span>
+                                <span class="text-accent-600 mt-1">✓</span>
                                 <span>Phần mềm giúp giảm thiểu tối đa các đơn hàng trễ, thất lạc; Tránh các sai sót trong khâu tài chính, công nợ</span>
                             </li>
                         </ul>

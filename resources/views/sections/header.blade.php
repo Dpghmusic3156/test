@@ -4,9 +4,10 @@
             <div class="brand-wrapper">
                 @if (get_theme_mod('logo'))
                 <a class="custom-logo-link" href="{{ home_url('/') }}">
-                    <img src="{{ get_theme_mod('logo') }}" alt="{{ $siteName }}" class="custom-logo">
+                    <img src="{{ get_theme_mod('logo') }}" alt="{{ $siteName }}" class="custom-logo my-2">
                 </a>
                 @endif
+                
                 <a class="brand" href="{{ home_url('/') }}">
                     {!! $siteName !!}
                 </a>
@@ -28,7 +29,7 @@
 
                 <div class="header-actions">
                     <a href="{{ home_url('/phan-mem-dental-lab-mien-phi') }}"
-                        class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-4 py-2 rounded-lg transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/50 transform hover:-translate-y-0.5 text-sm">
+                        class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold px-4 py-2 rounded-lg transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:shadow-accent-500/50 transform hover:-translate-y-0.5 text-sm">
                         <span>DÙNG THỬ MIỄN PHÍ</span>
                         <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -56,6 +57,36 @@
 
             if (toggle) toggle.addEventListener('click', toggleMenu);
             if (overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Submenu toggle for mobile
+            const menuItemsWithSubmenu = document.querySelectorAll('nav ul li.menu-item-has-children > a');
+            menuItemsWithSubmenu.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    // On mobile, toggle submenu on click
+                    if (window.innerWidth <= 991) {
+                        e.preventDefault();
+                        const parent = this.parentElement;
+                        const submenu = parent.querySelector('.sub-menu');
+                        
+                        // Close all other submenus
+                        document.querySelectorAll('nav ul li.menu-item-has-children').forEach(function(item) {
+                            if (item !== parent) {
+                                item.classList.remove('submenu-open');
+                                const otherSubmenu = item.querySelector('.sub-menu');
+                                if (otherSubmenu) {
+                                    otherSubmenu.style.display = 'none';
+                                }
+                            }
+                        });
+                        
+                        // Toggle current submenu
+                        parent.classList.toggle('submenu-open');
+                        if (submenu) {
+                            submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
+                        }
+                    }
+                });
+            });
         });
     </script>
 

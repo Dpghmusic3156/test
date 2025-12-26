@@ -300,6 +300,17 @@ nav ul .sub-menu li::after {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .brand-wrapper {
+    flex: 0 0 auto;
+  }
+
+  .menu-toggle {
+    flex: 0 0 auto;
   }
 
   /* Modern Sidebar with Gradient */
@@ -429,29 +440,45 @@ nav ul .sub-menu li::after {
   }
 
   /* Submenu adjustments for sidebar */
-  nav ul .sub-menu {
-    position: static;
-    width: 100%;
+  .sidebar-content nav ul .sub-menu {
+    position: relative !important;
+    width: 100% !important;
     background-color: rgba(0, 0, 0, 0.15);
-    box-shadow: none;
+    box-shadow: none !important;
     display: none;
+    flex-direction: column !important;
     padding: 8px 0;
     border-radius: 8px;
     margin-top: 4px;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    margin-left: 0 !important;
   }
 
-  nav ul li:hover > .sub-menu {
-    display: flex;
+  .sidebar-content nav ul li:hover > .sub-menu,
+  .sidebar-content nav ul li.submenu-open > .sub-menu {
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  nav ul .sub-menu li a {
+  .sidebar-content nav ul .sub-menu li {
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  .sidebar-content nav ul .sub-menu li a {
     padding: 12px 24px 12px 36px;
     justify-content: flex-start;
     font-size: 0.9em;
     margin: 0;
+    width: 100%;
+    display: block;
+    position: relative !important;
   }
 
-  nav ul .sub-menu li a:hover {
+  .sidebar-content nav ul .sub-menu li a:hover {
     transform: translateX(8px);
   }
 }
