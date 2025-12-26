@@ -1,5 +1,5 @@
 {{-- Hero Section --}}
-<section class="relative bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 py-20 overflow-hidden">
     {{-- Background Decoration --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -100,15 +100,15 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {{-- Module 1: Quản lý điều phối --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">Quản lý điều phối</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Quản lý điều phối</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Dễ dàng điều tiết hàng hoá vào - ra hợp lý. Theo dõi diện trạng sản xuất của các đơn hàng để có kế hoạch hạn chế vấn đề trễ hàng.</p>
-                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quan-ly-dieu-phoi/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quan-ly-dieu-phoi/" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -117,16 +117,16 @@
             </div>
 
             {{-- Module 2: Quy trình sản xuất --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-amber-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-amber-600 transition-colors">Quy trình sản xuất</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Quy trình sản xuất</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Quy trình sản xuất chặt chẽ và thống nhất thông qua mã vạch. Hỗ trợ kiểm soát chất lượng sản phẩm và đánh giá năng lực kỹ thuật viên.</p>
-                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quy-trinh-san-xuat/" class="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quy-trinh-san-xuat/" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -135,15 +135,15 @@
             </div>
 
             {{-- Module 3: Tài chính - Công nợ --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-green-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors">Tài chính - Công nợ</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Tài chính - Công nợ</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Chính xác, tự động và hoàn toàn phù hợp với nghiệp vụ kế toán của Labo. Giảm tối đa khối lượng công việc của kế toán khi xuất hoá đơn cuối tháng.</p>
-                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/doanh-so-cong-no/" class="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/doanh-so-cong-no/" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -152,16 +152,16 @@
             </div>
 
             {{-- Module 4: Quản lý giao nhận --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-cyan-600 transition-colors">Quản lý giao nhận</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Quản lý giao nhận</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Hàng đợi các yêu cầu giao / nhận hàng được cập nhật liên tục trên màn hình theo dõi của quản lý giao nhận. Giúp việc quản lý nhân viên giao nhận khoa học hơn.</p>
-                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quan-ly-giao-nhan/" class="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quan-ly-giao-nhan/" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -170,15 +170,15 @@
             </div>
 
             {{-- Module 5: Chăm sóc khách hàng --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-purple-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">Chăm sóc khách hàng</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Chăm sóc khách hàng</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Toàn bộ dữ liệu và giao dịch liên quan đến khách hàng đều được lưu trữ tập trung. Nhân viên dễ dàng tra cứu toàn bộ các thông tin liên quan đến khách hàng.</p>
-                <a href="https://www.phanmemlabo.com/cham-soc-khach-hang" class="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/cham-soc-khach-hang" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -187,15 +187,15 @@
             </div>
 
             {{-- Module 6: Báo cáo tổng hợp --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-indigo-600 transition-colors">Báo cáo tổng hợp</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Báo cáo tổng hợp</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Phần mềm có đầy đủ các báo cáo cần thiết để phục vụ nhu cầu theo dõi và quản lý hoạt động của Labo. Đánh giá được năng xuất làm việc của nhân viên.</p>
-                <a href="https://www.phanmemlabo.com/bao-cao-tong-hop" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/bao-cao-tong-hop" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -204,35 +204,35 @@
             </div>
 
             {{-- Module 7: Dịch vụ SMS --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-pink-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-pink-600 transition-colors">Dịch vụ nhắn tin SMS tự động</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Dịch vụ nhắn tin SMS tự động</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">SMS là công cụ chăm sóc khách hàng hiện đại và hiệu quả. Giúp nâng cao uy tín, mức độ chuyên nghiệp trong dịch vụ khách hàng và tạo ưu thế cạnh tranh.</p>
             </div>
 
             {{-- Module 8: Website tra cứu --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">Website tra cứu dành cho lãnh đạo</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Website tra cứu dành cho lãnh đạo</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Quản lý hoạt động của Labo mọi lúc, mọi nơi. Nền tảng Web, tương thích với các thiết bị di động; dữ liệu được thống kê theo thời gian thực.</p>
             </div>
 
             {{-- Module 9: Quản lý hàng nước ngoài --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-red-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
                 <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                     <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-red-600 transition-colors">Quản lý gia công hàng nước ngoài</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Quản lý gia công hàng nước ngoài</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Đáp ứng quy trình quản lý hàng nước ngoài với các quy định riêng; đáp ứng các nghiệp vụ về giao nhận hàng hoá qua UPS, tiền tệ, biểu mẫu báo cáo.</p>
             </div>
         </div>
@@ -240,12 +240,10 @@
 </section>
 
 {{-- CTA Section --}}
-<section class="py-20 bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 relative overflow-hidden" data-aos="fade-up">
+<section class="py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden" data-aos="fade-up">
     {{-- Background Decoration --}}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-20 right-20 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 left-20 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
-    </div>
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
 
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
