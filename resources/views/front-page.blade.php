@@ -39,25 +39,7 @@
                 </button>
             </div>
 
-            {{-- Social Proof - Desktop only (in left column) --}}
-            <div class="hidden lg:flex items-center gap-6 mt-12" data-aos="fade-right" data-aos-delay="500">
-                <div class="flex -space-x-4">
-                    <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo_new_smile_lab-removebg-XdclsaZoxPJDTfvxl2Ub.png" alt="Customer">
-                    <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/z5276532952194_2d396fbde325544879a50e96744952bd.jpg" alt="Customer">
-                    <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo-medical-lab-SgYwbApXgrbxnByVNadu.jpg" alt="Customer">
-                </div>
-                <div>
-                    <div class="flex items-center gap-1 mb-1">
-                        @for($i = 0; $i < 5; $i++)
-                            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            @endfor
-                            <span class="ml-2 font-bold text-gray-900">5.0</span>
-                    </div>
-                    <p class="text-sm text-gray-600 font-medium">Được <span class="text-accent-500 font-bold">200+ labs</span> tin dùng</p>
-                </div>
-            </div>
+
         </div>
 
         {{-- Hero Image --}}
@@ -67,41 +49,33 @@
 
             </div>
 
-            {{-- Floating Stats Card --}}
-            <div class="absolute bottom-4 right-4 lg:-bottom-8 lg:-left-8 lg:right-auto bg-white rounded-2xl shadow-2xl p-4 lg:p-6 border border-primary-100 scale-85 lg:scale-100" data-aos="fade-up" data-aos-delay="600">
-                <div class="flex items-center gap-3 lg:gap-4">
-                    <div class="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-xl flex items-center justify-center">
-                        <svg class="w-6 h-6 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-2xl lg:text-3xl font-bold text-gray-900">200+</p>
-                        <p class="text-xs lg:text-sm text-gray-600">Labs đang sử dụng</p>
-                    </div>
+            {{-- Floating Social Proof Card --}}
+            <div class="absolute bottom-4 right-4 lg:-bottom-8 lg:-left-8 lg:right-auto bg-white rounded-2xl shadow-2xl p-4 lg:p-6 border border-primary-100 scale-85 lg:scale-100 animate-floating" data-aos="fade-up">
+                {{-- Customer Avatars --}}
+                <div class="flex -space-x-3 mb-3">
+                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo_new_smile_lab-removebg-XdclsaZoxPJDTfvxl2Ub.png" alt="Customer">
+                    </a>
+                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://phanmemlabo.com/wp-content/uploads/2024/05/z5276532952194_2d396fbde325544879a50e96744952bd.jpg" alt="Customer">
+                    </a>
+                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo-medical-lab-SgYwbApXgrbxnByVNadu.jpg" alt="Customer">
+                    </a>
+                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Customer">
+                    </a>
+                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Customer">
+                    </a>
                 </div>
+
+                {{-- Text --}}
+                <p class="text-sm lg:text-base text-gray-700 font-semibold">Được <span class="text-accent-500 font-bold">200+ labs</span> tin dùng</p>
             </div>
         </div>
 
-        {{-- Social Proof - Mobile only (below hero image) --}}
-        <div class="w-full flex lg:hidden items-center justify-center gap-6 order-3 mt-8" data-aos="fade-up" data-aos-delay="500">
-            <div class="flex -space-x-4">
-                <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo_new_smile_lab-removebg-XdclsaZoxPJDTfvxl2Ub.png" alt="Customer">
-                <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/z5276532952194_2d396fbde325544879a50e96744952bd.jpg" alt="Customer">
-                <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo-medical-lab-SgYwbApXgrbxnByVNadu.jpg" alt="Customer">
-            </div>
-            <div>
-                <div class="flex items-center gap-1 mb-1">
-                    @for($i = 0; $i < 5; $i++)
-                        <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                        @endfor
-                        <span class="ml-2 font-bold text-gray-900">5.0</span>
-                </div>
-                <p class="text-sm text-gray-600 font-medium">Được <span class="text-accent-500 font-bold">200+ labs</span> tin dùng</p>
-            </div>
-        </div>
+
     </section>
 
     {{-- Testimonials Section - Teal/Cyan Theme --}}
@@ -113,10 +87,10 @@
             {{-- Header --}}
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                    What people say
+                    Phản hồi từ khách hàng
                 </h2>
                 <p class="text-lg md:text-xl text-gray-900/80 max-w-3xl mx-auto">
-                    Discover what our satisfied customers have to say about their experiences with our products/services.
+                    <span class="text-accent-500 font-bold">Chúng tôi</span> muốn đóng góp vào sự phát triển của <span class="text-accent-500 font-bold">ngành Labo Nha khoa Việt Nam</span>
                 </p>
             </div>
 

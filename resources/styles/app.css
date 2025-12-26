@@ -520,3 +520,18 @@ nav ul .sub-menu li::after {
   background-color: rgba(20, 149, 158, 0);
   z-index: 51;
 }
+
+/* Floating Animation */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}
