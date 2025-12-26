@@ -57,37 +57,28 @@
 
             if (toggle) toggle.addEventListener('click', toggleMenu);
             if (overlay) overlay.addEventListener('click', toggleMenu);
-
-            // Submenu toggle for mobile
-            const menuItemsWithSubmenu = document.querySelectorAll('nav ul li.menu-item-has-children > a');
-            menuItemsWithSubmenu.forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    // On mobile, toggle submenu on click
-                    if (window.innerWidth <= 991) {
+            if (window.innerWidth <= 991) {
+                const menuItemsWithSubmenu = document.querySelectorAll('nav ul li.menu-item-has-children > a');
+                menuItemsWithSubmenu.forEach(item => {
+                    item.addEventListener('click', function(e) {
                         e.preventDefault();
                         const parent = this.parentElement;
-                        const submenu = parent.querySelector('.sub-menu');
-                        
+                        const isOpen = parent.classList.contains('submenu-open');
+
                         // Close all other submenus
-                        document.querySelectorAll('nav ul li.menu-item-has-children').forEach(function(item) {
-                            if (item !== parent) {
-                                item.classList.remove('submenu-open');
-                                const otherSubmenu = item.querySelector('.sub-menu');
-                                if (otherSubmenu) {
-                                    otherSubmenu.style.display = 'none';
-                                }
-                            }
+                        document.querySelectorAll('nav ul li.menu-item-has-children').forEach(li => {
+                            li.classList.remove('submenu-open');
                         });
-                        
+
                         // Toggle current submenu
-                        parent.classList.toggle('submenu-open');
-                        if (submenu) {
-                            submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
+                        if (!isOpen) {
+                            parent.classList.add('submenu-open');
                         }
-                    }
+                    });
                 });
-            });
+            }
         });
+
     </script>
 
     <!--    <div class="max-w-7xl mx-auto flex justify-between items-center">
