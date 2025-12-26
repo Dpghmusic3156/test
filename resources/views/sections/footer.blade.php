@@ -18,7 +18,7 @@
                 <p class="py-8 text-gray-500 lg:max-w-xs text-center lg:text-left">Giải pháp quản trị doanh nghiệp được
                     xây dựng chuyên biệt cho ngành Labo Nha Khoa.</p>
                 <a href="/lien-he"
-                    class="py-2.5 px-5 h-9 block w-fit bg-primary-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all duration-500 hover:bg-primary-700 lg:mx-0">
+                    class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-4 py-2 rounded-lg transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/50 transform hover:-translate-y-0.5 text-sm">
                     Liên hệ tư vấn
                 </a>
             </div>

@@ -1,54 +1,197 @@
-<p align="center">
-  <a href="https://roots.io/sage/">
-    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
-  </a>
-</p>
+# SageTheme - vDentalLab WordPress Theme
 
-<p align="center">
-  <a href="https://packagist.org/packages/roots/sage">
-    <img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/sage?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
+Modern WordPress theme for vDentalLab dental laboratory management software website, built with Sage 10, Tailwind CSS, and Laravel Blade.
 
-  <a href="https://github.com/roots/sage/actions/workflows/main.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/sage/main.yml?branch=main&logo=github&label=CI&style=flat-square">
-  </a>
+## About vDentalLab
 
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/badge/follow%20@rootswp-1da1f2?logo=twitter&logoColor=ffffff&message=&style=flat-square">
-  </a>
-</p>
+vDentalLab is a specialized business management solution designed for dental laboratories in Vietnam. This theme powers the marketing website showcasing the software's features and capabilities.
 
-<p align="center">Advanced WordPress starter theme with Tailwind CSS and Laravel Blade</p>
+## Tech Stack
 
-<p align="center">
-  <a href="https://roots.io/sage/">Website</a> &nbsp;&nbsp; <a href="https://roots.io/sage/docs/installation/">Documentation</a> &nbsp;&nbsp; <a href="https://github.com/roots/sage/releases">Releases</a> &nbsp;&nbsp; <a href="https://discourse.roots.io/">Community</a>
-</p>
+- **Framework**: [Sage 10](https://roots.io/sage/) - Advanced WordPress starter theme
+- **Backend**: [Laravel Acorn](https://github.com/roots/acorn) - Laravel components for WordPress
+- **Templating**: [Laravel Blade](https://laravel.com/docs/blade) - Elegant templating engine
+- **Build Tool**: [Bud](https://bud.js.org/) - Modern frontend build tool
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- **Icons**: Font Awesome 6, Google Material Symbols
+- **Animations**: AOS (Animate On Scroll), custom CSS animations
+- **JavaScript**: Alpine.js, vanilla JS
 
-## Sponsors
+## Features
 
-Sage is an open source project and completely free to use. If you've benefited from our projects and would like to support our future endeavors, please consider [sponsoring Roots](https://github.com/sponsors/roots).
+### Design System
 
-<div align="center">
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="120" height="90"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" width="120" height="90"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="120" height="90"></a> <a href="https://www.copiadigital.com/"><img src="https://cdn.roots.io/app/uploads/copia-digital.svg" alt="Copia Digital" width="120" height="90"></a>  <a href="https://generodigital.com/"><img src="https://cdn.roots.io/app/uploads/genero.svg" alt="Genero" width="120" height="90"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="120" height="90"></a>
-</div>
+- **Brand Colors**:
+  - Primary (Teal): `#14b8a6`
+  - Secondary (Cyan): `#06b6d4`
+  - Accent (Amber): `#f59e0b`
+- **Typography**: Modern, responsive typography with custom Google Fonts
+- **Components**: Reusable Blade components and partials
 
-## Overview
+### Modern UI/UX
 
-Sage is a WordPress starter theme with block editor support.
+- ✨ Gradient backgrounds and glassmorphism effects
+- 🎨 Smooth animations and transitions
+- 📱 Fully responsive design
+- 🌙 Professional color palette
+- 💫 Micro-interactions and hover effects
 
-- Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn)
-- Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade)
-- Modern frontend development workflow powered by [Bud](https://bud.js.org/)
-- Out of the box support for [Tailwind CSS](https://tailwindcss.com/)
+### Key Pages & Sections
 
-## Getting Started
+- **Front Page**: Hero section with video, features showcase, testimonials
+- **About**: Giới thiệu (Introduction) with benefits and solutions
+- **Features**: Chức năng (Features) modal with 15+ key features
+- **Contact**: Liên hệ (Contact) form with API integration
+- **Free Trial**: Phần mềm dental lab miễn phí registration page
 
-See the [Sage installation documentation](https://roots.io/sage/docs/installation/).
+### Mobile Experience
 
-## Stay Connected
+- Modern sidebar menu with gradient background
+- Smooth cubic-bezier animations
+- Staggered menu item animations
+- Enhanced backdrop blur effects
 
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
+## Project Structure
+
+```
+SageTheme/
+├── app/                    # Theme logic (PHP)
+│   ├── filters.php        # WordPress filters and actions
+│   └── setup.php          # Theme setup and configuration
+├── resources/
+│   ├── scripts/           # JavaScript files
+│   │   └── app.js        # Main JS with Alpine.js
+│   ├── styles/            # CSS/SCSS files
+│   │   └── app.css       # Main stylesheet with Tailwind
+│   └── views/             # Blade templates
+│       ├── layouts/       # Layout templates
+│       ├── sections/      # Header, footer components
+│       │   ├── header.blade.php
+│       │   └── footer.blade.php
+│       ├── partials/      # Reusable components
+│       │   ├── gioi-thieu.blade.php
+│       │   ├── chuc-nang.blade.php
+│       │   ├── lien-he.blade.php
+│       │   ├── khach-hang.blade.php
+│       │   └── phan-mem-dental-lab-mien-phi.blade.php
+│       └── front-page.blade.php
+├── public/                # Compiled assets (generated)
+├── bud.config.js          # Bud build configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+└── package.json           # Node dependencies
+```
+
+## Development
+
+### Requirements
+
+- PHP >= 8.0
+- Composer 2.x
+- Node.js >= 16
+- WordPress >= 6.0
+
+### Installation
+
+1. Clone the theme into your WordPress themes directory:
+
+```bash
+cd wp-content/themes
+git clone [repository-url] SageTheme
+cd SageTheme
+```
+
+2. Install dependencies:
+
+```bash
+composer install
+npm install
+```
+
+3. Build assets:
+
+```bash
+# Development
+npm run dev
+
+# Production
+npm run build
+
+# Watch mode
+npm run dev -- --watch
+```
+
+### Color Customization
+
+Colors can be customized via WordPress Customizer or in `tailwind.config.js`:
+
+```javascript
+colors: {
+  primary: { /* Teal shades */ },
+  secondary: { /* Cyan shades */ },
+  accent: { /* Amber shades */ }
+}
+```
+
+### Adding New Pages
+
+Create new Blade templates in `resources/views/`:
+
+```php
+{{-- resources/views/my-page.blade.php --}}
+@extends('layouts.app')
+
+@section('content')
+  <div class="container">
+    <!-- Your content -->
+  </div>
+@endsection
+```
+
+## Deployment
+
+1. Build production assets:
+
+```bash
+npm run build
+```
+
+2. Ensure compiled assets are in `public/` directory
+
+3. Deploy to server via FTP, Git, or deployment tool
+
+## API Integration
+
+The theme integrates with external APIs:
+
+- **Contact Form**: `https://lapi.dentalso.com/api/v1/public/callme`
+- **Free Trial Registration**: JSON payload with company details
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Credits
+
+### Built With
+
+- [Sage](https://roots.io/sage/) by Roots
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Alpine.js](https://alpinejs.dev/)
+- [AOS Library](https://michalsnik.github.io/aos/)
+- [Font Awesome](https://fontawesome.com/)
+
+### Developer
+
+Theme developed for vDentalLab by Vision Software Company Limited
+
+## License
+
+Proprietary - All rights reserved
+
+---
+
+**vDentalLab** - Phần mềm Quản lý Labo Nha khoa chuyên nghiệp

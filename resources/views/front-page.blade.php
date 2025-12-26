@@ -23,7 +23,7 @@
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="400">
                 <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/"
-                    class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-500 to-secondary-600 hover:from-primary-600 hover:to-secondary-700 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-2xl hover:shadow-primary-500/50 transform hover:-translate-y-1">
+                    class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
                     <span>Dùng thử miễn phí</span>
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
