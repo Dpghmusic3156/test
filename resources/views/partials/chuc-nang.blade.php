@@ -1,22 +1,22 @@
 {{-- Hero Section --}}
-<section class="relative bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-700 py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 py-20 overflow-hidden">
     {{-- Background Decoration --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-primary-300/10 rounded-full blur-3xl"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-teal-300/10 rounded-full blur-3xl"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
             {{-- Badge --}}
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
-                <span class="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></span>
+                <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
                 <span class="text-sm font-medium">Chức năng toàn diện</span>
             </div>
 
             {{-- Heading --}}
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                Chức năng của <span class="bg-gradient-to-r from-accent-300 via-accent-400 to-accent-400 bg-clip-text text-transparent">vDentalLab</span>
+                Chức năng của <span class="bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">vDentalLab</span>
             </h1>
 
             <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -24,7 +24,7 @@
             </p>
 
             {{-- CTA --}}
-            <a href="/lien-he" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-accent-500 hover:from-accent-600 hover:to-accent-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
+            <a href="/phan-mem-dental-lab-mien-phi" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -38,7 +38,7 @@
 <section class="py-20 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
+            <div class="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold text-sm mb-6">
                 Ưu điểm
             </div>
             <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -48,8 +48,8 @@
 
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {{-- Advantage 1 --}}
-            <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-teal-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
                     </svg>
@@ -59,8 +59,8 @@
             </div>
 
             {{-- Advantage 2 --}}
-            <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-teal-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
@@ -70,8 +70,8 @@
             </div>
 
             {{-- Advantage 3 --}}
-            <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-teal-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
@@ -87,7 +87,7 @@
 <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100" data-aos="fade-up">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <div class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-semibold text-sm mb-6">
+            <div class="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full font-semibold text-sm mb-6">
                 Phân hệ chính
             </div>
             <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -117,16 +117,16 @@
             </div>
 
             {{-- Module 2: Quy trình sản xuất --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-accent-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-amber-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-accent-600 transition-colors">Quy trình sản xuất</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-amber-600 transition-colors">Quy trình sản xuất</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Quy trình sản xuất chặt chẽ và thống nhất thông qua mã vạch. Hỗ trợ kiểm soát chất lượng sản phẩm và đánh giá năng lực kỹ thuật viên.</p>
-                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quy-trinh-san-xuat/" class="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quy-trinh-san-xuat/" class="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -152,16 +152,16 @@
             </div>
 
             {{-- Module 4: Quản lý giao nhận --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-secondary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-secondary-600 transition-colors">Quản lý giao nhận</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-cyan-600 transition-colors">Quản lý giao nhận</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Hàng đợi các yêu cầu giao / nhận hàng được cập nhật liên tục trên màn hình theo dõi của quản lý giao nhận. Giúp việc quản lý nhân viên giao nhận khoa học hơn.</p>
-                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quan-ly-giao-nhan/" class="inline-flex items-center gap-2 text-secondary-600 hover:text-secondary-700 font-semibold">
+                <a href="https://www.phanmemlabo.com/help/huong-dan-su-dung/quan-ly-giao-nhan/" class="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 font-semibold">
                     Tìm hiểu thêm
                     <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -215,13 +215,13 @@
             </div>
 
             {{-- Module 8: Website tra cứu --}}
-            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-accent-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-accent-600 transition-colors">Website tra cứu dành cho lãnh đạo</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">Website tra cứu dành cho lãnh đạo</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Quản lý hoạt động của Labo mọi lúc, mọi nơi. Nền tảng Web, tương thích với các thiết bị di động; dữ liệu được thống kê theo thời gian thực.</p>
             </div>
 
@@ -240,11 +240,11 @@
 </section>
 
 {{-- CTA Section --}}
-<section class="py-20 bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-700 relative overflow-hidden" data-aos="fade-up">
+<section class="py-20 bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 relative overflow-hidden" data-aos="fade-up">
     {{-- Background Decoration --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-20 right-20 w-64 h-64 bg-accent-400/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 left-20 w-80 h-80 bg-secondary-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-20 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
@@ -255,7 +255,7 @@
             <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Dùng thử miễn phí ngay hôm nay và khám phá cách vDentalLab giúp tối ưu hoá quản lý Labo của bạn
             </p>
-            <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-accent-500 hover:from-accent-600 hover:to-accent-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-lg">
+            <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

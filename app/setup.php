@@ -102,6 +102,18 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    /**
+     * Enable custom logo support.
+     *
+     * @link https://developer.wordpress.org/themes/functionality/custom-logo/
+     */
+    add_theme_support('custom-logo', [
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ]);
 }, 20);
 
 /**
@@ -510,52 +522,3 @@ add_action('save_post_lab_logo', function () {
 });
 
 // Contact form REST API endpoint
-add_action('rest_api_init', function () {
-    register_rest_route('api/v1/public', '/callme', [
-        'methods' => 'POST',
-        'callback' => function (WP_REST_Request $req) {
-            // Sanitize input
-            $name = sanitize_text_field($req->get_param('name'));
-            $email = sanitize_email($req->get_param('email'));
-            $phone = sanitize_text_field($req->get_param('phone'));
-            $lab_name = sanitize_text_field($req->get_param('lab_name'));
-            $lab_size = sanitize_text_field($req->get_param('lab_size'));
-            $message = sanitize_textarea_field($req->get_param('message'));
-
-            // Validate required fields
-            if (empty($name) || empty($email) || empty($phone) || empty($message)) {
-                return new \WP_Error('missing_fields', 'Vui lòng điền đầy đủ các trường bắt buộc', ['status' => 400]);
-            }
-
-            if (!is_email($email)) {
-                return new \WP_Error('invalid_email', 'Email không hợp lệ', ['status' => 400]);
-            }
-
-            // Prepare email to admin
-            $to = get_option('admin_email');
-            $subject = 'Liên hệ mới từ ' . $name;
-            $body = "Bạn nhận được liên hệ mới từ website:\n\n";
-            $body .= "Họ tên: $name\n";
-            $body .= "Email: $email\n";
-            $body .= "Số điện thoại: $phone\n";
-            if ($lab_name) $body .= "Tên Labo: $lab_name\n";
-            if ($lab_size) $body .= "Quy mô: $lab_size\n";
-            $body .= "\nNội dung:\n$message\n";
-
-            $headers = ['Content-Type: text/plain; charset=UTF-8'];
-
-            // Send email
-            $sent = wp_mail($to, $subject, $body, $headers);
-
-            if ($sent) {
-                return [
-                    'success' => true,
-                    'message' => 'Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong thời gian sớm nhất.'
-                ];
-            } else {
-                return new \WP_Error('email_failed', 'Không thể gửi email. Vui lòng thử lại sau.', ['status' => 500]);
-            }
-        },
-        'permission_callback' => '__return_true',
-    ]);
-});
