@@ -3,13 +3,6 @@
 @section('content')
 
 <div class="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-x-hidden relative">
-    {{-- Animated Background Elements --}}
-    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div class="absolute w-[400px] h-[400px] rounded-full bg-gradient-to-br from-primary-400/20 to-secondary-400/20 blur-3xl top-[10%] left-[5%] animate-float"></div>
-        <div class="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-br from-accent-300/15 to-accent-400/15 blur-3xl bottom-[15%] right-[10%] animate-float delay-200"></div>
-        <div class="absolute w-[350px] h-[350px] rounded-full bg-gradient-to-br from-primary-300/20 to-primary-500/20 blur-3xl top-1/2 left-[30%] animate-float delay-400"></div>
-    </div>
-
     {{-- Hero Section --}}
     <section class="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto" data-aos="fade-up">
         <div class="lg:w-1/2 mb-16 lg:mb-0">
@@ -33,7 +26,7 @@
                     class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-500 to-secondary-600 hover:from-primary-600 hover:to-secondary-700 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-2xl hover:shadow-primary-500/50 transform hover:-translate-y-1">
                     <span>Dùng thử miễn phí</span>
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </a>
 
@@ -201,15 +194,15 @@
 </div>
 
 {{-- Features Modal --}}
-<div id="featuresModal"
-    style="display: none;"
-    class="fixed inset-0 z-50 overflow-y-auto"
-    aria-labelledby="modal-title"
-    role="dialog"
-    aria-modal="true">
+<div id="featuresModal" 
+     style="display: none;"
+     class="fixed inset-0 z-50 overflow-y-auto"
+     aria-labelledby="modal-title" 
+     role="dialog" 
+     aria-modal="true">
     {{-- Backdrop --}}
     <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity" id="modalBackdrop"></div>
-
+    
     {{-- Modal Content --}}
     <div class="flex min-h-full items-center justify-center p-4">
         <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 transform transition-all">
