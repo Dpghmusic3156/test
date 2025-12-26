@@ -2,310 +2,214 @@
 
 @section('content')
 
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-            <img src="https://dentalso.com/vi/wp-content/uploads/2024/08/dentallab-banner.jpg" alt="Slide 1"
-                class="object-cover">
-            <div class="slide-banner">
-                <div class="banner-left">
-                    <h2 class="text-[rgb(var(--primary-color-1))]" id="banner-title1"> Quản lý Dental lab</h2>
-                    <p>Quản lý toàn diện - Tối ưu quy trình sản xuất</p>
-                    <a href="#" class="banner-btn1">Đăng ký Demo</a>
+<div class="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-x-hidden relative">
+    {{-- Animated Background Elements --}}
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute w-[400px] h-[400px] rounded-full bg-gradient-to-br from-primary-400/20 to-secondary-400/20 blur-3xl top-[10%] left-[5%] animate-float"></div>
+        <div class="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-br from-accent-300/15 to-accent-400/15 blur-3xl bottom-[15%] right-[10%] animate-float delay-200"></div>
+        <div class="absolute w-[350px] h-[350px] rounded-full bg-gradient-to-br from-primary-300/20 to-primary-500/20 blur-3xl top-1/2 left-[30%] animate-float delay-400"></div>
+    </div>
+
+    {{-- Hero Section --}}
+    <section class="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="lg:w-1/2 mb-16 lg:mb-0">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6" data-aos="fade-right" data-aos-delay="100">
+                <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+                Giải pháp #1 tại Việt Nam
+            </div>
+
+            <div class="md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6" data-aos="fade-right" data-aos-delay="200">
+                <span class="text-5xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700">vDentalLab</span>
+                <span class="text-4xl block text-gray-900">Phần mềm Quản lý</span>
+                <span class="text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-accent-600">Labo Dental</span>
+            </div>
+
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed" data-aos="fade-right" data-aos-delay="300">
+                Hơn <span class="font-bold text-primary-600">200+ Lab</span> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
+            </p>
+
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="400">
+                <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/"
+                    class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-500 to-secondary-600 hover:from-primary-600 hover:to-secondary-700 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-2xl hover:shadow-primary-500/50 transform hover:-translate-y-1">
+                    <span>Dùng thử miễn phí</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+
+                <button @click="$dispatch('open-features-modal')"
+                    class="inline-flex items-center justify-center gap-2 px-8 py-5 border-2 border-primary-200 text-primary-700 rounded-xl hover:bg-primary-50 hover:border-primary-300 transition-all duration-300 font-semibold">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                    </svg>
+                    Chức năng nổi bật
+                </button>
+            </div>
+
+            {{-- Social Proof --}}
+            <div class="mt-12 flex items-center gap-6" data-aos="fade-right" data-aos-delay="500">
+                <div class="flex -space-x-4">
+                    <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo_new_smile_lab-removebg-XdclsaZoxPJDTfvxl2Ub.png" alt="Customer">
+                    <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/z5276532952194_2d396fbde325544879a50e96744952bd.jpg" alt="Customer">
+                    <img class="w-12 h-12 rounded-full border-3 border-white shadow-lg" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo-medical-lab-SgYwbApXgrbxnByVNadu.jpg" alt="Customer">
                 </div>
-                <div class="banner-right">
-                    <img src="https://dentalso.com/vi/wp-content/uploads/2024/08/lab.png" alt="Banner Image 1">
+                <div>
+                    <div class="flex items-center gap-1 mb-1">
+                        @for($i = 0; $i < 5; $i++)
+                            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            @endfor
+                            <span class="ml-2 font-bold text-gray-900">5.0</span>
+                    </div>
+                    <p class="text-sm text-gray-600 font-medium">Được <span class="text-primary-600 font-bold">200+ labs</span> tin dùng</p>
                 </div>
             </div>
         </div>
-        <div class="swiper-slide">
-            <img src="https://dentalso.com/vi/wp-content/uploads/2024/08/clinic-banner.jpg" alt="Slide 2"
-                class="object-cover">
-            <div class="slide-banner">
-                <div class="banner-left">
-                    <h2 class="text-[rgb(var(--primary-color-2))]" id="banner-title2">Quản lý nha khoa</h2>
-                    <p>Chuyển đổi số đơn giản - Chăm sóc bênh nhân tự động</p>
-                    <a href="#" class="banner-btn2">Tìm hiểu thêm</a>
-                </div>
-                <div class="banner-right">
-                    <img src="https://dentalso.com/vi/wp-content/uploads/2024/08/clinic.png" alt="Banner Image 2">
+
+        {{-- Hero Image --}}
+        <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-delay="300">
+            <div class="relative rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl">
+                <img class="w-full h-auto object-cover" src="http://localhost:10005/wp-content/uploads/2025/12/iMac_left-min-6.png" alt="vDentalLab Interface">
+
+            </div>
+
+            {{-- Floating Stats Card --}}
+            <div class="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-2xl p-6 border border-primary-100" data-aos="fade-up" data-aos-delay="600">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-gray-900">200+</p>
+                        <p class="text-sm text-gray-600">Labs đang sử dụng</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-    tffftftftfftftf
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div>
-<section class="py-16">
-    <div class="container text-center">
-        <p class="mb-10 text-3xl lg:text-4xl leading-normal" data-aos="fade-up">Ứng dụng quản trị
-            doanh nghiệp toàn diện cho ngành Nha</p>
-        <div class="grid lg:grid-cols-3 gap-8 text-xl">
-            <div data-aos="fade-up">
-                <span class="material-symbols-outlined align-text-bottom text-primary-500 mr-2">
-                    check_circle
-                </span>
-                Thiết kế chuyên cho ngành Nha
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <span class="material-symbols-outlined align-text-bottom text-primary-500 mr-2">
-                    check_circle
-                </span> Đầy đủ chức năng - Dễ sử dụng
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <span class="material-symbols-outlined align-text-bottom text-primary-500 mr-2">
-                    check_circle
-                </span> Hơn 300 doanh nghiệp tin dùng
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- 2 card -->
-<section class="container grid lg:grid-cols-2 lg:gap-2 text-center">
-    <div class="bg-[rgba(var(--primary-color-1-rgb),0.8)] py-16 px-2 lg:px-16 text-white rounded-2xl"
-        style="background-color: rgba(var(--primary-color-1-rgb), 0.8);">
-        <a class="text-3xl leading-snug text-white" data-aos="fade-up"
-            href="https://dentalso.com/vi/quan-ly-dental-lab">
-            Quản lý toàn diện Dental Lab
-        </a>
-        <ul class="list-type-none sub-text-2 pb-10 text-lg">
-            <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="200">
-                <a class="text-white" href="https://dentalso.com/vi/so-hoa-va-toi-uu-quy-trinh-san-xuat/">Số hoá và tối
-                    ưu quy trình sản
-                    xuất. Tạo môi trường làm việc công bằng</a>
-            </li>
-            <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="400">
-                <a class="text-white" href="https://dentalso.com/vi/phoi-hop-lam-viec-va-ket-noi-giua-cac-bo-phan/">Phối
-                    hợp làm việc và
-                    kết nối giữa các bộ phận. Tăng hiệu quả chung cho Lab</a>
-            </li>
-            <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="400">
-                Chăm sóc khách hàng và đáp ứng kỳ vọng của khách hàng tốt hơn
-            </li>
-        </ul>
-        <img class="img-fluid mb-4" height="150px" src="https://dentalso.com/vi/wp-content/uploads/2024/07/dental.png"
-            data-aos="fade-up">
-    </div>
-    <a class="bg-[rgba(var(--primary-color-2-rgb),0.2)] py-16 px-2 lg:px-16 rounded-2xl"
-        style="background-color: rgba(var(--primary-color-2-rgb), 0.2);"
-        href="https://dentalso.com/vi/ket-noi-voi-nha-khoa/">
-        <p class="text-3xl leading-loose" data-aos="fade-up">
-            Kết nối với nha khoa
-        </p>
-        <ul class="list-type-none sub-text-2 pb-10 text-lg">
-            <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="200">
-                Đặt hàng nhanh, Theo dõi đơn hàng theo thời gian thực
-            </li>
-            <li data-aos="fade-up" data-aos-delay="400" class="inline-flex items-center">
-                Không còn chờ đợi, không còn sai sót, không còn khoảng cách giữa Labo với nha khoa
-            </li>
-        </ul>
-        <img class="img-fluid mb-4" data-aos="fade-up" height="150px"
-            src="https://dentalso.com/vi/wp-content/uploads/2022/07/clinic.png">
-    </a>
-</section>
-<section class="relative py-20">
-    <div class="container text-center ">
-        <a class="container text-center text-2xl leading-normal aos-init aos-animate">
-            <ul data-aos="fade-up">Cung cấp môi trường giao tiếp online giữa Nha khoa và Lab</ul>
-            <ul data-aos="fade-up">Tiết kiệm thời gian, bảo mật thông tin bệnh nhân</ul>
-            <ul data-aos="fade-up">Thông tin & hình ảnh được lưu trữ theo từng đơn hàng</ul>
-        </a>
-        <div> <img class="mx-auto mt-10 aos-init aos-animate "
-                src="http://localhost:8080/test/wp-content/uploads/2025/17/bannerdentalso.png" data-aos="fade-up">
-        </div>
-    </div>
-</section>
+    {{-- Testimonials Section --}}
+    <section class="py-20 bg-white relative overflow-hidden">
+        {{-- Background decoration --}}
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full blur-3xl opacity-30 -z-10"></div>
 
-
-
-<!-- Dental Lab Features Section -->
-<section class="py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
-
-            <!-- Card 1: Dental Lab Management -->
-            <div class="group relative rounded-[32px] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]"
-                id='card1'>
-                <!-- Decorative Elements -->
-                <div
-                    class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-4">
+                    Phản hồi từ khách hàng
                 </div>
-                <div
-                    class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-700/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
-                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Được <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">200+ Labs</span> tin cậy
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Chúng tôi muốn đóng góp vào sự phát triển của ngành Labo Nha khoa Việt Nam
+                </p>
+            </div>
 
-                <!-- Content -->
-                <div class="relative z-10">
-                    <!-- Title -->
-                    <h2 id='tittle1' class="text-3xl lg:text-4xl font-bold mb-6 leading-tight" data-aos="fade-up">
-                        Quản lý toàn diện Dental Lab
-                    </h2>
-
-                    <!-- Features List -->
-                    <div class="space-y-4 mb-10">
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 w-6 h-6 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-                                data-aos="fade-up">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <p class="text-base lg:text-lg font-medium leading-relaxed" data-aos="fade-up">
-                                Số hoá và tối ưu quy trình sản xuất. Tạo môi trường làm việc công bằng
-                            </p>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 w-6 h-6 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-                                data-aos="fade-up">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
-                            <p class="text-base lg:text-lg font-medium leading-relaxed" data-aos="fade-up">
-                                Phối hợp làm việc và kết nối giữa các bộ phận. Tăng hiệu quả chung cho Lab
-                            </p>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <div class="mt-1 w-6 h-6 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-                                data-aos="fade-up">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <p class="text-base lg:text-lg font-medium leading-relaxed" data-aos="fade-up">
-                                Chăm sóc khách hàng và đáp ứng kỳ vọng của khách hàng tốt hơn
-                            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                {{-- Testimonial 1 --}}
+                <div class="bg-gradient-to-br from-white to-primary-50/50 rounded-2xl p-8 border border-primary-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 mb-6">
+                        @for($i = 0; $i < 5; $i++)
+                            <svg class="w-5 h-5 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            @endfor
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Phần mềm giúp tôi quản lý chặt chẽ quy trình sản xuất và các kỹ thuật viên. Tôi đã cải thiện hoàn toàn việc quản lý Labo của mình và tiết kiệm thời gian, công sức."
+                    </p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-teal-100">
+                        <img class="w-14 h-14 rounded-full object-cover ring-4 ring-teal-100" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Ms. Linh">
+                        <div>
+                            <p class="font-bold text-gray-900">Ms. Linh</p>
+                            <p class="text-sm text-gray-600">CEO, Labo Hữu Nguyên</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Laptop Mockup -->
-                    <div class="relative transition-transform duration-700 hover:-translate-y-2">
-                        <div class="relative aos-init aos-animate">
-                            <!-- Screen -->
+                {{-- Testimonial 2 --}}
+                <div class="bg-gradient-to-br from-white to-amber-50/50 rounded-2xl p-8 border border-amber-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 mb-6">
+                        @for($i = 0; $i < 5; $i++)
+                            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            @endfor
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Tôi sử dụng phần mềm này ngay từ ngày đầu thành lập Labo. Nó giúp tôi quản lý đơn hàng sản xuất rất dễ dàng. Đặc biệt là khả năng tra cứu lịch sử hàng bảo hành và kiểm soát tốt vấn đề trễ hàng."
+                    </p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-amber-100">
+                        <img class="w-14 h-14 rounded-full object-cover ring-4 ring-amber-100" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
+                        <div>
+                            <p class="font-bold text-gray-900">Alan Nguyễn</p>
+                            <p class="text-sm text-gray-600">CEO, Labo Thành Tuấn</p>
+                        </div>
+                    </div>
+                </div>
 
-
-                            <!-- Replace this div with your actual screenshot -->
-                            <img src="https://dentalso.com/vi/wp-content/uploads/2024/07/dental.png" data-aos="fade-up"
-                                alt="Dental Lab Interface" class="w-full h-full object-cover" />
-
-
-                            <!-- Base -->
-
+                {{-- Testimonial 3 --}}
+                <div class="bg-gradient-to-br from-white to-cyan-50/50 rounded-2xl p-8 border border-cyan-100 hover:shadow-2xl hover:border-cyan-200 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-1 mb-6">
+                        @for($i = 0; $i < 5; $i++)
+                            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            @endfor
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Tôi đã mua nhiều phần mềm của nước ngoài nhưng không phù hợp với đặc thù ngành Lab tại Việt Nam. Sau khi được nhân viên giới thiệu, tôi đã quyết định chuyển qua dùng vDentalLab. Phần mềm hỗ trợ tôi rất tốt trong việc tính lương cho kỹ thuật viên và quản lý vật liệu."
+                    </p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-cyan-100">
+                        <img class="w-14 h-14 rounded-full object-cover ring-4 ring-cyan-100" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-westcost.png" alt="Dr. Andrew Tsang">
+                        <div>
+                            <p class="font-bold text-gray-900">Dr. Andrew Tsang</p>
+                            <p class="text-sm text-gray-600">CEO, Labo Westcoast</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Card 2: Connection with Dental Clinics -->
-            <div class="group relative rounded-[32px] p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]"
-                id='card2'>
-                <!-- Decorative Elements -->
-                <div
-                    class="absolute top-0 right-0 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
-                </div>
-                <div
-                    class="absolute bottom-0 left-0 w-80 h-80 bg-cyan-200/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
-                </div>
-
-                <!-- Content -->
-                <div class="relative z-10">
-                    <!-- Title -->
-                    <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6 leading-tight" data-aos="fade-up">
-                        Kết nối với <span
-                            class="bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent">nha
-                            khoa</span>
-                    </h2>
-
-                    <!-- Description -->
-                    <div class="mb-10">
-                        <p class="text-slate-700 text-base lg:text-lg font-medium leading-relaxed mb-6"
-                            data-aos="fade-up">
-                            Đặt hàng nhanh, Theo dõi đơn hàng theo thời gian thực
-                        </p>
-
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-sky-500" data-aos="fade-up"></div>
-                                <p class="text-slate-600 text-base font-medium" data-aos="fade-up">
-                                    Không còn chờ đợi, không còn sai sót
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-sky-500" data-aos="fade-up"></div>
-                                <p class="text-slate-600 text-base font-medium" data-aos="fade-up">
-                                    Không còn khoảng cách giữa Labo với nha khoa
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Laptop Mockup -->
-                    <div class="relative transition-transform duration-700 hover:-translate-y-2">
-                        <div class="relative">
-                            <!-- Screen with glow effect -->
-                            <div>
-                                <div
-                                    class="absolute inset-0 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                </div>
-                                <div class="rounded-lg aspect-video overflow-hidden relative z-10">
-                                    <!-- Replace this div with your actual screenshot -->
-                                    <img src="https://dentalso.com/vi/wp-content/uploads/2022/07/clinic.png"
-                                        data-aos="fade-up" alt="Dental Clinic Connection"
-                                        class="w-full h-full object-cover" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
+    </section>
 
-        <!-- Bottom CTA (Optional) -->
-        <div class="mt-12 text-center">
-            <button
-                class="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <span class="text-slate-700 font-semibold">Khám phá thêm tính năng</span>
-                <svg class="w-5 h-5 text-emerald-500 group-hover:translate-x-1 transition-transform" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                    </path>
+    {{-- CTA Section --}}
+    <section class="py-20 bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 relative overflow-hidden">
+        {{-- Background decoration --}}
+        <div class="absolute top-20 right-20 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Sẵn sàng để bắt đầu?
+            </h2>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                Tham gia cùng 200+ Lab hàng đầu đang sử dụng vDentalLab mỗi ngày
+            </p>
+            <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
+                <span>Dùng thử miễn phí</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
-            </button>
+            </a>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
-<style>
-    /* Optional: Add these custom styles if you want the floating animation */
-    @keyframes float {
+{{-- AOS Animation Init --}}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+</script>
 
-        0%,
-        100% {
-            transform: translateY(0px);
-        }
-
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    .hover\:float:hover {
-        animation: float 3s ease-in-out infinite;
-    }
-</style>
 @endsection

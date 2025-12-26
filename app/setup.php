@@ -7,6 +7,8 @@
 namespace App;
 
 use function Roots\bundle;
+use WP_REST_Request;
+use \WP_Query;
 
 /**
  * Register the theme assets.
@@ -33,23 +35,11 @@ add_action('enqueue_block_editor_assets', function () {
  */
 add_action('after_setup_theme', function () {
     /**
-     * Enable features from the Soil plugin if activated.
-     *
-     * @link https://roots.io/plugins/soil/
-     */
-    add_theme_support('soil', [
-        'clean-up',
-        'nav-walker',
-        'nice-search',
-        'relative-urls',
-    ]);
-
-    /**
      * Disable full-site editing support.
      *
      * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
      */
-    /*remove_theme_support('block-templates');
+    remove_theme_support('block-templates');
 
     /**
      * Register the navigation menus.
@@ -58,6 +48,9 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'dentallab_navigation' => __('Dental Lab Navigation', 'sage'),
+        'dentalclinic_navigation' => __('Dental Clinic Navigation', 'sage'),
+        'warranty_navigation' => __('Warranty Navigation', 'sage'),
     ]);
 
     /**
@@ -80,18 +73,6 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
-
-    /**
-     * Enable custom logo support.
-     *
-     * @link https://developer.wordpress.org/themes/functionality/custom-logo/
-     */
-    add_theme_support('custom-logo', [
-        'height'      => 100,
-        'width'       => 400,
-        'flex-height' => true,
-        'flex-width'  => true,
-    ]);
 
     /**
      * Enable responsive embed support.
@@ -145,4 +126,436 @@ add_action('widgets_init', function () {
         'name' => __('Footer', 'sage'),
         'id' => 'sidebar-footer',
     ] + $config);
+});
+
+/*** Customizer */
+add_action('customize_register', function ($wp_customize) {
+    $wp_customize->add_setting('logo');
+    $wp_customize->add_control(
+        new \WP_Customize_Image_Control(
+            $wp_customize,
+            'logo',
+            array(
+                'label' => 'Logo',
+                'section' => 'title_tagline',
+                'settings' => 'logo'
+            )
+        )
+    );
+    $wp_customize->add_setting('logo_full');
+    $wp_customize->add_control(
+        new \WP_Customize_Image_Control(
+            $wp_customize,
+            'logo_full',
+            array(
+                'label' => 'Logo Full',
+                'section' => 'title_tagline',
+                'settings' => 'logo_full'
+            )
+        )
+    );
+
+    $wp_customize->add_setting('address');
+    $wp_customize->add_control(
+        'address',
+        array(
+            'label' => 'Địa chỉ',
+            'section' => 'title_tagline',
+            'settings' => 'address',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('phone');
+    $wp_customize->add_control(
+        'phone',
+        array(
+            'label' => 'Điện thoại',
+            'section' => 'title_tagline',
+            'settings' => 'phone',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('phoneus');
+    $wp_customize->add_control(
+        'phoneus',
+        array(
+            'label' => 'Điện thoại Mỹ',
+            'section' => 'title_tagline',
+            'settings' => 'phoneus',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('email1');
+    $wp_customize->add_control(
+        'email1',
+        array(
+            'label' => 'Email 1',
+            'section' => 'title_tagline',
+            'settings' => 'email1',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('email2');
+    $wp_customize->add_control(
+        'email2',
+        array(
+            'label' => 'Email 2',
+            'section' => 'title_tagline',
+            'settings' => 'email2',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('facebook');
+    $wp_customize->add_control(
+        'facebook',
+        array(
+            'label' => 'Facebook',
+            'section' => 'title_tagline',
+            'settings' => 'facebook',
+            'type' => 'text',
+        )
+    );
+
+    $wp_customize->add_panel('panel_trang_chu', array(
+        'capability'     => 'edit_theme_options',
+        'title'          => 'Trang chủ',
+    ));
+    $wp_customize->add_section('banner', array(
+        'title' => __('Banner', 'customizer_homepage_options_section'),
+        'panel' => 'panel_trang_chu',
+    ));
+    $wp_customize->add_setting('trang_chu.banner.hinh_1');
+    $wp_customize->add_control(
+        new \WP_Customize_Image_Control(
+            $wp_customize,
+            'trang_chu.banner.hinh_1',
+            array(
+                'label' => 'Hình banner 1',
+                'section' => 'banner',
+                'settings' => 'trang_chu.banner.hinh_1'
+            )
+        )
+    );
+    $wp_customize->add_setting('trang_chu.banner.hinhnen_1');
+    $wp_customize->add_control(
+        new \WP_Customize_Image_Control(
+            $wp_customize,
+            'trang_chu.banner.hinhnen_1',
+            array(
+                'label' => 'Hình nền 1',
+                'section' => 'banner',
+                'settings' => 'trang_chu.banner.hinhnen_1'
+            )
+        )
+    );
+    $wp_customize->add_setting('trang_chu.banner.title1');
+    $wp_customize->add_control(
+        'trang_chu.banner.title1',
+        array(
+            'label' => 'Tiêu đề 1',
+            'section' => 'banner',
+            'settings' => 'trang_chu.banner.title1',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('trang_chu.banner.content1');
+    $wp_customize->add_control(
+        'trang_chu.banner.content1',
+        array(
+            'label' => 'Nội dung 1',
+            'section' => 'banner',
+            'settings' => 'trang_chu.banner.content1',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('trang_chu.banner.hinh_2');
+    $wp_customize->add_control(
+        new \WP_Customize_Image_Control(
+            $wp_customize,
+            'trang_chu.banner.hinh_2',
+            array(
+                'label' => 'Hình banner 2',
+                'section' => 'banner',
+                'settings' => 'trang_chu.banner.hinh_2'
+            )
+        )
+    );
+    $wp_customize->add_setting('trang_chu.banner.hinhnen_2');
+    $wp_customize->add_control(
+        new \WP_Customize_Image_Control(
+            $wp_customize,
+            'trang_chu.banner.hinhnen_2',
+            array(
+                'label' => 'Hình nền 2',
+                'section' => 'banner',
+                'settings' => 'trang_chu.banner.hinhnen_2'
+            )
+        )
+    );
+    $wp_customize->add_setting('trang_chu.banner.title2');
+    $wp_customize->add_control(
+        'trang_chu.banner.title2',
+        array(
+            'label' => 'Tiêu đề 2',
+            'section' => 'banner',
+            'settings' => 'trang_chu.banner.title2',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('trang_chu.banner.content2');
+    $wp_customize->add_control(
+        'trang_chu.banner.content2',
+        array(
+            'label' => 'Nội dung 2',
+            'section' => 'banner',
+            'settings' => 'trang_chu.banner.content2',
+            'type' => 'text',
+        )
+    );
+});
+
+add_action('init', function () {
+    register_extended_post_type('lab_logo', [
+        'show_in_feed' => true,
+        'archive' => [
+            'nopaging' => true,
+        ],
+        'supports' => ['title', 'thumbnail', 'custom-fields'],
+    ], [
+        'singular' => 'Lab Logo',
+        'plural'   => 'Labs Logo',
+        'slug'     => 'labs-logo',
+
+    ]);
+    register_extended_post_type('customer', [
+        'show_in_feed' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'has_archive'   => true,
+        'archive' => [
+            'nopaging' => true,
+        ],
+        'supports' => ['title', 'thumbnail', 'custom-fields'],
+    ], [
+        'singular' => 'Customer',
+        'plural'   => 'Customers',
+        'slug'     => 'customer',
+    ]);
+    register_extended_post_type('warranty', [
+        'show_in_feed' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'has_archive'   => true,
+        'archive' => [
+            'nopaging' => true,
+        ],
+        'supports' => ['title', 'editor', 'excerpt', 'custom-fields'],
+    ], [
+        'singular' => 'Warranty',
+        'plural'   => 'Warranties',
+        'slug'     => 'warranty',
+    ]);
+    register_extended_post_type('price', [
+        'show_in_feed' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'has_archive'   => true,
+        'archive' => [
+            'nopaging' => true,
+        ],
+        'supports' => ['title', 'editor', 'excerpt', 'custom-fields', 'thumbnail'],
+    ], [
+        'singular' => 'Bảng giá',
+        'plural'   => 'Price',
+        'slug'     => 'price',
+    ]);
+    register_post_type('docs', [
+        'show_in_feed' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'label' => 'Tài liệu',
+        'public' => true,
+        'has_archive' => true, // <-- Cần có
+        'archive' => [
+            'nopaging' => true,
+        ],
+        'supports' => ['title', 'editor', 'excerpt'],
+        'taxonomies' => ['doc_category'],
+    ], [
+        'singular' => 'Tài liệu',
+        'plural'   => 'Tài liệu',
+        'slug'     => 'tai-lieu',
+    ]);
+    register_extended_taxonomy('genre', 'story', [
+
+        # Use radio buttons in the meta box for this taxonomy on the post editing screen:
+        'meta_box' => 'radio',
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        # Add a custom column to the admin screen:
+        'admin_cols' => [
+            'updated' => [
+                'title_cb'    => function () {
+                    return '<em>Last</em> Updated';
+                },
+                'meta_key'    => 'updated_date',
+                'date_format' => 'd/m/Y'
+            ],
+        ],
+
+    ]);
+    register_taxonomy('doc_category', 'docs', [
+        'labels' => [
+            'name'              => 'Chuyên mục tài liệu',
+            'singular_name'     => 'Chuyên mục',
+            'search_items'      => 'Tìm chuyên mục',
+            'all_items'         => 'Tất cả',
+            'edit_item'         => 'Chỉnh sửa',
+            'update_item'       => 'Cập nhật',
+            'add_new_item'      => 'Thêm mới',
+            'new_item_name'     => 'Tên mới',
+            'menu_name'         => 'Chuyên mục tài liệu',
+        ],
+        'hierarchical' => true, // như category
+        'show_ui'      => true,
+        'show_in_rest' => true,
+        'rewrite'      => ['slug' => 'chuyen-muc-tai-lieu'],
+    ]);
+});
+add_action('rest_api_init', function () {
+    register_rest_route('custom/v1', '/filter-docs', [
+        'methods' => 'GET',
+        'callback' => function (WP_REST_Request $req) {
+            $cat   = sanitize_text_field($req->get_param('category'));
+            $q     = sanitize_text_field($req->get_param('query'));
+            $paged = max(1, intval($req->get_param('paged')));
+
+            $args = [
+                'post_type'      => 'docs',
+                'posts_per_page' => 20,
+                'paged'          => $paged,
+                's'              => $q,
+            ];
+
+            if ($cat && $cat !== 'all') {
+                $args['tax_query'] = [[
+                    'taxonomy' => 'doc_category',
+                    'field'    => 'slug',
+                    'terms'    => $cat,
+                ]];
+            }
+
+            $query = new WP_Query($args);
+            $results = [];
+
+            while ($query->have_posts()) {
+                $query->the_post();
+                $results[] = [
+                    'title' => get_the_title(),
+                    'link' => get_permalink(),
+                    'excerpt' => get_the_excerpt(),
+                ];
+            }
+
+            wp_reset_postdata();
+
+            return [
+                'items' => $results,
+                'has_more' => $query->max_num_pages > $paged,
+            ];
+        },
+        'permission_callback' => '__return_true',
+    ]);
+    register_rest_route('custom/v1', '/recent-docs', [
+        'methods' => 'GET',
+        'callback' => 'get_recent_docs_by_category',
+        'permission_callback' => '__return_true',
+    ]);
+});
+
+function get_recent_docs_by_category(WP_REST_Request $request)
+{
+    $slug = sanitize_text_field($request->get_param('category'));
+
+    $args = [
+        'post_type' => 'docs',
+        'posts_per_page' => 5,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => [[
+            'taxonomy' => 'doc_category',
+            'field' => 'slug',
+            'terms' => $slug,
+        ]]
+    ];
+
+    $query = new WP_Query($args);
+    $results = [];
+
+    while ($query->have_posts()) {
+        $query->the_post();
+        $results[] = [
+            'title' => get_the_title(),
+            'link' => get_permalink(),
+        ];
+    }
+
+    wp_reset_postdata();
+    return $results;
+}
+
+
+add_action('save_post_lab_logo', function () {
+    delete_transient('lab_logo_html');
+});
+
+// Contact form REST API endpoint
+add_action('rest_api_init', function () {
+    register_rest_route('api/v1/public', '/callme', [
+        'methods' => 'POST',
+        'callback' => function (WP_REST_Request $req) {
+            // Sanitize input
+            $name = sanitize_text_field($req->get_param('name'));
+            $email = sanitize_email($req->get_param('email'));
+            $phone = sanitize_text_field($req->get_param('phone'));
+            $lab_name = sanitize_text_field($req->get_param('lab_name'));
+            $lab_size = sanitize_text_field($req->get_param('lab_size'));
+            $message = sanitize_textarea_field($req->get_param('message'));
+
+            // Validate required fields
+            if (empty($name) || empty($email) || empty($phone) || empty($message)) {
+                return new \WP_Error('missing_fields', 'Vui lòng điền đầy đủ các trường bắt buộc', ['status' => 400]);
+            }
+
+            if (!is_email($email)) {
+                return new \WP_Error('invalid_email', 'Email không hợp lệ', ['status' => 400]);
+            }
+
+            // Prepare email to admin
+            $to = get_option('admin_email');
+            $subject = 'Liên hệ mới từ ' . $name;
+            $body = "Bạn nhận được liên hệ mới từ website:\n\n";
+            $body .= "Họ tên: $name\n";
+            $body .= "Email: $email\n";
+            $body .= "Số điện thoại: $phone\n";
+            if ($lab_name) $body .= "Tên Labo: $lab_name\n";
+            if ($lab_size) $body .= "Quy mô: $lab_size\n";
+            $body .= "\nNội dung:\n$message\n";
+
+            $headers = ['Content-Type: text/plain; charset=UTF-8'];
+
+            // Send email
+            $sent = wp_mail($to, $subject, $body, $headers);
+
+            if ($sent) {
+                return [
+                    'success' => true,
+                    'message' => 'Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong thời gian sớm nhất.'
+                ];
+            } else {
+                return new \WP_Error('email_failed', 'Không thể gửi email. Vui lòng thử lại sau.', ['status' => 500]);
+            }
+        },
+        'permission_callback' => '__return_true',
+    ]);
 });

@@ -1,5 +1,15 @@
-@php(the_content())
+<article @php(post_class())>
+    <header>
+        <h2 class="entry-title">
+            <a href="{{ get_permalink() }}">
+                {!! $title !!}
+            </a>
+        </h2>
 
-{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav">
-    <p>' . __('Pages:', 'sage'), 'after' => '</p>
-</nav>']) !!}
+        @includeWhen(get_post_type() === 'post', 'partials.entry-meta')
+    </header>
+
+    <div class="entry-summary">
+        @php(the_excerpt())
+    </div>
+</article>

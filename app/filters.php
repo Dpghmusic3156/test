@@ -93,6 +93,9 @@ add_action('wp_head', function () {
         return "$r, $g, $b";
     };
 ?>
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <style type="text/css">
         :root {
             --primary-color-1: <?php echo esc_attr($primary1);
@@ -124,3 +127,17 @@ add_action('wp_head', function () {
     </style>
 <?php
 });
+
+/**
+ * Override weDocs plugin template to use Sage template
+ */
+add_filter('template_include', function ($template) {
+    if (is_singular('docs')) {
+        // Force use Sage template for docs post type
+        $sage_template = locate_template('single-docs.blade.php');
+        if ($sage_template) {
+            return $sage_template;
+        }
+    }
+    return $template;
+}, 99);

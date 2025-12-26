@@ -1,0 +1,12 @@
+@extends('layouts.app')
+
+@section('content')
+@php
+// Get current category
+$category = get_queried_object();
+@endphp
+
+{{-- Use the khach-hang partial for this category --}}
+@include('partials.khach-hang')
+
+@endsection
