@@ -26,7 +26,7 @@
                 Lab đã sử dụng <span class="bg-gradient-to-r from-amber-300 to-amber-400  bg-clip-text text-transparent">vDentalLab</span>
             </h1>
 
-            <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                 Hơn 200 phòng Lab tại Việt Nam đã tin tưởng và sử dụng vDentalLab để quản lý hoạt động sản xuất kinh doanh của mình
             </p>
         </div>
@@ -196,7 +196,7 @@
             <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Tham gia cùng hơn 200 Lab hàng đầu đang sử dụng vDentalLab mỗi ngày
             </p>
-            <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
+            <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

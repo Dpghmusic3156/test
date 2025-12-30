@@ -1,5 +1,5 @@
 {{-- Hero Section --}}
-<section class="relative bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 py-20">
     {{-- Background Decoration --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -19,7 +19,7 @@
                 Dùng thử <span class="bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">14 ngày miễn phí</span>
             </h1>
 
-            <div class="space-y-3 text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
+            <div class="space-y-3 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                 <p>✓ Hỗ trợ miễn phí ngay cả khi dùng thử</p>
                 <p>✓ Đơn giản và hiệu quả ngay từ ngày đầu tiên</p>
                 <p>✓ Hỗ trợ copy dữ liệu ban đầu từ file Excel</p>
