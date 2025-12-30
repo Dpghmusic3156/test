@@ -14,7 +14,7 @@
       <p class="page-title z-10 mb-6 text-white text-5xl">
         {{ single_term_title('', false) }}
       </p>
-      <div class="justify-center w-1/2">
+      <div class="justify-center w-3/4">
         @include('partials.search-docs')
       </div>
     </div>
