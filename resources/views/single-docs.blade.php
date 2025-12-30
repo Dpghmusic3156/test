@@ -10,7 +10,7 @@
             <p class="page-title z-10 mb-6 text-white text-5xl">
                 {{ get_the_title() }}
             </p>
-            <div class="justify-center w-1/2">
+            <div class="justify-center w-3/4">
                 {{-- Tìm kiếm tài liệu --}}
                 @include('partials.search-docs')
             </div>
