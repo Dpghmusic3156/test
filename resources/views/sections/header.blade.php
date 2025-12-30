@@ -7,7 +7,7 @@
                     <img src="{{ get_theme_mod('logo') }}" alt="{{ $siteName }}" class="custom-logo my-2">
                 </a>
                 @endif
-                
+
                 <a class="brand" href="{{ home_url('/') }}">
                     {!! $siteName !!}
                 </a>
@@ -29,8 +29,8 @@
 
                 <div class="header-actions">
                     <a href="{{ home_url('/phan-mem-dental-lab-mien-phi') }}"
-                        class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold px-4 py-2 rounded-lg transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:shadow-accent-500/50 transform hover:-translate-y-0.5 text-sm">
-                        <span>DÙNG THỬ MIỄN PHÍ</span>
+                        class="group relative inline-flex items-center text-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold px-4 py-2 rounded-lg transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:shadow-accent-500/50 transform hover:-translate-y-0.5 text-sm">
+                        <span class="text-center">DÙNG THỬ MIỄN PHÍ</span>
                         <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
@@ -78,7 +78,6 @@
                 });
             }
         });
-
     </script>
 
     <!--    <div class="max-w-7xl mx-auto flex justify-between items-center">

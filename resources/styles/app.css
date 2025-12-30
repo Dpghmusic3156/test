@@ -466,7 +466,10 @@ nav ul .sub-menu li::after {
 
   .header-actions a {
     animation: slideInMenu 0.3s ease-out 0.4s backwards;
-    width: 100%;
+    width: auto;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     position: relative;
     z-index: 151;
