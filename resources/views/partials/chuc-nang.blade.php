@@ -250,7 +250,7 @@
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 Sẵn sàng trải nghiệm vDentalLab?
             </h2>
-            <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
                 Dùng thử miễn phí ngay hôm nay và khám phá cách vDentalLab giúp tối ưu hoá quản lý Labo của bạn
             </p>
         </div>
