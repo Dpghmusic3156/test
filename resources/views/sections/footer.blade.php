@@ -64,7 +64,7 @@
                 <h4 class="text-lg text-gray-900 font-bold mb-7">Chức năng
                 </h4>
                 <ul class="text-sm  transition-all duration-500">
-                    <li class="mb-6"><a href="https://ghuy.me/docs/quan-ly-dieu-phoi/" class="text-gray-600 hover:text-primary-600">Điều phối hoạt động</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/quan-ly-dieu-phoi/" class="text-gray-600 hover:text-primary-600">Điều phối hoạt động</a></li>
                     <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Quy trình sản xuất</a></li>
                     <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Tài chính – Công nợ</a></li>
                     <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Quản lý giao nhận</a></li>
