@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- Hero Section with Gradient --}}
-<section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 py-24 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 py-24">
   {{-- Decorative Background Elements --}}
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl animate-pulse"></div>

@@ -31,7 +31,7 @@ $terms = get_terms(['taxonomy' => 'doc_category', 'hide_empty' => false]);
                     @focus="focused = true"
                     @click.stop
                     placeholder="Tìm kiếm tài liệu..."
-                    class="w-full bg-transparent py-3 pl-12 pr-4 focus:outline-none text-base">
+                    class="w-full bg-transparent py-3 pl-12 pr-4 focus:outline-none text-base text-gray-900 caret-gray-900">
                 <div class="absolute left-4 top-1/2 -translate-y-1/2 text-primary-500">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <circle cx="11" cy="11" r="8" />
@@ -70,7 +70,7 @@ $terms = get_terms(['taxonomy' => 'doc_category', 'hide_empty' => false]);
                     @focus="focused = true"
                     @click.stop
                     placeholder="Tìm kiếm tài liệu..."
-                    class="w-full bg-transparent py-2.5 pl-10 pr-4 focus:outline-none text-base">
+                    class="w-full bg-transparent py-2.5 pl-10 pr-4 focus:outline-none text-base text-gray-900 caret-gray-900">
                 <div class="absolute left-3 top-1/2 -translate-y-1/2 text-primary-500">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <circle cx="11" cy="11" r="8" />
@@ -95,7 +95,7 @@ $terms = get_terms(['taxonomy' => 'doc_category', 'hide_empty' => false]);
     <div x-show="focused && query.length"
         x-transition.opacity.scale
         @click.away="focused = false"
-        class="absolute left-0 right-0 mt-3 bg-white border-2 border-gray-200 rounded-2xl shadow-2xl z-10 overflow-hidden">
+        class="absolute left-0 right-0 mt-3 bg-white border-2 border-gray-200 rounded-2xl shadow-2xl z-100 overflow-hidden">
 
         <!-- Danh sách kết quả -->
         <div class="max-h-[400px] overflow-auto p-4">
