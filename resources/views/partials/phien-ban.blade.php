@@ -200,7 +200,7 @@
                 So sánh các phiên bản
             </h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                Xem chi tiết sự khác biệt giữa các phiên bản Basic và Standard
+                Xem chi tiết sự khác biệt giữa phiên bản Basic và Standard
             </p>
         </div>
 
@@ -570,7 +570,7 @@
             <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Trải nghiệm đầy đủ tính năng của vDentalLab miễn phí. Hỗ trợ đầy đủ ngay cả khi dùng thử.
             </p>
-            <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-lg">
+            <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
