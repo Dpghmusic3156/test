@@ -50,7 +50,7 @@
             </div>
 
             {{-- Floating Social Proof Card --}}
-            <div class="absolute bottom-4 right-4 lg:-bottom-8 lg:-left-8 lg:right-auto bg-white rounded-2xl shadow-2xl p-4 lg:p-6 border border-primary-100 scale-85 lg:scale-100 animate-floating" data-aos="fade-up">
+            <div class="absolute -bottom-20 right-2 lg:-bottom-8 lg:-left-8 lg:right-auto bg-white rounded-2xl shadow-2xl p-4 lg:p-6 border border-primary-100 scale-85 lg:scale-100 animate-floating" data-aos="fade-up">
                 {{-- Customer Avatars --}}
                 <div class="flex -space-x-3 mb-3">
                     <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">

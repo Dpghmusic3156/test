@@ -134,7 +134,7 @@
                                 fill="white"></path>
                         </svg>
                     </a>
-                    <a href="javascript:;"
+                    <a href="{{ get_theme_mod('facebook') }}"
                         class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-600 hover:bg-blue-700">
                         <svg class="w-[1rem] h-[1rem] text-white" viewBox="0 0 8 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
