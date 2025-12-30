@@ -5,3 +5,10 @@
 .budfiles
 npm-debug.log
 yarn-error.log
+build-with-node20.sh
+composer.json
+composer.json
+composer.lock
+package-lock.json
+theme.json
+yarn.lock

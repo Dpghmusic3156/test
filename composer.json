@@ -2,6 +2,7 @@
   "name": "roots/sage",
   "type": "wordpress-theme",
   "license": "MIT",
+  "version": "10.0.0",
   "description": "WordPress starter theme with a modern development workflow",
   "homepage": "https://roots.io/sage/",
   "authors": [
