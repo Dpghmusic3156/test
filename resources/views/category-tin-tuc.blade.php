@@ -54,12 +54,27 @@ $category = get_queried_object();
             $post_content = get_the_content();
             $is_video = (strpos($post_content, 'youtube.com') !== false || strpos($post_content, 'youtu.be') !== false);
             $post_title = get_the_title();
+            
+            // Extract YouTube video ID
+            $youtube_id = null;
+            if ($is_video) {
+                preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $post_content, $match);
+                $youtube_id = isset($match[1]) ? $match[1] : null;
+            }
+            
+            // Determine thumbnail URL - Priority: YouTube > Featured Image > null
+            $thumbnail_url = null;
+            if ($youtube_id) {
+                $thumbnail_url = "https://img.youtube.com/vi/{$youtube_id}/maxresdefault.jpg";
+            } elseif (has_post_thumbnail()) {
+                $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
+            }
             @endphp
 
             <article class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300">
-                @if (has_post_thumbnail())
+                @if ($thumbnail_url)
                 <div class="relative h-48 overflow-hidden">
-                    <img src="{{ get_the_post_thumbnail_url(get_the_ID(), 'medium_large') }}"
+                    <img src="{{ $thumbnail_url }}"
                         alt="{{ $post_title }}"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
 
