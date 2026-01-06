@@ -144,3 +144,13 @@ add_filter('template_include', function ($template) {
     }
     return $template;
 }, 99);
+
+/**
+ * Show all posts in tin-tuc category without pagination
+ */
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() && $query->is_main_query() && is_category('tin-tuc')) {
+        $query->set('posts_per_page', -1);
+        $query->set('nopaging', true);
+    }
+});

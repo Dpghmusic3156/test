@@ -132,14 +132,6 @@ $category = get_queried_object();
             @endwhile
         </div>
 
-        <div class="mt-12 max-w-6xl mx-auto">
-            {!! get_the_posts_pagination([
-            'mid_size' => 2,
-            'prev_text' => '← Trước',
-            'next_text' => 'Sau →',
-            ]) !!}
-        </div>
-
         @else
         <div class="max-w-2xl mx-auto text-center py-16">
             <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
