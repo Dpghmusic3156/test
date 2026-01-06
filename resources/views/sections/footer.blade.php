@@ -1,4 +1,4 @@
-<footer class="content-info w-full py-14 bg-gray-50 border-t border-gray-200">
+<footer class="content-info w-full pt-14 bg-gray-50 border-t border-gray-200">
     @php(dynamic_sidebar('sidebar-footer'))
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
