@@ -64,12 +64,12 @@
                 <h4 class="text-lg text-gray-900 font-bold mb-7">Chức năng
                 </h4>
                 <ul class="text-sm  transition-all duration-500">
-                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/quan-ly-dieu-phoi/" class="text-gray-600 hover:text-primary-600">Điều phối hoạt động</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}docs/quan-ly-dieu-phoi/" class="text-gray-600 hover:text-primary-600">Điều phối hoạt động</a></li>
                     <li class="mb-6"><a href="{{ home_url('/') }}/docs/quy-trinh-san-xuat/" class="text-gray-600 hover:text-primary-600">Quy trình sản xuất</a></li>
-                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/tai-chinh-cong-no/" class="text-gray-600 hover:text-primary-600">Tài chính – Công nợ</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}tai-chinh-cong-no/" class="text-gray-600 hover:text-primary-600">Tài chính – Công nợ</a></li>
                     <li class="mb-6"><a href="{{ home_url('/') }}/docs/quan-ly-giao-nhan/" class="text-gray-600 hover:text-primary-600">Quản lý giao nhận</a></li>
-                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/cham-soc-khach-hang/" class="text-gray-600 hover:text-primary-600">Chăm sóc khách hàng</a></li>
-                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/bao-cao-kinh-doanh/" class="text-gray-600 hover:text-primary-600">Báo cáo kinh doanh</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}cham-soc-khach-hang/" class="text-gray-600 hover:text-primary-600">Chăm sóc khách hàng</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}bao-cao-tong-hop/" class="text-gray-600 hover:text-primary-600">Báo cáo kinh doanh</a></li>
                 </ul>
             </div>
             <!--End Col-->
@@ -77,7 +77,7 @@
                 <h4 class="text-lg text-gray-900 font-bold mb-7">Video hướng dẫn</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a
-                            href="{{ home_url('/') }}/docs/phan-mem-quan-ly-labo-vdentallab/"
+                            href="{{ home_url('/') }}phan-mem-quan-ly-labo-vdentallab/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Phần mềm Quản lý Labo vDentalLab">Phần mềm Quản lý Labo vDentalLab</a></li>
                     <li class="mb-6"><a href="{{ home_url('/') }}/docs/huong-dan-tao-moi-nha-khoa/"

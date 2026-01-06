@@ -1,4 +1,4 @@
-{{-- Hero Section - Modern UX/UI Design --}}
+
 <section class="relative hero-section bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative py-24 overflow-hidden">
 
     {{-- Decorative Background Elements --}}
