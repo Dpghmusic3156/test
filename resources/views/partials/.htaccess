@@ -1,0 +1,115 @@
+RewriteCond %{REQUEST_URI} ^/Cloud/ [NC]
+
+# Chặn tất cả URL có chứa 1 trong các từ khóa
+RedirectMatch 403 (alfa-rex|worm0|gawean)
+RedirectMatch 403 .*wp-content/plugins/revslider/includes/external/page.*
+RedirectMatch 403 .*wp-includes/blocks/table/int/tmpl.*
+RedirectMatch 403 .*wp-content/themes/twentyseventeen/page.*
+RedirectMatch 403 .*\.well-known/traffic-advice.*
+RedirectMatch 403 .*admin/debug\.xml.*
+RedirectMatch 403 .*admin/log\.swp.*
+RedirectMatch 403 .*index\.htm$
+RedirectMatch 403 .*plugins/content/apismtp/apismtp\.php\.suspected.*
+RedirectMatch 403 .*author.*
+RedirectMatch 403 .*app-ads.*
+RedirectMatch 403 .*maint/wp-login.php.*
+RedirectMatch 403 .*ccx.*
+RedirectMatch 403 .*aarssrlrn.html.*
+RedirectMatch 403 .*app-ads.*
+RedirectMatch 403 .*druid/index.html$
+RedirectMatch 403 .*wp-comments-post.php$
+RedirectMatch 403 .*\.well-known/traffic-advice$
+RedirectMatch 403 .*plugins/content/apismtp/apismtp\.php\.suspected$
+RedirectMatch 403 .*index\.htm$
+RedirectMatch 403 .*admin/log\.swp$
+RedirectMatch 403 .*admin/debug\.xml$
+RedirectMatch 403 .*favicon\.ico$
+RedirectMatch 403 .*wp-content/themes/twentyseventeen/page/
+RedirectMatch 403 .*worm0\.PhP7$
+RedirectMatch 403 .*gawean\.PhP7$
+RedirectMatch 403 .*wp-includes/blocks/table/int/tmpl/
+RedirectMatch 403 .*alfa-rex\.php7$
+RedirectMatch 403 .*\.aspx$
+RedirectMatch 403 .*wp-content/plugins/revslider/includes/external/page(/.*)?$
+RedirectMatch 403 .*?author(/.*)?$
+RedirectMatch 403 .*admin/old(/.*)?$
+# Chặn các file nhạy cảm không được public
+RewriteRule ^(.*/)?[^/]+\.(env|sql|conf|crt|key|pem|cer|yml|yaml|ts|json|py|phar|pl|sh|rb|cgi|bat|ini|log|lock|md|bak|old|zip|tar|gz|tgz|7z|rar|swp|suspected)$ - [F,L]
+# Chặn các thư mục nhạy cảm
+RewriteRule ^(__MACOSX|__tests__|_profiler|vendor|node_modules|tests|backup|backups)(/.*)?$ - [F,L]
+# Chặn thư mục admin/json (nếu không dùng public)
+RewriteRule ^admin/json/.* - [F,L]
+# Chặn toàn bộ file ẩn (dotfiles) như .env, .git, .htaccess, .DS_Store, .svn, v.v.
+RewriteRule (^|/)\. - [F,L]
+# Chặn tất cả truy cập vào thư mục alfacgiapi
+RewriteRule ^alfacgiapi/.* - [F,L]
+# Chặn Symfony profiler, dev tools
+RewriteRule ^_profiler/.* - [F,L]
+RewriteRule ^app_dev\.php - [F,L]
+# chặn admin/keys/* (ví dụ admin/keys/sample.conf)
+RewriteRule ^admin/keys/.* - [F,L]
+# Chặn các file nhạy cảm thường thấy
+RewriteRule ^(readme|license|changelog)\.txt$ - [F,L]
+RewriteRule ^phpinfo\.php$ - [F,L]
+RewriteRule ^__info\.php$ - [F,L]
+RewriteRule ^__init__\.py$ - [F,L]
+
+# Chặn truy cập trực tiếp tất cả file .php (trừ các file cần thiết)
+RewriteCond %{THE_REQUEST} \s/.*\.php [NC]
+RewriteCond %{REQUEST_URI} !/index\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-login\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/load-styles\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/load-scripts\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-admin/update-core\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-admin/plugin-install\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-admin/admin\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-admin/update\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-admin/admin-ajax\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/xmlrpc\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-admin/plugins\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/wp-admin/edit\.php$ [NC]
+RewriteRule ^.*\.php$ - [F,L]
+
+# Chặn truy cập file .htaccess, .git, composer, v.v.
+<FilesMatch "^(\.htaccess|\.git|composer\.json|composer\.lock|package\.json|webpack\.config\.js)">
+    Require all denied
+</FilesMatch>
+# Apache 2.4+
+<Files "xmlrpc.php">
+    Require all denied
+</Files>
+
+# Apache 2.2 (cũ hơn)
+<Files xmlrpc.php>
+    Order allow,deny
+    Deny from all
+</Files>
+# Chặn truy cập vào index.htm
+<Files "index.htm">
+    Require all denied
+</Files>
+# Ngăn directory listing
+Options -Indexes
+
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
