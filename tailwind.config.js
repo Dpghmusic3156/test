@@ -73,6 +73,9 @@ const config = {
           primary1: '#ffd146',
           primary2: '#14949E',
         },
+        'skype': {
+          bg: '#15ace5',
+        },
       },
       animation: {
         float: 'float 15s infinite ease-in-out',

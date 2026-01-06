@@ -177,6 +177,16 @@ add_action('customize_register', function ($wp_customize) {
             'type' => 'text',
         )
     );
+    $wp_customize->add_setting('address_link');
+    $wp_customize->add_control(
+        'address_link',
+        array(
+            'label' => 'Link địa chỉ',
+            'section' => 'title_tagline',
+            'settings' => 'address_link',
+            'type' => 'text',
+        )
+    );
     $wp_customize->add_setting('phone');
     $wp_customize->add_control(
         'phone',
@@ -224,6 +234,36 @@ add_action('customize_register', function ($wp_customize) {
             'label' => 'Facebook',
             'section' => 'title_tagline',
             'settings' => 'facebook',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('youtube');
+    $wp_customize->add_control(
+        'youtube',
+        array(
+            'label' => 'Youtube',
+            'section' => 'title_tagline',
+            'settings' => 'youtube',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('skype');
+    $wp_customize->add_control(
+        'skype',
+        array(
+            'label' => 'Skype',
+            'section' => 'title_tagline',
+            'settings' => 'skype',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('zalo');
+    $wp_customize->add_control(
+        'zalo',
+        array(
+            'label' => 'Zalo',
+            'section' => 'title_tagline',
+            'settings' => 'zalo',
             'type' => 'text',
         )
     );

@@ -1521,6 +1521,11 @@
           "color": "#14949e",
           "name": "Pmlab Primary2",
           "slug": "pmlab-primary2"
+        },
+        {
+          "color": "#15ace5",
+          "name": "Skype Bg",
+          "slug": "skype-bg"
         }
       ]
     },

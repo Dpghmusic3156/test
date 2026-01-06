@@ -36,7 +36,7 @@
                     </li>
                     @if(get_theme_mod('address'))
                     <li class="mb-6">
-                        <a class="flex items-start gap-3 text-gray-600">
+                        <a href="{{ get_theme_mod('address_link') }}" class="flex items-start gap-3 text-gray-600 hover:text-primary-600">
                             <i class="fas fa-map-marker-alt mt-1"></i>
                             <span>{{ get_theme_mod('address') }}</span>
                         </a>
@@ -65,11 +65,11 @@
                 </h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a href="{{ home_url('/') }}/docs/quan-ly-dieu-phoi/" class="text-gray-600 hover:text-primary-600">Điều phối hoạt động</a></li>
-                    <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Quy trình sản xuất</a></li>
-                    <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Tài chính – Công nợ</a></li>
-                    <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Quản lý giao nhận</a></li>
-                    <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Chăm sóc khách hàng</a></li>
-                    <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-primary-600">Báo cáo kinh doanh</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/quy-trinh-san-xuat/" class="text-gray-600 hover:text-primary-600">Quy trình sản xuất</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/tai-chinh-cong-no/" class="text-gray-600 hover:text-primary-600">Tài chính – Công nợ</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/quan-ly-giao-nhan/" class="text-gray-600 hover:text-primary-600">Quản lý giao nhận</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/cham-soc-khach-hang/" class="text-gray-600 hover:text-primary-600">Chăm sóc khách hàng</a></li>
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/bao-cao-kinh-doanh/" class="text-gray-600 hover:text-primary-600">Báo cáo kinh doanh</a></li>
                 </ul>
             </div>
             <!--End Col-->
@@ -77,33 +77,33 @@
                 <h4 class="text-lg text-gray-900 font-bold mb-7">Video hướng dẫn</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a
-                            href="https://phanmemlabo.com/help/thu-vien-video/phan-mem-quan-ly-labo-vdentallab/"
+                            href="{{ home_url('/') }}/docs/phan-mem-quan-ly-labo-vdentallab/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Phần mềm Quản lý Labo vDentalLab">Phần mềm Quản lý Labo vDentalLab</a></li>
-                    <li class="mb-6"><a href="https://phanmemlabo.com/help/thu-vien-video/huong-dan-tao-moi-nha-khoa/"
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/huong-dan-tao-moi-nha-khoa/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Hướng dẫn tạo mới nha khoa">Hướng dẫn tạo mới nha khoa</a></li>
                     <li class="mb-6"><a
-                            href="https://phanmemlabo.com/help/thu-vien-video/huong-dan-quy-trinh-nhan-hang/"
+                            href="{{ home_url('/') }}/docs/huong-dan-quy-trinh-nhan-hang/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Hướng dẫn quy trình nhập hàng">Hướng dẫn quy trình nhập hàng</a></li>
                     <li class="mb-6"><a
-                            href="https://phanmemlabo.com/help/thu-vien-video/huong-dan-lap-don-hang-san-xuat/"
+                            href="{{ home_url('/') }}/docs/huong-dan-lap-don-hang-san-xuat/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Hướng dẫn lập đơn hàng sản xuất">Hướng dẫn lập đơn hàng sản xuất</a></li>
                     <li class="mb-6"><a
-                            href="https://phanmemlabo.com/help/thu-vien-video/huong-dan-quan-ly-san-xuat-phan-1/"
+                            href="{{ home_url('/') }}/docs/huong-dan-quan-ly-san-xuat-phan-1/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Hướng dẫn quản lý sản xuất – Phần 1">Hướng dẫn quản lý sản xuất – Phần 1</a></li>
                     <li class="mb-6"><a
-                            href="https://phanmemlabo.com/help/thu-vien-video/huong-dan-quan-ly-san-xuat-phan-2/"
+                            href="{{ home_url('/') }}/docs/huong-dan-quan-ly-san-xuat-phan-2/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Hướng dẫn quản lý sản xuất – Phần 2">Hướng dẫn quản lý sản xuất – Phần 2</a></li>
                     <li class="mb-6"><a
-                            href="https://phanmemlabo.com/help/thu-vien-video/huong-dan-quy-trinh-giao-hang/"
+                            href="{{ home_url('/') }}/docs/huong-dan-quy-trinh-giao-hang/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Hướng dẫn quy trình giao hàng">Hướng dẫn quy trình giao hàng</a></li>
-                    <li class="mb-6"><a href="https://phanmemlabo.com/help/thu-vien-video/huong-dan-quan-ly-tai-chinh/"
+                    <li class="mb-6"><a href="{{ home_url('/') }}/docs/huong-dan-quan-ly-tai-chinh/"
                             class="block text-gray-600 hover:text-primary-600"
                             title="Hướng dẫn quản lý tài chính">Hướng dẫn quản lý tài chính</a></li>
                 </ul>
@@ -113,27 +113,9 @@
         <!--Grid-->
         <div class="py-7 border-t border-gray-200">
             <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-                <span class="text-sm text-gray-500 ">©<a href="https://phanmemlabo.com/">vDentalLab</a>2025, All rights
-                    reserved.</span>
+                <span class="text-sm text-gray-500 ">©<a href="{{ home_url('/') }}">vDentalLab</a></span>
                 <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
-                    <a href="javascript:;"
-                        class="w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-secondary-400 hover:bg-secondary-600">
-                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Social Media">
-                                <path id="Vector"
-                                    d="M11.8214 9.81691L16.9919 3.93591H15.7667L11.2772 9.0423L7.6914 3.93591H3.55566L8.97803 11.6577L3.55566 17.8248H4.78097L9.522 12.4323L13.3088 17.8248H17.4446L11.8211 9.81691H11.8214ZM10.1432 11.7257L9.59382 10.9568L5.22246 4.83846H7.10445L10.6322 9.77615L11.1816 10.5451L15.7672 16.9633H13.8852L10.1432 11.726V11.7257Z"
-                                    fill="white" />
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="javascript:;" class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-gradient-to-br from-pink-500 via-red-500 to-accent-500 hover:from-pink-600 hover:via-red-600 hover:to-accent-600">
-                        <svg class="w-[1.25rem] h-[1.125rem] text-white" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.63434 7.99747C5.63434 6.69062 6.6941 5.63093 8.00173 5.63093C9.30936 5.63093 10.3697 6.69062 10.3697 7.99747C10.3697 9.30431 9.30936 10.364 8.00173 10.364C6.6941 10.364 5.63434 9.30431 5.63434 7.99747ZM4.35427 7.99747C4.35427 10.0108 5.98723 11.6427 8.00173 11.6427C10.0162 11.6427 11.6492 10.0108 11.6492 7.99747C11.6492 5.98418 10.0162 4.3522 8.00173 4.3522C5.98723 4.3522 4.35427 5.98418 4.35427 7.99747ZM10.9412 4.20766C10.9411 4.37615 10.991 4.54087 11.0846 4.681C11.1783 4.82113 11.3113 4.93037 11.4671 4.99491C11.6228 5.05945 11.7942 5.07639 11.9595 5.04359C12.1249 5.01078 12.2768 4.92971 12.3961 4.81062C12.5153 4.69153 12.5966 4.53977 12.6295 4.37453C12.6625 4.2093 12.6457 4.03801 12.5812 3.88232C12.5168 3.72663 12.4076 3.59354 12.2674 3.49988C12.1273 3.40622 11.9625 3.35619 11.7939 3.35612H11.7936C11.5676 3.35623 11.3509 3.44597 11.1911 3.60563C11.0313 3.76529 10.9414 3.98182 10.9412 4.20766ZM5.132 13.7759C4.43946 13.7444 4.06304 13.6291 3.81289 13.5317C3.48125 13.4027 3.24463 13.249 2.99584 13.0007C2.74705 12.7524 2.59305 12.5161 2.46451 12.1847C2.367 11.9348 2.25164 11.5585 2.22016 10.8664C2.18572 10.1181 2.17885 9.89331 2.17885 7.99752C2.17885 6.10174 2.18629 5.87758 2.22016 5.12866C2.2517 4.43654 2.36791 4.06097 2.46451 3.81035C2.59362 3.47891 2.7474 3.24242 2.99584 2.99379C3.24428 2.74515 3.48068 2.59124 3.81289 2.46278C4.06292 2.36532 4.43946 2.25004 5.132 2.21857C5.88074 2.18416 6.10566 2.17729 8.00173 2.17729C9.89779 2.17729 10.1229 2.18472 10.8723 2.21857C11.5648 2.25009 11.9406 2.36623 12.1914 2.46278C12.5231 2.59124 12.7597 2.74549 13.0085 2.99379C13.2573 3.24208 13.4107 3.47891 13.5398 3.81035C13.6373 4.06023 13.7527 4.43654 13.7841 5.12866C13.8186 5.87758 13.8255 6.10174 13.8255 7.99752C13.8255 9.89331 13.8186 10.1175 13.7841 10.8664C13.7526 11.5585 13.6367 11.9347 13.5398 12.1847C13.4107 12.5161 13.2569 12.7526 13.0085 13.0007C12.76 13.2488 12.5231 13.4027 12.1914 13.5317C11.9414 13.6292 11.5648 13.7444 10.8723 13.7759C10.1236 13.8103 9.89865 13.8172 8.00173 13.8172C6.10481 13.8172 5.88051 13.8103 5.132 13.7759ZM5.07318 0.941429C4.31699 0.975845 3.80027 1.09568 3.34902 1.27116C2.88168 1.45239 2.48605 1.69552 2.09071 2.09C1.69537 2.48447 1.45272 2.88049 1.27139 3.34755C1.0958 3.79882 0.975892 4.31494 0.941455 5.07068C0.90645 5.82761 0.898438 6.0696 0.898438 7.99747C0.898438 9.92534 0.90645 10.1673 0.941455 10.9243C0.975892 11.68 1.0958 12.1961 1.27139 12.6474C1.45272 13.1142 1.69543 13.5106 2.09071 13.9049C2.48599 14.2992 2.88168 14.542 3.34902 14.7238C3.80113 14.8993 4.31699 15.0191 5.07318 15.0535C5.83096 15.0879 6.0727 15.0965 8.00173 15.0965C9.93075 15.0965 10.1729 15.0885 10.9303 15.0535C11.6865 15.0191 12.2029 14.8993 12.6544 14.7238C13.1215 14.542 13.5174 14.2994 13.9127 13.9049C14.3081 13.5105 14.5502 13.1142 14.7321 12.6474C14.9077 12.1961 15.0281 11.68 15.062 10.9243C15.0964 10.1668 15.1044 9.92534 15.1044 7.99747C15.1044 6.0696 15.0964 5.82761 15.062 5.07068C15.0276 4.31489 14.9077 3.79853 14.7321 3.34755C14.5502 2.88077 14.3075 2.4851 13.9127 2.09C13.518 1.69489 13.1215 1.45239 12.655 1.27116C12.2029 1.09568 11.6865 0.975277 10.9308 0.941429C10.1735 0.907013 9.93132 0.898438 8.00229 0.898438C6.07327 0.898438 5.83096 0.906445 5.07318 0.941429Z"
-                                fill="white"></path>
-                        </svg>
-                    </a>
+                    @if(get_theme_mod('facebook'))
                     <a href="{{ get_theme_mod('facebook') }}"
                         class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-600 hover:bg-blue-700">
                         <svg class="w-[1rem] h-[1rem] text-white" viewBox="0 0 8 14" fill="none"
@@ -143,7 +125,9 @@
                                 fill="currentColor" />
                         </svg>
                     </a>
-                    <a href="javascript:;"
+                    @endif
+                    @if(get_theme_mod('youtube'))
+                    <a href="{{ get_theme_mod('youtube') }}"
                         class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-red-600 hover:bg-red-700">
                         <svg class="w-[1.25rem] h-[0.875rem] text-white" viewBox="0 0 16 12" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -152,6 +136,23 @@
                                 fill="white" />
                         </svg>
                     </a>
+                    @endif
+                    @if(get_theme_mod('skype'))
+                    <a href="{{ get_theme_mod('skype') }}"
+                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-600 hover:bg-blue-700">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-100.26 -100.26 656.25 656.25" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.00455731"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"><rect x="-100.26" y="-100.26" width="656.25" height="656.25" rx="328.125" fill="#15ace5" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.911462"></g><g id="SVGRepo_iconCarrier"> <g> <rect x="0" y="0" style="fill:#15ACE5;" width="455.731" height="455.731"></rect> <path style="fill:#FFFFFF;" d="M379.742,257.242c1.77-9.097,2.708-18.492,2.708-28.107c0-80.82-65.518-146.338-146.338-146.338 c-9.615,0-19.01,0.938-28.107,2.708c-12.507-7.319-27.052-11.532-42.589-11.532c-46.65,0-84.467,37.817-84.467,84.467 c0,15.537,4.214,30.082,11.532,42.588c-1.77,9.097-2.708,18.492-2.708,28.107c0,80.82,65.518,146.338,146.338,146.338 c9.615,0,19.01-0.938,28.107-2.708c12.507,7.319,27.052,11.532,42.588,11.532c46.65,0,84.467-37.817,84.467-84.467 C391.275,284.293,387.061,269.749,379.742,257.242z M238.892,329.634c-52,0-78-19.5-86-44s9.5-31.5,15-32s17.167,0.833,20.5,11 c3.465,10.567,15,31.5,40,34s41.5-9,46.5-21s-4-28.5-42.5-34s-78.5-22.5-78.5-61s44-54,86-54s63.293,23.721,68,33 c5.833,11.5,3.833,30.661-10,34c-14.5,3.5-22-4.5-32.5-24c-10.858-20.165-49.5-15-62.5-3.5s-9.5,28,44.5,38.5s74,30,74,60.5 S290.892,329.634,238.892,329.634z"></path> </g> </g></svg>
+                    </a>
+                    @endif
+                    @if(get_theme_mod('zalo'))
+                    <a href="{{ get_theme_mod('zalo') }}"
+                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-600 hover:bg-blue-700">
+<svg id="svg_zalo_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve">
+            <path fill="#FFFFFF" d="M464.721,301.399c-13.984-0.014-23.707,11.478-23.944,28.312c-0.251,17.771,9.168,29.208,24.037,29.202   c14.287-0.007,23.799-11.095,24.01-27.995C489.028,313.536,479.127,301.399,464.721,301.399z" />
+            <path fill="#FFFFFF" d="M291.83,301.392c-14.473-0.316-24.578,11.603-24.604,29.024c-0.02,16.959,9.294,28.259,23.496,28.502   c15.072,0.251,24.592-10.87,24.539-28.707C315.214,313.318,305.769,301.696,291.83,301.392z" />
+            <path fill="#FFFFFF" d="M310.518,3.158C143.102,3.158,7.375,138.884,7.375,306.3s135.727,303.142,303.143,303.142   c167.415,0,303.143-135.727,303.143-303.142S477.933,3.158,310.518,3.158z M217.858,391.083   c-33.364,0.818-66.828,1.353-100.133-0.343c-21.326-1.095-27.652-18.647-14.248-36.583c21.55-28.826,43.886-57.065,65.792-85.621   c2.546-3.305,6.214-5.996,7.15-12.705c-16.609,0-32.784,0.04-48.958-0.013c-19.195-0.066-28.278-5.805-28.14-17.652   c0.132-11.768,9.175-17.329,28.397-17.348c25.159-0.026,50.324-0.06,75.476,0.026c9.637,0.033,19.604,0.105,25.304,9.789   c6.22,10.561,0.284,19.512-5.646,27.454c-21.26,28.497-43.015,56.624-64.559,84.902c-2.599,3.41-5.119,6.88-9.453,12.725   c23.424,0,44.123-0.053,64.816,0.026c8.674,0.026,16.662,1.873,19.941,11.267C237.892,379.329,231.368,390.752,217.858,391.083z    M350.854,330.211c0,13.417-0.093,26.841,0.039,40.265c0.073,7.599-2.599,13.647-9.512,17.084   c-7.296,3.642-14.71,3.028-20.304-2.968c-3.997-4.281-6.214-3.213-10.488-0.422c-17.955,11.728-39.908,9.96-56.597-3.866   c-29.928-24.789-30.026-74.803-0.211-99.776c16.194-13.562,39.592-15.462,56.709-4.143c3.951,2.619,6.201,4.815,10.396-0.053   c5.39-6.267,13.055-6.761,20.271-3.357c7.454,3.509,9.935,10.165,9.776,18.265C350.67,304.222,350.86,317.217,350.854,330.211z    M395.617,369.579c-0.118,12.837-6.398,19.783-17.196,19.908c-10.779,0.132-17.593-6.966-17.646-19.512   c-0.179-43.352-0.185-86.696,0.007-130.041c0.059-12.256,7.302-19.921,17.896-19.222c11.425,0.752,16.992,7.448,16.992,18.833   c0,22.104,0,44.216,0,66.327C395.677,327.105,395.828,348.345,395.617,369.579z M463.981,391.868   c-34.399-0.336-59.037-26.444-58.786-62.289c0.251-35.66,25.304-60.713,60.383-60.396c34.631,0.304,59.374,26.306,58.998,61.986   C524.207,366.492,498.534,392.205,463.981,391.868z" />
+          </svg>
+                    </a>
+                    @endif
                 </div>
             </div>
         </div>
