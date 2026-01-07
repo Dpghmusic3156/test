@@ -103,7 +103,7 @@
                 {{-- Image on the right --}}
                 <div class="hidden lg:block">
                     <div class="relative rounded-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                        <img class="w-full h-auto object-cover" src="{{ home_url('/') }}/wp-content/uploads/2025/12/iMac_left-min-6.png" alt="vDentalLab">
+                        <img class="ml-25 w-4/5 h-auto object-cover" src="{{ home_url('/') }}/wp-content/uploads/2021/03/iMac_dung-thu-mien-phi.png" alt="vDentalLab">
                     </div>
                 </div>
 

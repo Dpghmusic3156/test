@@ -45,7 +45,7 @@
         {{-- Hero Image --}}
         <div class="lg:w-1/2 relative order-2 lg:order-2 mb-12 lg:mb-0" data-aos="fade-left" data-aos-delay="300">
             <div class="relative rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
-                <img class="w-full h-auto object-cover" src="{{ home_url('/') }}/wp-content/uploads/2025/12/iMac_left-min-6.png" alt="vDentalLab Interface">
+                <img class="w-full h-auto object-cover" src="{{ home_url('/') }}/wp-content/uploads/2019/07/iMac_left-min-6.png" alt="vDentalLab Interface">
 
             </div>
 
