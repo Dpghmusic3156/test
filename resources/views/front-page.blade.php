@@ -18,11 +18,11 @@
             </div>
 
             <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed" data-aos="fade-right" data-aos-delay="300">
-                Hơn <span class="font-bold text-accent-500">200+ Lab</span> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
+                Hơn <a href="{{ home_url() }}/khach-hang" class="font-bold text-accent-500">200+ Lab</a> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
             </p>
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12" data-aos="fade-right" data-aos-delay="400">
-                <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/"
+                <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi/"
                     class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
                     <span>Dùng thử miễn phí</span>
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
