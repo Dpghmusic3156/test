@@ -10,11 +10,11 @@
             {{-- Left Column - Text Content --}}
             <div class="text-white space-y-8">
 
-                {{-- Badge --}}
+                {{-- Badge 
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 animate-fade-in-down">
                     <span class="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></span>
                     <span class="text-sm font-medium text-white/90">Giải pháp quản trị chuyên biệt</span>
-                </div>
+                </div>--}}
 
                 {{-- Main Heading --}}
                 <div class="space-y-4 animate-fade-in-up">
@@ -44,54 +44,40 @@
 
             </div>
 
-            {{-- Right Column - Video with Glassmorphism Frame --}}
-            <div class="relative animate-fade-in-right"
-                x-data="{ 
-                     showStats: true,
-                     player: null,
-                     initPlayer() {
-                         if (typeof YT !== 'undefined' && YT.Player) {
-                             this.createPlayer();
-                         } else {
-                             window.onYouTubeIframeAPIReady = () => this.createPlayer();
-                         }
-                     },
-                     createPlayer() {
-                         this.player = new YT.Player('youtube-player', {
-                             events: {
-                                 'onStateChange': (event) => {
-                                     if (event.data === YT.PlayerState.PLAYING) {
-                                         this.showStats = false;
-                                     }
-                                     else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
-                                         this.showStats = true;
-                                     }
-                                 }
-                             }
-                         });
-                     }
-                 }"
-                x-init="initPlayer()">
+            {{-- Right Column - Video Modal Trigger --}}
+            <div class="relative animate-fade-in-right" x-data="{ showStats: true }" x-init="window.videoModalOpen = false">
 
                 {{-- Decorative Accent --}}
                 <div class="absolute -inset-4 bg-gradient-to-r from-accent-400/20 to-accent-400/20 rounded-3xl blur-xl"></div>
 
-                {{-- Video Container --}}
-                <div class="relative bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-2xl hover:scale-105 transition-transform duration-500">
-                    <div class="aspect-video rounded-xl overflow-hidden bg-gray-900">
-                        <iframe
-                            id="youtube-player"
-                            class="w-full h-full"
-                            src="https://www.youtube.com/embed/ytoFOidMrhE?enablejsapi=1"
-                            title="Phần mềm Quản lý Labo vDentalLab"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                {{-- Video Thumbnail with Play Button --}}
+                <div
+                    @click="$dispatch('open-video-modal'); showStats = false"
+                    class="relative bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-2xl hover:scale-105 transition-transform duration-500 cursor-pointer group">
+                    <div class="aspect-video rounded-xl overflow-hidden bg-gray-900 relative">
+                        {{-- YouTube Thumbnail --}}
+                        <img
+                            src="https://img.youtube.com/vi/ytoFOidMrhE/maxresdefault.jpg"
+                            alt="Video Preview"
+                            class="w-full h-full object-cover">
+
+                        {{-- Play Button Overlay --}}
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-all">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+                                <svg class="w-8 h-8 text-primary-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        {{-- Duration Badge --}}
+                        <div class="absolute bottom-4 right-4 bg-black/80 px-3 py-1 rounded-lg">
+                            <span class="text-white text-sm font-medium">2:45</span>
+                        </div>
                     </div>
                 </div>
 
-                {{-- Floating Stats Card --}}
+                {{-- Floating Stats Card 
                 <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs hidden lg:block animate-float transition-all duration-500"
                     x-show="showStats"
                     x-transition:enter="transition ease-out duration-300"
@@ -111,7 +97,9 @@
                             <div class="text-sm text-gray-600">Uptime đảm bảo</div>
                         </div>
                     </div>
-                </div>
+                </div>--}}
+
+
 
             </div>
 
@@ -119,9 +107,70 @@
     </div>
 </section>
 
+{{-- Video Modal (Outside Container for Proper Centering) --}}
+<div x-data="{ showModal: false }"
+    @open-video-modal.window="showModal = true"
+    @keydown.escape.window="showModal = false">
+    <div
+        x-show="showModal"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        @click.self="showModal = false"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md px-4 py-6"
+        style="display: none; margin: 0 auto !important; left: 0 !important; right: 0 !important;">
+
+        <div
+            x-show="showModal"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90"
+            class="relative bg-white rounded-3xl shadow-2xl w-full max-w-5xl mx-auto overflow-hidden flex flex-col max-h-[90vh]">
+
+            {{-- Close Button --}}
+            <button
+                @click="showModal = false"
+                class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            {{-- Modal Header 
+            <div class="p-6 border-b border-gray-200 flex-shrink-0">
+                <div class="text-xs text-primary-600 font-bold mb-1">Phần mềm vDentalLab</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Giới thiệu phần mềm quản lý Labo Nha Khoa</h3>
+                <p class="text-gray-600 text-sm">Tìm hiểu về các tính năng và lợi ích khi sử dụng vDentalLab trong quản lý Labo</p>
+            </div>--}}
+
+            {{-- Video Container --}}
+            <div class="aspect-video bg-black flex-shrink-0">
+                <iframe
+                    :src="showModal ? 'https://www.youtube.com/embed/ytoFOidMrhE?autoplay=1&enablejsapi=1' : ''"
+                    class="w-full h-full"
+                    title="vDentalLab Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+{{-- What is vDentalLab Section with Circle Diagram --}}
 {{-- What is vDentalLab Section with Circle Diagram --}}
 <section class="py-20 bg-white relative overflow-hidden" data-aos="fade-up">
-    <div class="container mx-auto px-4">
+
+    <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
                 <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
@@ -141,76 +190,65 @@
                 {{-- Feature Cards Grid --}}
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {{-- Quản lý Khách hàng --}}
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
-                                <svg class="w-7 h-7 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Quản lý Khách hàng</h3>
+                    <div class="group bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="mb-6 text-gray-900 group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Quản lý Khách hàng</h3>
                     </div>
 
                     {{-- Giao nhận --}}
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
-                                <svg class="w-7 h-7 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Giao nhận</h3>
+                    <div class="group bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="mb-6 text-gray-900 group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Giao nhận</h3>
                     </div>
 
                     {{-- Điều phối --}}
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
-                                <svg class="w-7 h-7 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Điều phối</h3>
+                    <div class="group bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="mb-6 text-gray-900 group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Điều phối</h3>
                     </div>
 
                     {{-- KCS --}}
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
-                                <svg class="w-7 h-7 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">KCS (Kiểm soát chất lượng)</h3>
+                    <div class="group bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="mb-6 text-gray-900 group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">KCS (Kiểm soát chất lượng)</h3>
                     </div>
 
                     {{-- Các công đoạn sản xuất --}}
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
-                                <svg class="w-7 h-7 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Các công đoạn sản xuất</h3>
+                    <div class="group bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="mb-6 text-gray-900 group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Các công đoạn sản xuất</h3>
                     </div>
 
                     {{-- Tài chính --}}
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
-                                <svg class="w-7 h-7 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-accent-600 transition-colors">Tài chính</h3>
+                    <div class="group bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="mb-6 text-gray-900 group-hover:scale-110 transition-transform duration-300 origin-left">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                <line x1="2" y1="10" x2="22" y2="10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                            </svg>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">Tài chính</h3>
                     </div>
                 </div>
             </div>
@@ -235,12 +273,14 @@
             <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <div class="relative w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6">
-                            <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex-shrink-0 text-gray-900">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 m-0">Quản lý sản xuất chặt chẽ</h3>
                         </div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Quản lý sản xuất chặt chẽ</h3>
                         <ul class="space-y-3 text-gray-600">
                             <li class="flex items-start gap-2">
                                 <span class="text-accent-600 mt-1">✓</span>
@@ -271,12 +311,14 @@
                             class="zoom-image w-full drop-shadow-2xl">
                     </div>
                     <div class="order-1 lg:order-2">
-                        <div class="relative w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6">
-                            <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex-shrink-0 text-gray-900">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 m-0">Nâng cao hiệu quả hoạt động</h3>
                         </div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Nâng cao hiệu quả hoạt động</h3>
                         <ul class="space-y-3 text-gray-600">
                             <li class="flex items-start gap-2">
                                 <span class="text-accent-600 mt-1">✓</span>
@@ -297,12 +339,14 @@
             <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <div class="relative w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6">
-                            <svg class="w-10 h-10 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                            </svg>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex-shrink-0 text-gray-900">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 m-0">Chăm sóc khách hàng tốt hơn</h3>
                         </div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Chăm sóc khách hàng tốt hơn</h3>
                         <ul class="space-y-3 text-gray-600">
                             <li class="flex items-start gap-2">
                                 <span class="text-accent-600 mt-1">✓</span>
@@ -327,7 +371,76 @@
 </section>
 
 {{-- Customers Section --}}
-<section class="py-20 bg-white" data-aos="fade-up">
+@php
+// Query customers from WordPress 'khach-hang' category
+$customer_query = new WP_Query([
+'post_type' => 'post',
+'category_name' => 'khach-hang',
+'posts_per_page' => -1
+]);
+
+// Organize customers by region based on location in content
+$regions_data = [
+'north' => [
+'name' => 'Miền Bắc',
+'color' => 'from-red-500 to-pink-500',
+'customers' => []
+],
+'central' => [
+'name' => 'Miền Trung',
+'color' => 'from-yellow-500 to-green-500',
+'customers' => []
+],
+'south' => [
+'name' => 'Miền Nam',
+'color' => 'from-blue-500 to-cyan-500',
+'customers' => []
+]
+];
+
+if ($customer_query->have_posts()) {
+while ($customer_query->have_posts()) {
+$customer_query->the_post();
+$customer = [
+'name' => get_the_title(),
+'logo' => get_the_post_thumbnail_url(get_the_ID(), 'medium') ?: 'https://via.placeholder.com/150',
+'location' => strip_tags(get_the_content()),
+'url' => get_permalink()
+];
+
+// Determine region based on location
+$content_lower = strtolower($customer['location']);
+if (strpos($content_lower, 'hà nội') !== false || strpos($content_lower, 'ha noi') !== false || strpos($content_lower, 'hanoi') !== false) {
+$regions_data['north']['customers'][] = $customer;
+} elseif (strpos($content_lower, 'tp. hcm') !== false || strpos($content_lower, 'hồ chí minh') !== false || strpos($content_lower, 'sài gòn') !== false || strpos($content_lower, 'saigon') !== false || strpos($content_lower, 'cần thơ') !== false || strpos($content_lower, 'can tho') !== false) {
+$regions_data['south']['customers'][] = $customer;
+} else {
+$regions_data['central']['customers'][] = $customer;
+}
+}
+wp_reset_postdata();
+}
+@endphp
+
+
+<script>
+    window.vietnamMapData = {
+        !!json_encode($regions_data) !!
+    };
+</script>
+
+
+<section class="py-20 bg-white" data-aos="fade-up"
+    x-data="{
+        selectedRegion: null,
+        showModal: false,
+        regions: window.vietnamMapData || {},
+openRegion(region) {
+this.selectedRegion = region;
+this.showModal = true;
+}
+}"
+    x-init="console.log('Vietnam Map Loaded:', regions)">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
@@ -341,51 +454,143 @@
             </p>
         </div>
 
-        {{-- Customer Logos --}}
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-            {{-- Skion Lab --}}
-            <a href="https://skionlab.com" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:-translate-y-1">
-                <img src="https://skionlab.com/wp-content/uploads/2024/09/300767424_476487554484766_3134076792255235907_n.png"
-                    alt="Skion Lab"
-                    class="w-full h-20 object-contain mb-3">
-                <div class="mt-2 text-xs text-gray-500 text-center">TP. HCM</div>
-            </a>
+        {{-- Interactive Vietnam Map --}}
+        <div class="max-w-2xl mx-auto mb-8">
+            <div class="relative group">
+                {{-- Map Image --}}
+                <img src="{{ home_url() }}/wp-content/themes/test/resources/images/vietnam-map.png"
+                    alt="Bản đồ Việt Nam"
+                    class="w-full h-auto drop-shadow-lg">
 
-            {{-- Detec Dental Lab --}}
-            <a href="https://www.detec.vn" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:-translate-y-1">
-                <img src="https://detec.vn/wp-content/uploads/2020/12/Logo-detect.png"
-                    alt="Detec Dental Lab"
-                    class="w-full h-20 object-contain mb-3">
-                <div class="mt-2 text-xs text-gray-500 text-center">Hà Nội</div>
-            </a>
+                {{-- SVG Clickable Regions --}}
+                <svg viewBox="0 0 400 1080" class="absolute inset-0 w-full h-full">
+                    {{-- North Region (Red/Pink) - Upper portion --}}
+                    <path
+                        @click="openRegion('north')"
+                        class="cursor-pointer hover:opacity-50 transition-opacity duration-200"
+                        fill="transparent"
+                        d="M 0,0 L 400,0 L 400,360 L 220,360 Q 200,370 180,360 L 0,360 Z"
+                        stroke="rgba(239, 68, 68, 0.3)"
+                        stroke-width="2">
+                        <title>Miền Bắc - Click để xem khách hàng</title>
+                    </path>
 
-            {{-- HT Dental Art Lab --}}
-            <a href="https://htdentalart.vn" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:-translate-y-1">
-                <img src="https://htdentalart.vn/wp-content/uploads/2023/07/LOGO-2-e1689394383599.png"
-                    alt="HT Dental Art Lab"
-                    class="w-full h-20 object-contain mb-3">
-                <div class="mt-2 text-xs text-gray-500 text-center">TP. HCM</div>
-            </a>
+                    {{-- Central Region (Yellow/Green) - Middle portion --}}
+                    <path
+                        @click="openRegion('central')"
+                        class="cursor-pointer hover:opacity-50 transition-opacity duration-200"
+                        fill="transparent"
+                        d="M 0,360 L 220,360 Q 240,390 260,420 L 400,740 L 400,760 L 360,760 L 0,760 Z"
+                        stroke="rgba(234, 179, 8, 0.3)"
+                        stroke-width="2">
+                        <title>Miền Trung - Click để xem khách hàng</title>
+                    </path>
 
-            {{-- Katri Lab --}}
-            <a href="http://katri.com.vn" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:-translate-y-1">
-                <img src="http://katri.com.vn/Themes/css/screen/images/logo-katri.png"
-                    alt="Katri Lab"
-                    class="w-full h-20 object-contain mb-3">
-                <div class="mt-2 text-xs text-gray-500 text-center">Hà Nội</div>
-            </a>
+                    {{-- South Region (Blue) - Lower portion --}}
+                    <path
+                        @click="openRegion('south')"
+                        class="cursor-pointer hover:opacity-50 transition-opacity duration-200"
+                        fill="transparent"
+                        d="M 0,760 L 360,760 L 400,760 L 400,1080 L 0,1080 Z"
+                        stroke="rgba(59, 130, 246, 0.3)"
+                        stroke-width="2">
+                        <title>Miền Nam - Click để xem khách hàng</title>
+                    </path>
+                </svg>
 
-            {{-- Việt Vương Lab --}}
-            <a href="https://vietvuongdent.com" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:-translate-y-1">
-                <img src="https://vietvuongdent.com/public/frontend/images/logo.png"
-                    alt="Việt Vương Lab"
-                    class="w-full h-20 object-contain mb-3">
-                <div class="mt-2 text-xs text-gray-500 text-center">Hà Nội</div>
-            </a>
+                {{-- Region Labels with Icons --}}
+                <div class="absolute top-[15%] left-1/2 -translate-x-1/2 text-center pointer-events-none">
+                    <div class="bg-red-500/80 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                        <span class="inline-block mr-1">🏢</span> Miền Bắc (<span x-text="regions.north.customers.length">0</span>)
+                    </div>
+                </div>
+
+                <div class="absolute top-[52%] left-1/2 -translate-x-1/2 text-center pointer-events-none">
+                    <div class="bg-yellow-500/80 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                        <span class="inline-block mr-1">🏢</span> Miền Trung (<span x-text="regions.central.customers.length">0</span>)
+                    </div>
+                </div>
+
+                <div class="absolute bottom-[15%] left-1/2 -translate-x-1/2 text-center pointer-events-none">
+                    <div class="bg-blue-500/80 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                        <span class="inline-block mr-1">🏢</span> Miền Nam (<span x-text="regions.south.customers.length">0</span>)
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500 mt-4 italic">
+                💡 Click vào từng miền để xem danh sách khách hàng
+            </p>
+        </div>
+
+        {{-- Customer Modal --}}
+        <div x-show="showModal"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            @click.self="showModal = false"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4"
+            style="display: none;">
+
+            <div x-show="showModal"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 transform scale-90"
+                x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100 transform scale-100"
+                x-transition:leave-end="opacity-0 transform scale-90"
+                class="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[80vh] overflow-hidden">
+
+                {{-- Close Button --}}
+                <button @click="showModal = false"
+                    class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg">
+                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+
+                {{-- Modal Header --}}
+                <div class="p-8 border-b border-gray-200" x-show="selectedRegion">
+                    <div :class="'inline-block px-4 py-2 bg-gradient-to-r ' + regions[selectedRegion]?.color + ' text-white rounded-full text-sm font-bold mb-4'">
+                        <span x-text="regions[selectedRegion]?.name"></span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900">Khách hàng tại <span x-text="regions[selectedRegion]?.name"></span></h3>
+                </div>
+
+                {{-- Customer Grid --}}
+                <div class="p-8 overflow-y-auto max-h-[calc(80vh-180px)]">
+                    <template x-if="selectedRegion && regions[selectedRegion]?.customers.length > 0">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <template x-for="customer in regions[selectedRegion]?.customers" :key="customer.name">
+                                <a :href="customer.url"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-primary-500 hover:-translate-y-1 group">
+                                    <img :src="customer.logo"
+                                        :alt="customer.name"
+                                        class="w-full h-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300">
+                                    <h4 class="font-bold text-gray-900 text-center mb-1" x-text="customer.name"></h4>
+                                    <div class="text-xs text-gray-500 line-clamp-2 text-center" x-text="customer.location"></div>
+                                </a>
+                            </template>
+                        </div>
+                    </template>
+
+                    <template x-if="selectedRegion && (!regions[selectedRegion]?.customers || regions[selectedRegion]?.customers.length === 0)">
+                        <div class="text-center py-12">
+                            <div class="text-6xl mb-4">🏢</div>
+                            <p class="text-gray-500 text-lg">Chưa có khách hàng tại khu vực này</p>
+                        </div>
+                    </template>
+                </div>
+            </div>
         </div>
 
         <div class="text-center mt-8">
-            <a href="{{ home_url('/khach-hang') }}" class="text-accent-400 italic underline">và nhiều khách hàng khác...</a>
+            <a href="{{ home_url('/khach-hang') }}" class="text-md text-accent-400 italic hover:underline transition-all duration-300">Cùng nhiều khách hàng khác > </a>
         </div>
     </div>
 </section>
