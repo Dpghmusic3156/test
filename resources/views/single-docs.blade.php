@@ -49,6 +49,11 @@
 
                     {{-- Categories List --}}
                     <div class="p-4 max-h-[calc(100vh-200px)] overflow-y-auto">
+                        @php
+                        $current_post_id = get_the_ID();
+                        $current_terms = wp_get_post_terms($current_post_id, 'doc_category', ['fields' => 'ids']);
+                        @endphp
+
                         @if(!empty($categories) && !is_wp_error($categories))
                         <ul class="space-y-2">
                             @foreach($categories as $i => $category)
@@ -56,6 +61,7 @@
                             $posts = get_posts([
                             'post_type' => 'docs',
                             'posts_per_page' => 100,
+                            'post_parent' => 0, // Only parent posts
                             'tax_query' => [
                             [
                             'taxonomy' => 'doc_category',
@@ -64,8 +70,6 @@
                             ],
                             ],
                             ]);
-                            $current_post_id = get_the_ID();
-                            $current_terms = wp_get_post_terms($current_post_id, 'doc_category', ['fields' => 'ids']);
                             $is_current_cat = in_array($category->term_id, $current_terms);
                             @endphp
 
@@ -112,8 +116,17 @@
                                     @foreach($posts as $post)
                                     @php
                                     $is_current = (get_the_ID() == $post->ID);
+                                    // Get child posts
+                                    $child_posts = get_posts([
+                                    'post_type' => 'docs',
+                                    'post_parent' => $post->ID,
+                                    'posts_per_page' => -1,
+                                    'orderby' => 'title',
+                                    'order' => 'ASC',
+                                    ]);
+                                    $has_children = count($child_posts) > 0;
                                     @endphp
-                                    <li>
+                                    <li x-data="{ childOpen: {{ $is_current ? 'true' : 'false' }} }">
                                         <a
                                             href="{{ get_permalink($post) }}"
                                             class="group/item flex items-start gap-2 px-3 py-2 rounded-lg text-sm transition-all duration-200
@@ -129,11 +142,39 @@
                                             {{-- Document Title --}}
                                             <span class="flex-1 line-clamp-2">{{ get_the_title($post) }}</span>
 
-                                            {{-- Active Indicator --}}
-                                            @if($is_current)
+                                            {{-- Child indicator or Active Indicator --}}
+                                            @if($has_children)
+                                            <button @click.prevent="childOpen = !childOpen" class="flex-shrink-0">
+                                                <svg :class="{'rotate-90': childOpen}" class="w-3 h-3 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                            @elseif($is_current)
                                             <div class="w-1.5 h-1.5 bg-primary-600 rounded-full flex-shrink-0 mt-2"></div>
                                             @endif
                                         </a>
+
+                                        {{-- Child Posts --}}
+                                        @if($has_children)
+                                        <ul x-show="childOpen" x-transition class="ml-6 mt-1 space-y-0.5 border-l-2 border-gray-100 pl-3">
+                                            @foreach($child_posts as $child_post)
+                                            @php
+                                            $is_current_child = (get_the_ID() == $child_post->ID);
+                                            @endphp
+                                            <li>
+                                                <a href="{{ get_permalink($child_post) }}" class="group/child flex items-start gap-2 px-2 py-1.5 rounded text-xs transition-all {{ $is_current_child ? 'bg-primary-50 text-primary-600 font-semibold' : 'text-gray-500 hover:text-primary-600 hover:bg-gray-50' }}">
+                                                    <svg class="w-3 h-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                    <span class="flex-1 line-clamp-2">{{ get_the_title($child_post) }}</span>
+                                                    @if($is_current_child)
+                                                    <div class="w-1 h-1 bg-primary-600 rounded-full flex-shrink-0 mt-1"></div>
+                                                    @endif
+                                                </a>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                        @endif
                                     </li>
                                     @endforeach
                                 </ul>
@@ -183,6 +224,55 @@
             <div class="prose max-w-none">
                 {!! apply_filters('the_content', get_the_content()) !!}
             </div>
+
+            @php
+            // Get child posts if this is a parent post
+            $child_posts = get_posts([
+            'post_type' => 'docs',
+            'post_parent' => get_the_ID(),
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order' => 'ASC',
+            ]);
+            @endphp
+
+            {{-- Child Posts Section --}}
+            @if($child_posts && count($child_posts) > 0)
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    Tài liệu liên quan
+                </h3>
+                <div class="grid gap-4">
+                    @foreach($child_posts as $child_post)
+                    <a href="{{ get_permalink($child_post) }}" class="group bg-white border border-gray-200 rounded-xl p-5 hover:border-primary-300 hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary-200 transition-colors">
+                                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-800 group-hover:text-primary-600 transition-colors mb-1">
+                                    {{ get_the_title($child_post) }}
+                                </h4>
+                                @if(get_the_excerpt($child_post))
+                                <p class="text-sm text-gray-600 line-clamp-2">
+                                    {{ wp_strip_all_tags(get_the_excerpt($child_post)) }}
+                                </p>
+                                @endif
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    @endforeach
+                </div>
+            </div>
+            @endif
         </div>
 
     </div>

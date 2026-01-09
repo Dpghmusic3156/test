@@ -80,11 +80,12 @@ add_action('init', function () {
         'show_in_nav_menus' => true,
         'label' => 'Tài liệu',
         'public' => true,
+        'hierarchical' => true, // Enable parent-child posts
         'has_archive' => true,
         'archive' => [
             'nopaging' => true,
         ],
-        'supports' => ['title', 'editor', 'excerpt'],
+        'supports' => ['title', 'editor', 'excerpt', 'page-attributes'], // Add page-attributes for parent dropdown
         'taxonomies' => ['doc_category'],
     ], [
         'singular' => 'Tài liệu',

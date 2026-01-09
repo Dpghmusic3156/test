@@ -154,3 +154,21 @@ add_action('pre_get_posts', function ($query) {
         $query->set('nopaging', true);
     }
 });
+
+/**
+ * Order docs posts hierarchically in admin - parent posts followed by their children
+ */
+add_filter('pre_get_posts', function ($query) {
+    // Only apply to admin post list for docs post type
+    if (!is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    global $pagenow, $typenow;
+
+    if ($pagenow === 'edit.php' && $typenow === 'docs') {
+        // Order by post_parent first (parents = 0), then by title alphabetically
+        $query->set('orderby', ['post_parent' => 'ASC', 'title' => 'ASC']);
+        $query->set('order', 'ASC');
+    }
+});

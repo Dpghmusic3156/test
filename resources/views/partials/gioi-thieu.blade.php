@@ -1,4 +1,3 @@
-
 <section class="relative hero-section bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative py-24 overflow-hidden">
 
     {{-- Decorative Background Elements --}}
@@ -254,7 +253,7 @@
                         </ul>
                     </div>
                     <div>
-                        <img src="https://www.phanmemlabo.com/img/circle.png"
+                        <img src="{{ home_url() }}/img/circle.png"
                             alt="Quản lý sản xuất"
                             class="w-full max-w-sm mx-auto drop-shadow-xl">
                     </div>
@@ -267,7 +266,7 @@
             <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
                     <div class="order-2 lg:order-1">
-                        <img src="https://www.phanmemlabo.com/wp-content/uploads/2019/07/iMac_left-min-6.png"
+                        <img src="{{ home_url() }}/wp-content/uploads/2019/07/iMac_left-min-6.png"
                             alt="Nâng cao hiệu quả hoạt động"
                             class="zoom-image w-full drop-shadow-2xl">
                     </div>
@@ -316,7 +315,7 @@
                         </ul>
                     </div>
                     <div>
-                        <img src="https://www.phanmemlabo.com/wp-content/uploads/2019/07/bannerpic1-min.png"
+                        <img src="{{ home_url() }}/wp-content/uploads/2019/07/bannerpic1-min.png"
                             alt="Chăm sóc khách hàng"
                             class="zoom-image w-full drop-shadow-xl rounded-xl">
                     </div>
@@ -412,7 +411,7 @@
             <div class="grid md:grid-cols-3 gap-6 mb-12">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div class="mb-4">
-                        <img src="https://www.phanmemlabo.com/img/survey.jpg"
+                        <img src="{{ home_url() }}/img/survey.jpg"
                             alt="Khảo sát tư vấn"
                             class="w-20 h-20 rounded-full mx-auto object-cover">
                     </div>
@@ -422,7 +421,7 @@
 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div class="mb-4">
-                        <img src="https://www.phanmemlabo.com/img/customize.png"
+                        <img src="{{ home_url() }}/img/customize.png"
                             alt="Tuỳ biến phần mềm"
                             class="w-20 h-20 rounded-full mx-auto object-cover bg-white p-2">
                     </div>
@@ -432,7 +431,7 @@
 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div class="mb-4">
-                        <img src="https://www.phanmemlabo.com/img/support247.jpg"
+                        <img src="{{ home_url() }}/img/support247.jpg"
                             alt="Hỗ trợ 24/7"
                             class="w-20 h-20 rounded-full mx-auto object-cover">
                     </div>

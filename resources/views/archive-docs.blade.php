@@ -64,9 +64,11 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
       @foreach($categories as $index => $category)
       @php
+      // Get parent posts in this category
       $posts = get_posts([
       'post_type' => 'docs',
       'posts_per_page' => 3,
+      'post_parent' => 0, // Only parent posts
       'tax_query' => [
       [
       'taxonomy' => 'doc_category',
@@ -128,7 +130,7 @@
             <svg class="w-12 h-12 mx-auto mb-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
-            Chưa có tài liệu
+            Chưa có bài post nào
           </div>
           @endif
 

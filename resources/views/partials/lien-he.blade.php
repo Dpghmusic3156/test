@@ -199,7 +199,18 @@
                     <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
                         <div class="flex items-start gap-4">
                             <div class="flex-shrink-0 w-12 h-12 bg-skype-bg rounded-lg flex items-center justify-center">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-100.26 -100.26 656.25 656.25" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.00455731"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"><rect x="-100.26" y="-100.26" width="656.25" height="656.25" rx="328.125" fill="#15ace5" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.911462"></g><g id="SVGRepo_iconCarrier"> <g> <rect x="0" y="0" style="fill:#15ACE5;" width="455.731" height="455.731"></rect> <path style="fill:#FFFFFF;" d="M379.742,257.242c1.77-9.097,2.708-18.492,2.708-28.107c0-80.82-65.518-146.338-146.338-146.338 c-9.615,0-19.01,0.938-28.107,2.708c-12.507-7.319-27.052-11.532-42.589-11.532c-46.65,0-84.467,37.817-84.467,84.467 c0,15.537,4.214,30.082,11.532,42.588c-1.77,9.097-2.708,18.492-2.708,28.107c0,80.82,65.518,146.338,146.338,146.338 c9.615,0,19.01-0.938,28.107-2.708c12.507,7.319,27.052,11.532,42.588,11.532c46.65,0,84.467-37.817,84.467-84.467 C391.275,284.293,387.061,269.749,379.742,257.242z M238.892,329.634c-52,0-78-19.5-86-44s9.5-31.5,15-32s17.167,0.833,20.5,11 c3.465,10.567,15,31.5,40,34s41.5-9,46.5-21s-4-28.5-42.5-34s-78.5-22.5-78.5-61s44-54,86-54s63.293,23.721,68,33 c5.833,11.5,3.833,30.661-10,34c-14.5,3.5-22-4.5-32.5-24c-10.858-20.165-49.5-15-62.5-3.5s-9.5,28,44.5,38.5s74,30,74,60.5 S290.892,329.634,238.892,329.634z"></path> </g> </g></svg>
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-100.26 -100.26 656.25 656.25" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.00455731">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
+                                        <rect x="-100.26" y="-100.26" width="656.25" height="656.25" rx="328.125" fill="#15ace5" strokewidth="0"></rect>
+                                    </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.911462"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <rect x="0" y="0" style="fill:#15ACE5;" width="455.731" height="455.731"></rect>
+                                            <path style="fill:#FFFFFF;" d="M379.742,257.242c1.77-9.097,2.708-18.492,2.708-28.107c0-80.82-65.518-146.338-146.338-146.338 c-9.615,0-19.01,0.938-28.107,2.708c-12.507-7.319-27.052-11.532-42.589-11.532c-46.65,0-84.467,37.817-84.467,84.467 c0,15.537,4.214,30.082,11.532,42.588c-1.77,9.097-2.708,18.492-2.708,28.107c0,80.82,65.518,146.338,146.338,146.338 c9.615,0,19.01-0.938,28.107-2.708c12.507,7.319,27.052,11.532,42.588,11.532c46.65,0,84.467-37.817,84.467-84.467 C391.275,284.293,387.061,269.749,379.742,257.242z M238.892,329.634c-52,0-78-19.5-86-44s9.5-31.5,15-32s17.167,0.833,20.5,11 c3.465,10.567,15,31.5,40,34s41.5-9,46.5-21s-4-28.5-42.5-34s-78.5-22.5-78.5-61s44-54,86-54s63.293,23.721,68,33 c5.833,11.5,3.833,30.661-10,34c-14.5,3.5-22-4.5-32.5-24c-10.858-20.165-49.5-15-62.5-3.5s-9.5,28,44.5,38.5s74,30,74,60.5 S290.892,329.634,238.892,329.634z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-lg font-bold text-gray-800 mb-2">Skype</h3>
@@ -227,12 +238,12 @@
                                 </a>
                             </div>
                         </div>
-                    @endif
-                </div>
+                        @endif
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 {{-- CTA Section --}}
@@ -251,7 +262,7 @@
             <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Dùng thử miễn phí ngay. Hỗ trợ đầy đủ ngay từ khi bắt đầu.
             </p>
-            <a href="https://www.phanmemlabo.com/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
+            <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
