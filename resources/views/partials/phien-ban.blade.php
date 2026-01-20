@@ -226,7 +226,7 @@
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                Thanh toán một lần, sử dụng vĩnh viễn
+                                Thanh toán mỗi tháng để gia hạn <span x-text="count"></span> máy
                             </div>
                         </div>
                         <a href="{{ home_url('/') }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
