@@ -51,16 +51,16 @@
     ]);
     $child_count = count($children);
     @endphp
-    <div class="bg-white border border-gray-100 rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col group">
+    <div href="{{ get_permalink($post) }}" class="bg-white border border-gray-100 rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col group">
       <div class="flex items-center mb-4">
         <div class="bg-primary-100 text-primary-500 rounded-full p-2 mr-3 flex-shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
             <path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-gray-800 group-hover:text-primary-600 transition">
+        <a href="{{ get_permalink($post) }}" class="text-lg font-semibold text-gray-800 group-hover:text-primary-600 transition">
           {{ get_the_title($post) }}
-        </h3>
+        </a>
       </div>
 
       @if(get_the_excerpt($post))
@@ -88,12 +88,7 @@
             @endif
           </div>
         </div>
-        <a href="{{ get_permalink($post) }}" class="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-semibold text-sm">
-          Xem chi tiết
-          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+
       </div>
     </div>
     @endforeach

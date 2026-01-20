@@ -189,6 +189,59 @@
     </div>
 </section>
 
+{{-- Cost Estimator Section --}}
+<section class="py-16 bg-gray-50 border-t border-gray-200" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+            <div class="p-8 md:p-12" x-data="{ count: 5, rate: 4000000 }">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Tính toán chi phí theo nhu cầu</h2>
+                    <p class="text-gray-600">Kéo thanh trượt để chọn số lượng máy tính bạn muốn cài đặt</p>
+                </div>
+
+                <div class="space-y-8">
+                    {{-- Slider --}}
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700 font-medium">Số lượng máy:</span>
+                            <span class="text-3xl font-bold text-primary-600" x-text="count"></span>
+                        </div>
+                        <input type="range" min="1" max="50" x-model="count"
+                            class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary-600 hover:accent-primary-700 transition-all">
+                        <div class="flex justify-between text-xs text-gray-400 mt-2">
+                            <span>1 máy</span>
+                            <span>50 máy</span>
+                        </div>
+                    </div>
+
+                    {{-- Result --}}
+                    <div class="bg-primary-50 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-primary-100">
+                        <div class="text-center md:text-left">
+                            <div class="text-gray-500 text-sm mb-1">Tổng chi phí ước tính</div>
+                            <div class="text-4xl font-extrabold text-gray-900">
+                                <span x-text="(count * rate).toLocaleString('vi-VN')"></span>
+                                <span class="text-2xl text-gray-500 font-medium">đ</span>
+                            </div>
+                            <div class="text-xs text-green-600 mt-2 font-medium flex items-center justify-center md:justify-start gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Thanh toán một lần, sử dụng vĩnh viễn
+                            </div>
+                        </div>
+                        <a href="{{ home_url('/') }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
+                            Đăng ký gói này
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- Comparison Table Section --}}
 <section class="pb-10 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4">
@@ -283,7 +336,7 @@
                     </tr>
                 </tbody>
 
-                    {{-- Điều phối --}}
+                {{-- Điều phối --}}
 
                 <thead class="bg-gray-100">
                     <tr>
@@ -394,7 +447,7 @@
                     </tr>
                 </tbody>
 
-                    {{-- Sản xuất --}}
+                {{-- Sản xuất --}}
                 <thead class="bg-gray-100">
                     <tr>
                         <td colspan="3" class="text-center py-3 px-6 font-bold text-gray-800">Sản xuất</td>
@@ -444,7 +497,7 @@
                     </tr>
                 </tbody>
 
-                    {{-- Tài chính --}}
+                {{-- Tài chính --}}
                 <thead class="bg-gray-100">
                     <tr>
                         <td colspan="3" class="text-center py-3 px-6 font-bold text-gray-800">Tài chính</td>

@@ -30,7 +30,7 @@
             @endphp
 
             {{-- Sticky Sidebar Container --}}
-            <div class="md:sticky md:top-8">
+            <div class="md:sticky md:top-16">
                 <div class="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
                     {{-- Sidebar Header with Gradient --}}
                     <div class="bg-gradient-to-r from-primary-600 to-cyan-600 px-6 py-4">
