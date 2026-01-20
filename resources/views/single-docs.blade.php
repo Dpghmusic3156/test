@@ -20,7 +20,7 @@
 </section>
 <div class="mx-auto max-w-screen-xl px-4 py-10">
     <div class="flex flex-col md:flex-row gap-8">
-        {{-- Modern Sidebar bên trái --}}
+        {{-- Sidebar bên trái --}}
         <aside class="w-full order-1 md:order-1 md:w-1/4 mb-8 md:mb-0">
             @php
             $categories = get_terms([
