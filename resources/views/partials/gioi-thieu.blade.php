@@ -844,6 +844,9 @@
             // Disable custom scroll snapping on smaller screens (tablets/mobile)
             if (window.innerWidth < 1024) return;
 
+            // Disable custom scroll if modal is open (body has overflow-hidden)
+            if (document.body.classList.contains('overflow-hidden')) return;
+
             if (isScrolling) {
                 event.preventDefault();
                 return;

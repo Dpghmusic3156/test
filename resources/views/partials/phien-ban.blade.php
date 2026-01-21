@@ -1,8 +1,3 @@
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-</style>
 {{-- Hero Section --}}
 <section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative py-20 overflow-hidden">
     {{-- Background Decoration --}}
@@ -702,3 +697,4 @@
             </div>
         </div>
     </section>
+</div>

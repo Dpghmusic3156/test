@@ -116,4 +116,33 @@ domReady(async () => {
 /**
  * @see {@link https://webpack.js.org/api/hot-module-replacement/}
  */
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+
+
+// Enforce scroll to top on reload
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
+// Initialize ScrollSmoother if wrapper exists
+const smoothWrapper = document.getElementById('smooth-wrapper');
+if (smoothWrapper) {
+  ScrollSmoother.create({
+    wrapper: '#smooth-wrapper',
+    content: '#smooth-content',
+    smooth: 1,
+    effects: true
+  });
+}
+
 if (import.meta.webpackHot) import.meta.webpackHot.accept(console.error);

@@ -1,15 +1,20 @@
 @include('sections.header')
 
-<main id="main" class="main">
-  @yield('content')
-</main>
+<div id="smooth-wrapper">
+  <div id="smooth-content">
 
-@hasSection('sidebar')
-<aside class="sidebar">
-  @yield('sidebar')
-</aside>
-@endif
+    <main id="main" class="main">
+      @yield('content')
+    </main>
 
-@unless(is_front_page() || is_page('gioi-thieu'))
-@include('sections.footer')
-@endunless
+    @hasSection('sidebar')
+    <aside class="sidebar">
+      @yield('sidebar')
+    </aside>
+    @endif
+
+    @unless(is_page('gioi-thieu') || is_page('lien-he'))
+    @include('sections.footer')
+    @endunless
+  </div>
+</div>

@@ -1,7 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-
+@include('sections.header')
 <style>
     html {
         scroll-behavior: auto;
@@ -465,5 +462,3 @@
         });
     });
 </script>
-
-@endsection
