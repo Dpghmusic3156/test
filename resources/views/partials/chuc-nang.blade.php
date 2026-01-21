@@ -1,15 +1,6 @@
 <style>
     html {
         scroll-behavior: smooth;
-        scrollbar-width: none;
-        /* Firefox */
-        -ms-overflow-style: none;
-        /* IE and Edge */
-    }
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    html::-webkit-scrollbar {
-        display: none;
     }
 </style>
 {{-- Hero Section --}}

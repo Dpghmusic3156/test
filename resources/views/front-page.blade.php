@@ -2,15 +2,6 @@
 <style>
     html {
         scroll-behavior: auto;
-        scrollbar-width: none;
-        /* Firefox */
-        -ms-overflow-style: none;
-        /* IE and Edge */
-    }
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    html::-webkit-scrollbar {
-        display: none;
     }
 </style>
 <div class="bg-gradient-to-b from-gray-50 to-white text-gray-800 relative w-full">
@@ -351,12 +342,23 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         const blocks = document.querySelectorAll('.container-block');
+        if (blocks.length === 0) return;
+
         let isScrolling = false;
         let currentIndex = 0;
+
+        // Track accumulated delta to require "intent"
+        let accumulatedDelta = 0;
+        const scrollThreshold = 100; // Threshold to trigger scroll (higher = harder to trigger)
+        let resetDeltaTimeout;
 
         function scrollToBlock(index) {
             if (index < 0 || index >= blocks.length) return;
             isScrolling = true;
+
+            // Reset accumulated delta when starting a scroll
+            accumulatedDelta = 0;
+
             gsap.to(window, {
                 scrollTo: {
                     y: blocks[index],
@@ -370,41 +372,7 @@
             });
         }
 
-        function handleScroll(event) {
-            // Disable custom scroll snapping on smaller screens (tablets/mobile)
-            // to allow natural scrolling for content that exceeds viewport height.
-            if (window.innerWidth < 1024) return;
-
-            if (isScrolling) {
-                event.preventDefault();
-                return;
-            }
-
-            // Detect scroll direction
-            if (event.deltaY > 0) {
-                // Scrolling down
-                if (currentIndex < blocks.length - 1) {
-                    event.preventDefault();
-                    currentIndex++;
-                    scrollToBlock(currentIndex);
-                }
-            } else if (event.deltaY < 0) {
-                // Scrolling up
-                if (currentIndex > 0) {
-                    event.preventDefault();
-                    currentIndex--;
-                    scrollToBlock(currentIndex);
-                }
-            }
-        }
-
-        // Use passive: false to allow preventDefault
-        window.addEventListener('wheel', handleScroll, {
-            passive: false
-        });
-
-        // Optional: Update currentIndex based on manual scroll/resize
-        // Using ScrollTrigger to track which block is in view
+        // Initialize current index based on view
         blocks.forEach((block, i) => {
             ScrollTrigger.create({
                 trigger: block,
@@ -413,6 +381,52 @@
                 onEnter: () => currentIndex = i,
                 onEnterBack: () => currentIndex = i
             });
+        });
+
+        window.addEventListener('wheel', (event) => {
+            // Disable custom scroll snapping on smaller screens
+            if (window.innerWidth < 1024) return;
+
+            // If currently animating, ignore
+            if (isScrolling) {
+                event.preventDefault();
+                return;
+            }
+
+            // Add current delta to accumulator
+            accumulatedDelta += event.deltaY;
+
+            // Clear accumulator if no scroll happens for a short time (debounce)
+            clearTimeout(resetDeltaTimeout);
+            resetDeltaTimeout = setTimeout(() => {
+                accumulatedDelta = 0;
+            }, 150);
+
+            // Check if threshold is met
+            if (Math.abs(accumulatedDelta) < scrollThreshold) {
+                // Prevent default scrolling to avoid shaky native scroll while building momentum
+                event.preventDefault();
+                return;
+            }
+
+            // Logic to trigger scroll
+            if (accumulatedDelta > 0) {
+                // Scrolling Down
+                if (currentIndex < blocks.length - 1) {
+                    event.preventDefault();
+                    currentIndex++;
+                    scrollToBlock(currentIndex);
+                }
+            } else {
+                // Scrolling Up
+                if (currentIndex > 0) {
+                    event.preventDefault();
+                    currentIndex--;
+                    scrollToBlock(currentIndex);
+                }
+            }
+        }, {
+            passive: false
         });
     });
 </script>
@@ -433,7 +447,7 @@
         const backdrop = document.getElementById('modalBackdrop');
 
         // Open modal
-        if (openBtn) {
+        if (openBtn && modal) {
             openBtn.addEventListener('click', function() {
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -442,8 +456,10 @@
 
         // Close modal
         function closeModal() {
-            modal.style.display = 'none';
-            document.body.style.overflow = ''; // Restore scrolling
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
         }
 
         if (closeBtn) {
@@ -456,7 +472,7 @@
 
         // Close on ESC key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modal.style.display === 'block') {
+            if (e.key === 'Escape' && modal && modal.style.display === 'block') {
                 closeModal();
             }
         });
