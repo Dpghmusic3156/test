@@ -1,3 +1,17 @@
+<style>
+    html {
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    html::-webkit-scrollbar {
+        display: none;
+    }
+</style>
 {{-- Hero Section --}}
 <section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 py-20 overflow-hidden">
     {{-- Background Decoration --}}
@@ -9,22 +23,24 @@
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
             {{-- Badge --}}
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6" data-aos="fade-up">
                 <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
                 <span class="text-sm font-medium">Chức năng toàn diện</span>
             </div>
 
             {{-- Heading --}}
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
                 Chức năng của <span class="bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">vDentalLab</span>
             </h1>
 
-            <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 Giải pháp toàn diện với đầy đủ các phân hệ quản lý, từ điều phối sản xuất, tài chính đến chăm sóc khách hàng
             </p>
 
             {{-- CTA --}}
-            <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1">
+            <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1"
+                data-aos="fade-up" data-aos-delay="300">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -234,6 +250,14 @@
 </section>
 
 {{-- AOS Initialization --}}
+{{-- AOS Initialization --}}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    // AOS will be initialized from app.js bundle
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
 </script>

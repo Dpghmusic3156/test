@@ -3,18 +3,23 @@
 @section('content')
 
 <style>
-    body {
-        overflow: hidden;
+    html {
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
     }
 
-    .snap-always {
-        scroll-snap-stop: always;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    html::-webkit-scrollbar {
+        display: none;
     }
 </style>
-<div class="bg-gradient-to-b from-gray-50 to-white text-gray-800 relative h-screen overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth w-full">
+<div class="bg-gradient-to-b from-gray-50 to-white text-gray-800 relative w-full">
     {{-- Hero Section --}}
-    <section class="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto md:snap-start md:snap-always" data-aos="fade-up">
-        <div class="lg:w-1/2 mb-16 lg:mb-0 order-1 lg:order-1 flex flex-col justify-center">
+    <section class="container-block min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="lg:w-1/2 mb-8 lg:mb-0 order-1 lg:order-1 flex flex-col justify-center">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6 w-fit" data-aos="fade-right" data-aos-delay="100">
                 <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
                 Giải pháp #1 tại Việt Nam
@@ -30,7 +35,7 @@
                 Hơn <a href="{{ home_url() }}/khach-hang" class="font-bold text-accent-500">200+ Lab</a> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
             </p>
 
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12" data-aos="fade-right" data-aos-delay="400">
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8 lg:mb-12" data-aos="fade-right" data-aos-delay="400">
                 <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi/"
                     class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
                     <span>Dùng thử miễn phí</span>
@@ -52,9 +57,9 @@
         </div>
 
         {{-- Hero Image --}}
-        <div class="lg:w-1/2 relative order-2 lg:order-2 mb-12 lg:mb-0 flex justify-center items-center">
+        <div class="lg:w-1/2 relative order-2 lg:order-2 mb-8 lg:mb-0 flex justify-center items-center">
             <div class="relative rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
-                <img class="w-full h-auto object-cover" src="{{ home_url('/') }}/wp-content/uploads/2019/07/iMac_left-min-6.png" alt="vDentalLab Interface">
+                <img class="w-full h-auto max-h-[30vh] lg:max-h-none object-cover" src="{{ home_url('/') }}/wp-content/uploads/2019/07/iMac_left-min-6.png" alt="vDentalLab Interface">
 
             </div>
 
@@ -88,13 +93,13 @@
     </section>
 
     {{-- Testimonials Section - Teal/Cyan Theme --}}
-    <section class="py-24 relative overflow-hidden min-h-screen flex flex-col justify-center md:snap-start md:snap-always">
+    <section class="container-block py-12 md:py-24 relative overflow-hidden h-screen flex flex-col justify-center">
         {{-- Background decorative elements --}}
 
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             {{-- Header --}}
-            <div class="text-center mb-16">
+            <div class="text-center mb-8 md:mb-16">
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                     Phản hồi từ khách hàng
                 </h2>
@@ -104,9 +109,10 @@
             </div>
 
             {{-- Testimonials Grid --}}
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
                 {{-- Testimonial 1 --}}
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                {{-- Testimonial 1 --}}
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up">
                     {{-- Avatar --}}
                     <div class="mb-6">
                         <img class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Ms. Linh">
@@ -125,7 +131,8 @@
                 </div>
 
                 {{-- Testimonial 2 --}}
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                {{-- Testimonial 2 --}}
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-6">
                         <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
                     </div>
@@ -141,7 +148,8 @@
                 </div>
 
                 {{-- Testimonial 3 --}}
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                {{-- Testimonial 3 --}}
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="mb-6">
                         <img class="w-20 h-20 rounded-full object-cover ring-4 ring-cyan-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-westcost.png" alt="Dr. Andrew Tsang">
                     </div>
@@ -160,20 +168,21 @@
     </section>
 
     {{-- CTA Section --}}
-    <section class="py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden min-h-screen flex flex-col justify-center md:snap-start md:snap-always">
+    <section class="container-block py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden h-screen flex flex-col justify-center">
         {{-- Background decoration --}}
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6" data-aos="fade-up">
                 Sẵn sàng để bắt đầu?
             </h2>
-            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                 Tham gia cùng 200+ Lab hàng đầu đang sử dụng vDentalLab mỗi ngày
             </p>
             <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md">
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md"
+                data-aos="fade-up" data-aos-delay="200">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -183,7 +192,7 @@
     </section>
 
     {{-- Footer manually included inside snap container --}}
-    <div class="md:snap-start md:snap-always">
+    <div class="container-block">
         @include('sections.footer')
     </div>
 </div>
@@ -336,6 +345,81 @@
 {{-- AOS Animation Init --}}
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.2/dist/ScrollToPlugin.min.js"></script>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const blocks = document.querySelectorAll('.container-block');
+        let isScrolling = false;
+        let currentIndex = 0;
+
+        function scrollToBlock(index) {
+            if (index < 0 || index >= blocks.length) return;
+            isScrolling = true;
+            gsap.to(window, {
+                scrollTo: {
+                    y: blocks[index],
+                    autoKill: false
+                },
+                duration: 1,
+                ease: "power2.inOut",
+                onComplete: () => {
+                    isScrolling = false;
+                }
+            });
+        }
+
+        function handleScroll(event) {
+            // Disable custom scroll snapping on smaller screens (tablets/mobile)
+            // to allow natural scrolling for content that exceeds viewport height.
+            if (window.innerWidth < 1024) return;
+
+            if (isScrolling) {
+                event.preventDefault();
+                return;
+            }
+
+            // Detect scroll direction
+            if (event.deltaY > 0) {
+                // Scrolling down
+                if (currentIndex < blocks.length - 1) {
+                    event.preventDefault();
+                    currentIndex++;
+                    scrollToBlock(currentIndex);
+                }
+            } else if (event.deltaY < 0) {
+                // Scrolling up
+                if (currentIndex > 0) {
+                    event.preventDefault();
+                    currentIndex--;
+                    scrollToBlock(currentIndex);
+                }
+            }
+        }
+
+        // Use passive: false to allow preventDefault
+        window.addEventListener('wheel', handleScroll, {
+            passive: false
+        });
+
+        // Optional: Update currentIndex based on manual scroll/resize
+        // Using ScrollTrigger to track which block is in view
+        blocks.forEach((block, i) => {
+            ScrollTrigger.create({
+                trigger: block,
+                start: "top center",
+                end: "bottom center",
+                onEnter: () => currentIndex = i,
+                onEnterBack: () => currentIndex = i
+            });
+        });
+    });
+</script>
+
 <script>
     AOS.init({
         duration: 800,
