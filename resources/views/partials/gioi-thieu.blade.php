@@ -126,59 +126,53 @@
     <div x-data="{ showModal: false }"
         @open-video-modal.window="showModal = true"
         @keydown.escape.window="showModal = false">
-        <div
-            x-show="showModal"
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="transition ease-in duration-200"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            @click.self="showModal = false"
-            class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md px-4 py-6"
-            style="display: none; margin: 0 auto !important; left: 0 !important; right: 0 !important;">
-
+        <template x-teleport="body">
             <div
                 x-show="showModal"
                 x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0 transform scale-90"
-                x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
                 x-transition:leave="transition ease-in duration-200"
-                x-transition:leave-start="opacity-100 transform scale-100"
-                x-transition:leave-end="opacity-0 transform scale-90"
-                class="relative bg-white rounded-3xl shadow-2xl w-full max-w-5xl mx-auto overflow-hidden flex flex-col max-h-[90vh]">
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                @click.self="showModal = false"
+                class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md px-4 py-6"
+                style="display: none;">
 
-                {{-- Close Button --}}
-                <button
-                    @click="showModal = false"
-                    class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg">
-                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
+                <div
+                    x-show="showModal"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform scale-90"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 transform scale-100"
+                    x-transition:leave-end="opacity-0 transform scale-90"
+                    class="relative bg-white rounded-3xl shadow-2xl w-full max-w-5xl mx-auto overflow-hidden flex flex-col max-h-[90vh]">
 
-                {{-- Modal Header 
-            <div class="p-6 border-b border-gray-200 flex-shrink-0">
-                <div class="text-xs text-primary-600 font-bold mb-1">Phần mềm vDentalLab</div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Giới thiệu phần mềm quản lý Labo Nha Khoa</h3>
-                <p class="text-gray-600 text-sm">Tìm hiểu về các tính năng và lợi ích khi sử dụng vDentalLab trong quản lý Labo</p>
-            </div>--}}
+                    {{-- Close Button --}}
+                    <button
+                        @click="showModal = false"
+                        class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg">
+                        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
 
-                {{-- Video Container --}}
-                <div class="aspect-video bg-black flex-shrink-0">
-                    <iframe
-                        :src="showModal ? 'https://www.youtube.com/embed/ytoFOidMrhE?autoplay=1&enablejsapi=1' : ''"
-                        class="w-full h-full"
-                        title="vDentalLab Video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+                    {{-- Video Container --}}
+                    <div class="aspect-video bg-black flex-shrink-0">
+                        <iframe
+                            :src="showModal ? 'https://www.youtube.com/embed/ytoFOidMrhE?autoplay=1&enablejsapi=1' : ''"
+                            class="w-full h-full"
+                            title="vDentalLab Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
                 </div>
-
-
             </div>
-        </div>
+        </template>
     </div>
 
     {{-- What is vDentalLab Section with Circle Diagram --}}
@@ -588,70 +582,73 @@
         </section>
 
         {{-- Customer Modal (Moved outside section to fix fixed positioning) --}}
-        <div x-show="showModal"
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="transition ease-in duration-200"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            @click.self="showModal = false"
-            class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4"
-            style="display: none;">
-
+        {{-- Customer Modal (Moved outside section to fix fixed positioning) --}}
+        <template x-teleport="body">
             <div x-show="showModal"
                 x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0 transform scale-90"
-                x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
                 x-transition:leave="transition ease-in duration-200"
-                x-transition:leave-start="opacity-100 transform scale-100"
-                x-transition:leave-end="opacity-0 transform scale-90"
-                class="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[80vh] overflow-hidden">
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                @click.self="showModal = false"
+                class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4"
+                style="display: none;">
 
-                {{-- Close Button --}}
-                <button @click="showModal = false"
-                    class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg">
-                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
+                <div x-show="showModal"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform scale-90"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 transform scale-100"
+                    x-transition:leave-end="opacity-0 transform scale-90"
+                    class="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[80vh] overflow-hidden">
 
-                {{-- Modal Header --}}
-                <div class="p-4 border-b border-gray-200" x-show="selectedRegion">
-                    <div :class="'inline-block px-4 py-2 bg-gradient-to-r ' + regions[selectedRegion]?.color + ' text-white rounded-full text-sm font-bold'">
-                        <span x-text="regions[selectedRegion]?.name"></span>
+                    {{-- Close Button --}}
+                    <button @click="showModal = false"
+                        class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all shadow-md hover:shadow-lg">
+                        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+
+                    {{-- Modal Header --}}
+                    <div class="p-4 border-b border-gray-200" x-show="selectedRegion">
+                        <div :class="'inline-block px-4 py-2 bg-gradient-to-r ' + regions[selectedRegion]?.color + ' text-white rounded-full text-sm font-bold'">
+                            <span x-text="regions[selectedRegion]?.name"></span>
+                        </div>
+
                     </div>
 
-                </div>
+                    {{-- Customer Grid --}}
+                    <div class="p-8 overflow-y-auto max-h-[calc(80vh-180px)]">
+                        <template x-if="selectedRegion && regions[selectedRegion]?.customers.length > 0">
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <template x-for="customer in regions[selectedRegion]?.customers" :key="customer.name">
+                                    <a :href="customer.url"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-primary-500 hover:-translate-y-1 group">
+                                        <img :src="customer.logo"
+                                            :alt="customer.name"
+                                            class="w-full h-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300">
+                                        <h4 class="font-bold text-gray-900 text-center mb-1" x-text="customer.name"></h4>
+                                        <div class="text-xs text-gray-500 line-clamp-2 text-center" x-text="customer.location"></div>
+                                    </a>
+                                </template>
+                            </div>
+                        </template>
 
-                {{-- Customer Grid --}}
-                <div class="p-8 overflow-y-auto max-h-[calc(80vh-180px)]">
-                    <template x-if="selectedRegion && regions[selectedRegion]?.customers.length > 0">
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <template x-for="customer in regions[selectedRegion]?.customers" :key="customer.name">
-                                <a :href="customer.url"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-primary-500 hover:-translate-y-1 group">
-                                    <img :src="customer.logo"
-                                        :alt="customer.name"
-                                        class="w-full h-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300">
-                                    <h4 class="font-bold text-gray-900 text-center mb-1" x-text="customer.name"></h4>
-                                    <div class="text-xs text-gray-500 line-clamp-2 text-center" x-text="customer.location"></div>
-                                </a>
-                            </template>
-                        </div>
-                    </template>
-
-                    <template x-if="selectedRegion && (!regions[selectedRegion]?.customers || regions[selectedRegion]?.customers.length === 0)">
-                        <div class="text-center py-12">
-                            <div class="text-6xl mb-4">🏢</div>
-                            <p class="text-gray-500 text-lg">Chưa có khách hàng tại khu vực này</p>
-                        </div>
-                    </template>
+                        <template x-if="selectedRegion && (!regions[selectedRegion]?.customers || regions[selectedRegion]?.customers.length === 0)">
+                            <div class="text-center py-12">
+                                <div class="text-6xl mb-4">🏢</div>
+                                <p class="text-gray-500 text-lg">Chưa có khách hàng tại khu vực này</p>
+                            </div>
+                        </template>
+                    </div>
                 </div>
             </div>
-        </div>
+        </template>
     </div>
 
     {{-- Solutions Section with Illustrations --}}
