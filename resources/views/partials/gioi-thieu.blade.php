@@ -464,7 +464,7 @@
             <div class="container mx-auto px-4">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     {{-- Left Column: Text Content --}}
-                    <div class="text-left mb-12 lg:mb-0">
+                    <div class="text-left mb-12 lg:mb-0 lg:pl-10">
                         <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
                             Khách hàng
                         </div>

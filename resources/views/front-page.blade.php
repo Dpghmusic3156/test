@@ -168,7 +168,7 @@
     </section>
 
     {{-- CTA Section --}}
-    <section class="container-block py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden h-screen flex flex-col justify-center">
+    <section class="container-block py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden min-h-[60vh] lg:h-screen flex flex-col justify-center">
         {{-- Background decoration --}}
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
