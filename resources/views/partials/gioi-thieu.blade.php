@@ -32,7 +32,7 @@
                 </div>--}}
 
                     {{-- Main Heading --}}
-                    <div class="space-y-4 animate-fade-in-up">
+                    <div class="space-y-4 animate-fade-in-up mt-20 md:mt-0">
                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-white/90">
                             Phần mềm Quản lý<br class="md:hidden"> Labo Nha khoa
                         </h2>
@@ -272,7 +272,7 @@
     </section>
 
     {{-- Benefit 1: Quản lý sản xuất --}}
-    <section class="container-block pt-28 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
+    <section class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
         <div class="container mx-auto px-4">
             <div class="text-center mb-8">
                 <div class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-semibold text-sm mb-4">
@@ -283,19 +283,19 @@
                 </h2>
             </div>
 
-            <div class="max-w-6xl mx-auto">
-                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="bg-white rounded-3xl p-10 md:px-16 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <div class="flex items-center gap-4 mb-6">
+                            <div class="flex items-center gap-6 mb-8">
                                 <div class="flex-shrink-0 text-gray-900">
-                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-3xl font-bold text-gray-900 m-0">Quản lý sản xuất chặt chẽ</h3>
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 m-0">Quản lý sản xuất chặt chẽ</h3>
                             </div>
-                            <ul class="space-y-3 text-gray-600">
+                            <ul class="space-y-6 text-gray-600 text-lg md:text-xl">
                                 <li class="flex items-start gap-2">
                                     <span class="text-accent-600 mt-1">✓</span>
                                     <span>Tạo ra môi trường làm việc công bằng hơn khi năng suất được tính toán tự động</span>
@@ -318,26 +318,26 @@
     </section>
 
     {{-- Benefit 2: Nâng cao hiệu quả --}}
-    <section class="container-block pt-28 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
+    <section class="container-block pt-20 pb-12 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
         <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="bg-white rounded-3xl p-10 md:p-16 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div class="order-2 lg:order-1">
                             <img src="{{ home_url() }}/wp-content/uploads/2019/07/iMac_left-min-6.png"
                                 alt="Nâng cao hiệu quả hoạt động"
                                 class="zoom-image w-full drop-shadow-2xl">
                         </div>
                         <div class="order-1 lg:order-2">
-                            <div class="flex items-center gap-4 mb-6">
+                            <div class="flex items-center gap-6 mb-8">
                                 <div class="flex-shrink-0 text-gray-900">
-                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-3xl font-bold text-gray-900 m-0">Nâng cao hiệu quả hoạt động</h3>
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 m-0">Nâng cao hiệu quả hoạt động</h3>
                             </div>
-                            <ul class="space-y-3 text-gray-600">
+                            <ul class="space-y-6 text-gray-600 text-lg md:text-xl">
                                 <li class="flex items-start gap-2">
                                     <span class="text-accent-600 mt-1">✓</span>
                                     <span>Thông tin kết nối giữa các bộ phận trong quy trình hoàn chỉnh từ nhận mẫu đến giao hàng</span>
@@ -355,21 +355,21 @@
     </section>
 
     {{-- Benefit 3: Chăm sóc khách hàng --}}
-    <section class="container-block pt-28 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
+    <section class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
         <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="bg-white rounded-3xl p-10 md:p-16 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <div class="flex items-center gap-4 mb-6">
+                            <div class="flex items-center gap-6 mb-8">
                                 <div class="flex-shrink-0 text-gray-900">
-                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-3xl font-bold text-gray-900 m-0">Chăm sóc khách hàng tốt hơn</h3>
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 m-0">Chăm sóc khách hàng tốt hơn</h3>
                             </div>
-                            <ul class="space-y-3 text-gray-600">
+                            <ul class="space-y-6 text-gray-600 text-lg md:text-xl">
                                 <li class="flex items-start gap-2">
                                     <span class="text-accent-600 mt-1">✓</span>
                                     <span>Kho dữ liệu tập trung từ tất cả các bộ phận: sản xuất, tài chính, bảo hành... Giúp dễ dàng tra cứu và giải đáp ngay các thắc mắc của khách hàng</span>
@@ -459,12 +459,12 @@
         }
     }"
         x-init="$watch('showModal', value => document.body.classList.toggle('overflow-hidden', value)); console.log('Vietnam Map Loaded:', regions)"
-        class="container-block min-h-screen flex flex-col justify-center pt-28">
+        class="container-block min-h-screen flex flex-col justify-center pt-8">
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="grid lg:grid-cols-2 gap-4 items-center">
                     {{-- Left Column: Text Content --}}
-                    <div class="text-left mb-12 lg:mb-0 lg:pl-10">
+                    <div class="text-left mb-12 lg:mb-0 lg:pl-40">
                         <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
                             Khách hàng
                         </div>
@@ -486,7 +486,7 @@
 
                     {{-- Right Column: Interactive Vietnam Map --}}
                     <div class="w-full">
-                        <div class="relative group max-w-xl mx-auto lg:mx-0 lg:ml-auto">
+                        <div class="relative group max-w-xl mx-auto">
                             {{-- Inline SVG Map with Clickable Regions --}}
                             <svg width="100%" height="auto" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-lg">
                                 <g transform="translate(180, 0)">
@@ -803,7 +803,7 @@
 
     /* Smooth Scroll */
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
     }
 </style>
 

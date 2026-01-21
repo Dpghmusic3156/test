@@ -4,7 +4,7 @@
 
 <style>
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
         scrollbar-width: none;
         /* Firefox */
         -ms-overflow-style: none;
