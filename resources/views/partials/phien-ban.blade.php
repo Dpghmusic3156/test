@@ -30,7 +30,7 @@
 <div x-data="{
     selectedPlan: 'Basic',
     count: 1,
-    get rate() { return this.selectedPlan === 'Basic' ? 11000000 : 4000000; },
+    get rate() { return this.selectedPlan === 'Basic' ? 11000000 : 6000000; },
     get minCount() { return this.selectedPlan === 'Basic' ? 1 : 8; },
     init() {
         this.$watch('count', value => {
