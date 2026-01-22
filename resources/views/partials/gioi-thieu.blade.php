@@ -4,7 +4,7 @@
     }
 </style>
 <div class="bg-gradient-to-b from-gray-50 to-white text-gray-800 relative w-full">
-    <section class="container-block relative hero-section bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative pb-24 overflow-hidden min-h-screen flex flex-col justify-center">
+    <section class="container-block relative hero-section bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative pb-24 overflow-hidden min-h-screen flex flex-col justify-center pt-26">
 
         {{-- Decorative Background Elements --}}
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl"></div>
@@ -812,9 +812,18 @@
         let isScrolling = false;
         let currentIndex = 0;
 
+        // Track accumulated delta to require "intent"
+        let accumulatedDelta = 0;
+        const scrollThreshold = 150; // Threshold to trigger scroll
+        let resetDeltaTimeout;
+
         function scrollToBlock(index) {
             if (index < 0 || index >= blocks.length) return;
             isScrolling = true;
+
+            // Reset accumulated delta when starting a scroll
+            accumulatedDelta = 0;
+
             gsap.to(window, {
                 scrollTo: {
                     y: blocks[index],
@@ -829,33 +838,45 @@
         }
 
         function handleScroll(event) {
-            // Disable custom scroll snapping on smaller screens (tablets/mobile)
+            // Disable custom scroll snapping on smaller screens
             if (window.innerWidth < 1024) return;
 
             // Disable custom scroll if modal is open (body has overflow-hidden)
             if (document.body.classList.contains('overflow-hidden')) return;
 
-            if (isScrolling) {
-                event.preventDefault();
-                return;
-            }
+            // Prevent default to control scroll
+            event.preventDefault();
 
-            // Detect scroll direction
-            if (event.deltaY > 0) {
+            if (isScrolling) return;
+
+            // Reset accumulator if paused
+            clearTimeout(resetDeltaTimeout);
+            resetDeltaTimeout = setTimeout(() => {
+                accumulatedDelta = 0;
+            }, 100);
+
+            // Accumulate
+            accumulatedDelta += event.deltaY;
+
+            // Check threshold
+            if (Math.abs(accumulatedDelta) < scrollThreshold) return;
+
+            if (accumulatedDelta > 0) {
                 // Scrolling down
                 if (currentIndex < blocks.length - 1) {
-                    event.preventDefault();
                     currentIndex++;
                     scrollToBlock(currentIndex);
                 }
-            } else if (event.deltaY < 0) {
+            } else if (accumulatedDelta < 0) {
                 // Scrolling up
                 if (currentIndex > 0) {
-                    event.preventDefault();
                     currentIndex--;
                     scrollToBlock(currentIndex);
                 }
             }
+
+            // Reset after trigger
+            accumulatedDelta = 0;
         }
 
         // Use passive: false to allow preventDefault
