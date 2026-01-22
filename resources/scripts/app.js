@@ -4,14 +4,14 @@ import AOS from 'aos';
 import Alpine from 'alpinejs';
 import Zoomist from 'zoomist';
 
-window.Alpine = Alpine;
-Alpine.start();
+window.Alpine = Alpine
 
+Alpine.start()
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // Initialize Swiper
+  // Khởi tạo Swiper
   const swiper = new Swiper('.swiper', {
     loop: true,
     autoplay: {
@@ -27,7 +27,7 @@ domReady(async () => {
     },
   });
 
-  // Initialize AOS
+  // Khởi tạo AOS
   AOS.init({
     duration: 400,
     easing: 'ease',
@@ -36,13 +36,14 @@ domReady(async () => {
     once: false,
   });
 
-  // Initialize Zoomist
+  // Khởi tạo Zoomist cho các ảnh benefit
   const zoomImages = document.querySelectorAll('.zoom-image');
+
   zoomImages.forEach(img => {
     img.style.cursor = 'zoom-in';
 
     img.addEventListener('click', () => {
-      // Create modal
+      // Tạo modal zoom
       const modal = document.createElement('div');
       modal.className = 'zoom-modal';
       modal.style.cssText = `
@@ -91,7 +92,7 @@ domReady(async () => {
         zoomer: false,
       });
 
-      // Close handlers
+      // Close on outside click
       modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target.classList.contains('zoomist-wrapper')) {
           document.body.removeChild(modal);
@@ -99,6 +100,7 @@ domReady(async () => {
         }
       });
 
+      // Close on ESC key
       const handleEscape = (e) => {
         if (e.key === 'Escape') {
           document.body.removeChild(modal);
@@ -119,6 +121,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+
 
 // Enforce scroll to top on reload
 if ('scrollRestoration' in history) {

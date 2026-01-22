@@ -349,7 +349,7 @@
 
         // Track accumulated delta to require "intent"
         let accumulatedDelta = 0;
-        const scrollThreshold = 100; // Threshold to trigger scroll (higher = harder to trigger)
+        const scrollThreshold = 150; // Threshold to trigger scroll (higher = harder to trigger)
         let resetDeltaTimeout;
 
         function scrollToBlock(index) {
@@ -372,7 +372,52 @@
             });
         }
 
-        // Initialize current index based on view
+        function handleScroll(event) {
+            // Disable custom scroll snapping on smaller screens
+            if (window.innerWidth < 1024) return;
+
+            // Prevent default to control scroll
+            event.preventDefault();
+
+            if (isScrolling) return;
+
+            // Reset accumulator if paused
+            clearTimeout(resetDeltaTimeout);
+            resetDeltaTimeout = setTimeout(() => {
+                accumulatedDelta = 0;
+            }, 100);
+
+            // Accumulate
+            accumulatedDelta += event.deltaY;
+
+            // Check threshold
+            if (Math.abs(accumulatedDelta) < scrollThreshold) return;
+
+            if (accumulatedDelta > 0) {
+                // Scrolling down
+                if (currentIndex < blocks.length - 1) {
+                    currentIndex++;
+                    scrollToBlock(currentIndex);
+                }
+            } else if (accumulatedDelta < 0) {
+                // Scrolling up
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    scrollToBlock(currentIndex);
+                }
+            }
+
+            // Reset after trigger
+            accumulatedDelta = 0;
+        }
+
+        // Use passive: false to allow preventDefault
+        window.addEventListener('wheel', handleScroll, {
+            passive: false
+        });
+
+        // Optional: Update currentIndex based on manual scroll/resize
+        // Using ScrollTrigger to track which block is in view
         blocks.forEach((block, i) => {
             ScrollTrigger.create({
                 trigger: block,
@@ -381,52 +426,6 @@
                 onEnter: () => currentIndex = i,
                 onEnterBack: () => currentIndex = i
             });
-        });
-
-        window.addEventListener('wheel', (event) => {
-            // Disable custom scroll snapping on smaller screens
-            if (window.innerWidth < 1024) return;
-
-            // If currently animating, ignore
-            if (isScrolling) {
-                event.preventDefault();
-                return;
-            }
-
-            // Add current delta to accumulator
-            accumulatedDelta += event.deltaY;
-
-            // Clear accumulator if no scroll happens for a short time (debounce)
-            clearTimeout(resetDeltaTimeout);
-            resetDeltaTimeout = setTimeout(() => {
-                accumulatedDelta = 0;
-            }, 150);
-
-            // Check if threshold is met
-            if (Math.abs(accumulatedDelta) < scrollThreshold) {
-                // Prevent default scrolling to avoid shaky native scroll while building momentum
-                event.preventDefault();
-                return;
-            }
-
-            // Logic to trigger scroll
-            if (accumulatedDelta > 0) {
-                // Scrolling Down
-                if (currentIndex < blocks.length - 1) {
-                    event.preventDefault();
-                    currentIndex++;
-                    scrollToBlock(currentIndex);
-                }
-            } else {
-                // Scrolling Up
-                if (currentIndex > 0) {
-                    event.preventDefault();
-                    currentIndex--;
-                    scrollToBlock(currentIndex);
-                }
-            }
-        }, {
-            passive: false
         });
     });
 </script>
@@ -447,7 +446,7 @@
         const backdrop = document.getElementById('modalBackdrop');
 
         // Open modal
-        if (openBtn && modal) {
+        if (openBtn) {
             openBtn.addEventListener('click', function() {
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -456,10 +455,8 @@
 
         // Close modal
         function closeModal() {
-            if (modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = ''; // Restore scrolling
-            }
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
         }
 
         if (closeBtn) {
@@ -472,7 +469,7 @@
 
         // Close on ESC key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
                 closeModal();
             }
         });
