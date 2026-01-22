@@ -4,9 +4,9 @@
         scroll-behavior: auto;
     }
 </style>
-<div class="bg-gradient-to-b from-gray-50 to-white text-gray-800 relative w-full">
+<div x-data="{ showFeaturesModal: false }" class="bg-gradient-to-b from-gray-50 to-white text-gray-800 relative w-full">
     {{-- Hero Section --}}
-    <section class="container-block min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto" data-aos="fade-up">
+    <section class="container-block lg:min-h-screen pt-20 pb-10 md:pt-28 md:pb-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto" data-aos="fade-up">
         <div class="lg:w-1/2 mb-8 lg:mb-0 order-1 lg:order-1 flex flex-col justify-center">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6 w-fit" data-aos="fade-right" data-aos-delay="100">
                 <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
@@ -32,7 +32,7 @@
                     </svg>
                 </a>
 
-                <button id="openFeaturesBtn"
+                <button @click="showFeaturesModal = true"
                     class="inline-flex items-center justify-center gap-2 px-8 py-5 border-2 border-accent-300 text-accent-600 rounded-xl hover:bg-accent-100 hover:border-accent-400 transition-all duration-300 font-semibold">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
@@ -81,7 +81,7 @@
     </section>
 
     {{-- Testimonials Section - Teal/Cyan Theme --}}
-    <section class="container-block py-12 md:py-24 relative overflow-hidden h-screen flex flex-col justify-center">
+    <section class="container-block py-8 md:py-24 relative overflow-hidden lg:min-h-screen flex flex-col justify-center pt-20">
         {{-- Background decorative elements --}}
 
 
@@ -97,8 +97,7 @@
             </div>
 
             {{-- Testimonials Grid --}}
-            <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
-                {{-- Testimonial 1 --}}
+            <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-accent-200 scrollbar-track-transparent md:scrollbar-none">
                 {{-- Testimonial 1 --}}
                 <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up">
                     {{-- Avatar --}}
@@ -119,7 +118,6 @@
                 </div>
 
                 {{-- Testimonial 2 --}}
-                {{-- Testimonial 2 --}}
                 <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-6">
                         <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
@@ -135,7 +133,6 @@
                     </p>
                 </div>
 
-                {{-- Testimonial 3 --}}
                 {{-- Testimonial 3 --}}
                 <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="mb-6">
@@ -155,8 +152,121 @@
         </div>
     </section>
 
+    {{-- Version 2 Introduction Section --}}
+    <section class="container-block py-2 md:py-6 lg:pt-20 lg:pb-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden lg:min-h-screen flex flex-col justify-center scroll-mt-24 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-4 lg:gap-x-12 lg:gap-y-2 items-center">
+                {{-- 1. Header Info: Desktop Col 1, Row 1 --}}
+                <div class="lg:col-start-1 lg:row-start-1" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-100 text-accent-700 rounded-full font-semibold text-xs mb-2 md:mb-4 w-fit">
+                        <span class="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></span>
+                        Phiên bản mới
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2 leading-tight">
+                        Trải nghiệm phiên bản mới của chúng tôi <br>
+                        <img src="{{ home_url() }}/wp-content/uploads/2026/01/logo.png" alt="DentalSO Logo" class="h-12 md:h-16 lg:h-20 w-auto my-5 block">
+                    </h2>
+
+                    <p class="text-xs md:text-base text-gray-600 mb-4 leading-relaxed">
+                        Phiên bản nâng cấp toàn diện mang đến sức mạnh quản lý vượt trội. Tối ưu hóa quy trình, nâng cao trải nghiệm người dùng.
+                    </p>
+                </div>
+
+                {{-- 2. Image: Desktop Col 2, Row 1-2 (Spans height) --}}
+                <div class="lg:col-start-2 lg:row-start-1 lg:row-span-2 relative" data-aos="fade-left">
+                    <div class="m-6 relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary-600 to-cyan-500 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
+                        <img src="{{ home_url('/') }}wp-content/uploads/2026/01/lab.png"
+                            alt="vDentalLab V2 Interface"
+                            class="p-2 md:p-4 relative rounded-2xl shadow-2xl w-full object-cover border border-gray-200 max-h-[35vh] lg:max-h-[45vh] w-auto mx-auto">
+
+                        {{-- Floating Badge --}}
+                        <div class="absolute -bottom-6 -right-6 bg-white p-3 rounded-xl shadow-xl border border-gray-100 animate-bounce hidden md:block">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">Trạng thái</p>
+                                    <p class="font-bold text-gray-900 text-sm">Sẵn sàng dùng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Button to V2 Site (Desktop Only) --}}
+                    <div class="pt-6 hidden lg:flex lg:justify-center">
+                        <a href="https://dentalso.com/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:-translate-y-1 text-sm md:text-base mb-4">
+                            <span>Truy cập DentalSO</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- 3. Features List: Desktop Col 1, Row 2 --}}
+                <div class="lg:col-start-1 lg:row-start-2 space-y-2 md:space-y-3" data-aos="fade-right" data-aos-delay="100">
+                    {{-- Feature 1 --}}
+                    <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-100">
+                        <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm md:text-lg font-bold text-gray-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
+                            <p class="text-xs md:text-sm text-gray-600">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo mọi lúc mọi nơi.</p>
+                        </div>
+                    </div>
+
+                    {{-- Feature 2 --}}
+                    <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-100">
+                        <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm md:text-lg font-bold text-gray-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
+                            <p class="text-xs md:text-sm text-gray-600">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
+                        </div>
+                    </div>
+
+                    {{-- Feature 3 --}}
+                    <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-100">
+                        <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-accent-100 flex items-center justify-center text-accent-600">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm md:text-lg font-bold text-gray-900 mb-0.5 md:mb-1">Hiệu năng Vượt trội</h3>
+                            <p class="text-xs md:text-sm text-gray-600">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
+                        </div>
+                    </div>
+
+                    {{-- Button to V2 Site (Mobile Only) --}}
+                    <div class="pt-4 flex justify-center lg:hidden">
+                        <a href="https://dentalso.com/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:-translate-y-1 text-sm md:text-base">
+                            <span>Truy cập DentalSO</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- CTA Section --}}
-    <section class="container-block py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden min-h-[60vh] lg:h-screen flex flex-col justify-center">
+    <section class="container-block py-12 md:py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden lg:min-h-screen flex flex-col justify-center">
         {{-- Background decoration --}}
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
@@ -178,157 +288,179 @@
             </a>
         </div>
     </section>
-
     {{-- Footer manually included inside snap container --}}
     <div class="container-block">
         @include('sections.footer')
     </div>
-</div>
 
-{{-- Features Modal --}}
-<div id="featuresModal"
-    style="display: none;"
-    class="fixed inset-0 z-50 overflow-y-auto"
-    aria-labelledby="modal-title"
-    role="dialog"
-    aria-modal="true">
-    {{-- Backdrop --}}
-    <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity" id="modalBackdrop"></div>
+    {{-- Features Modal with x-teleport --}}
+    <template x-teleport="body">
+        <div x-show="showFeaturesModal"
+            style="display: none;"
+            class="fixed inset-0 z-[9999] overflow-y-auto"
+            aria-labelledby="modal-title
+            role=" dialog"
+            aria-modal="true"
+            x-init="$watch('showFeaturesModal', value => document.body.classList.toggle('overflow-hidden', value))">
 
-    {{-- Modal Content --}}
-    <div class="flex min-h-full items-center justify-center p-4">
-        <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 transform transition-all">
-            {{-- Close Button --}}
-            <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
+            {{-- Backdrop --}}
+            <div x-show="showFeaturesModal"
+                x-transition:enter="transition-opacity ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition-opacity ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity"
+                @click="showFeaturesModal = false"></div>
 
-            {{-- Header --}}
-            <div class="text-center mb-8">
-                <h3 class="text-3xl font-bold text-gray-900 mb-2">Chức năng nổi bật</h3>
-                <p class="text-gray-600">Giải pháp toàn diện cho Labo Nha khoa</p>
-            </div>
+            {{-- Modal Content --}}
+            <div class="flex min-h-full items-center justify-center p-4">
+                <div x-show="showFeaturesModal"
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0 scale-95"
+                    x-transition:enter-end="opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-200 transform"
+                    x-transition:leave-start="opacity-100 scale-100"
+                    x-transition:leave-end="opacity-0 scale-95"
+                    class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 transform transition-all">
 
-            {{-- Features Grid --}}
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-96 overflow-y-auto pr-2">
-                {{-- Row 1 --}}
-                <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-clipboard-list"></i>
+                    {{-- Close Button --}}
+                    <button @click="showFeaturesModal = false" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+
+                    {{-- Header --}}
+                    <div class="text-center mb-8">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Chức năng nổi bật</h3>
+                        <p class="text-gray-600">Giải pháp toàn diện cho Labo Nha khoa</p>
                     </div>
-                    <span class="text-gray-800 font-semibold">Quản lý đơn hàng Labo</span>
-                </div>
 
-                <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Theo dõi lịch giao hàng</span>
-                </div>
+                    {{-- Features Grid --}}
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                        {{-- Row 1 --}}
+                        <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Quản lý đơn hàng Labo</span>
+                        </div>
 
-                {{-- Row 2 --}}
-                <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Theo dõi sản lượng</span>
-                </div>
+                        <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Theo dõi lịch giao hàng</span>
+                        </div>
 
-                <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-file-medical"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Phiếu chỉ định</span>
-                </div>
+                        {{-- Row 2 --}}
+                        <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Theo dõi sản lượng</span>
+                        </div>
 
-                {{-- Row 3 --}}
-                <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-images"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Hình ảnh đính kèm</span>
-                </div>
+                        <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-file-medical"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Phiếu chỉ định</span>
+                        </div>
 
-                <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Công nợ</span>
-                </div>
+                        {{-- Row 3 --}}
+                        <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Hình ảnh đính kèm</span>
+                        </div>
 
-                {{-- Row 4 --}}
-                <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-receipt"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Hoá đơn cuối tháng</span>
-                </div>
+                        <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Công nợ</span>
+                        </div>
 
-                <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Thu - Chi</span>
-                </div>
+                        {{-- Row 4 --}}
+                        <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Hoá đơn cuối tháng</span>
+                        </div>
 
-                {{-- Row 5 --}}
-                <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Doanh số</span>
-                </div>
+                        <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Thu - Chi</span>
+                        </div>
 
-                <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Bảng giá</span>
-                </div>
+                        {{-- Row 5 --}}
+                        <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Doanh số</span>
+                        </div>
 
-                {{-- Row 6 --}}
-                <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Năng suất</span>
-                </div>
+                        <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Bảng giá</span>
+                        </div>
 
-                <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Hàng lỗi</span>
-                </div>
+                        {{-- Row 6 --}}
+                        <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Năng suất</span>
+                        </div>
 
-                {{-- Row 7 --}}
-                <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Tiến độ sản xuất</span>
-                </div>
+                        <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Hàng lỗi</span>
+                        </div>
 
-                <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <span class="text-gray-800 font-semibold">Hàng trễ</span>
-                </div>
+                        {{-- Row 7 --}}
+                        <div class="flex items-center gap-3 p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Tiến độ sản xuất</span>
+                        </div>
 
-                {{-- Row 8 --}}
-                <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
-                        <i class="fas fa-barcode"></i>
+                        <div class="flex items-center gap-3 p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-secondary-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Hàng trễ</span>
+                        </div>
+
+                        {{-- Row 8 --}}
+                        <div class="flex items-center gap-3 p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition-all duration-200 group cursor-default">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-accent-500 text-white group-hover:scale-110 transition-transform">
+                                <i class="fas fa-barcode"></i>
+                            </div>
+                            <span class="text-gray-800 font-semibold">Quản lý bằng mã vạch</span>
+                        </div>
                     </div>
-                    <span class="text-gray-800 font-semibold">Quản lý bằng mã vạch</span>
                 </div>
             </div>
         </div>
-    </div>
+    </template>
 </div>
+
+<!-- Alpine.js -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 {{-- AOS Animation Init --}}
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -375,6 +507,11 @@
         function handleScroll(event) {
             // Disable custom scroll snapping on smaller screens
             if (window.innerWidth < 1024) return;
+
+            // Check if modal is open (body has overflow-hidden class)
+            if (document.body.classList.contains('overflow-hidden')) {
+                return;
+            }
 
             // Prevent default to control scroll
             event.preventDefault();
@@ -429,49 +566,11 @@
         });
     });
 </script>
-
 <script>
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
         once: true,
         offset: 100
-    });
-
-    // Script chuc nang noi bat
-    document.addEventListener('DOMContentLoaded', function() {
-        const openBtn = document.getElementById('openFeaturesBtn');
-        const modal = document.getElementById('featuresModal');
-        const closeBtn = document.getElementById('closeModalBtn');
-        const backdrop = document.getElementById('modalBackdrop');
-
-        // Open modal
-        if (openBtn) {
-            openBtn.addEventListener('click', function() {
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
-        }
-
-        // Close modal
-        function closeModal() {
-            modal.style.display = 'none';
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closeModal);
-        }
-
-        if (backdrop) {
-            backdrop.addEventListener('click', closeModal);
-        }
-
-        // Close on ESC key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modal.style.display === 'block') {
-                closeModal();
-            }
-        });
     });
 </script>
