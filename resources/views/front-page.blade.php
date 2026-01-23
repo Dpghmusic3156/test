@@ -245,14 +245,7 @@
                     </div>
 
                     {{-- Button to V2 Site (Desktop Only) --}}
-                    <!-- <div class="pt-6 hidden lg:flex lg:justify-center">
-                        <a href="https://dentalso.com/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:-translate-y-1 text-sm md:text-base mb-4">
-                            <span>Truy cập DentalSO</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>-->
+                    {{-- Button removed --}}
                 </div>
 
                 {{-- 3. Features List: Desktop Col 1, Row 2 --}}
