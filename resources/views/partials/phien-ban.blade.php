@@ -55,9 +55,17 @@
             const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y, behavior: 'smooth'});
         }
+    },
+    scrollToPricing() {
+        const section = document.getElementById('pricing-models');
+        if (section) {
+            const yOffset = -100;
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
     }
 }">
-    <section class="py-20 bg-white" data-aos="fade-up">
+    <section id="pricing-models" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
@@ -104,7 +112,7 @@
                     <div class="space-y-3">
                         <button @click="selectPlan('Basic')"
                             class="block w-full text-center bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white font-bold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
-                            Đăng ký gói này
+                            Chọn gói này
                         </button>
                     </div>
                 </div>
@@ -159,7 +167,7 @@
                     <div class="space-y-3">
                         <button @click="selectPlan('Standard')"
                             class="block w-full text-center bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
-                            Đăng ký gói này
+                            Chọn gói này
                         </button>
                     </div>
                 </div>
@@ -262,15 +270,20 @@
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span>Thanh toán hàng tháng cho <span x-text="count"></span> máy</span>
+                                    <span>Thanh toán một lần duy nhất</span>
                                 </div>
                             </div>
-                            <a href="{{ home_url() }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
-                                Đăng ký gói này
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                                <button @click="scrollToPricing()" class="px-6 py-4 border-2 border-accent-300 text-accent-600 rounded-xl hover:bg-accent-100 hover:border-accent-400  transition-all duration-300 whitespace-nowrap font-semibold">
+                                    Chọn gói khác
+                                </button>
+                                <a href="{{ home_url() }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
+                                    Đăng ký gói này
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -279,7 +292,7 @@
     </section>
 
     {{-- Comparison Table Section --}}
-    <section class="pb-10 bg-white" data-aos="fade-up">
+    <section class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <div class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-semibold text-sm mb-6">

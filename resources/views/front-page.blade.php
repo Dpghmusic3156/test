@@ -6,7 +6,7 @@
 </style>
 <div x-data="{ showFeaturesModal: false }" class="bg-gradient-to-b from-gray-50 to-white text-gray-800 relative w-full">
     {{-- Hero Section --}}
-    <section class="container-block lg:min-h-screen pt-20 pb-10 md:pt-28 md:pb-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto" data-aos="fade-up">
+    <section class="container-block lg:min-h-screen pt-20 pb-10 px-4 md:px-8 mx-auto md:pt-28 md:pb-20 flex flex-col lg:flex-row items-center justify-between max-w-7xl" data-aos="fade-up">
         <div class="lg:w-1/2 mb-8 lg:mb-0 order-1 lg:order-1 flex flex-col justify-center">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6 w-fit" data-aos="fade-right" data-aos-delay="100">
                 <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
@@ -14,17 +14,17 @@
             </div>
 
             <div class="font-extrabold leading-tight mb-6" data-aos="fade-right" data-aos-delay="200">
-                <span class="text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-orange-500">vDentalLab</span>
-                <span class="text-4xl block mb-2 text-gray-900">Phần mềm Quản lý</span>
-                <span class="text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Labo Dental</span>
+                <span class="text-4xl md:text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-orange-500">vDentalLab</span>
+                <span class="text-2xl md:text-4xl block mb-2 text-gray-900">Phần mềm Quản lý</span>
+                <span class="text-2xl md:text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Labo Dental</span>
             </div>
 
             <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed" data-aos="fade-right" data-aos-delay="300">
-                Hơn <a href="{{ home_url() }}/khach-hang" class="font-bold text-accent-500">200+ Lab</a> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
+                Hơn <a href="{{ home_url('/khach-hang') }}" class="font-bold text-accent-500">200+ Lab</a> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
             </p>
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8 lg:mb-12" data-aos="fade-right" data-aos-delay="400">
-                <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi/"
+                <a href="{{ home_url('/phan-mem-dental-lab-mien-phi/') }}"
                     class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
                     <span>Dùng thử miễn phí</span>
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +47,7 @@
         {{-- Hero Image --}}
         <div class="lg:w-1/2 relative order-2 lg:order-2 mb-8 lg:mb-0 flex justify-center items-center">
             <div class="relative rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
-                <img class="w-full h-auto max-h-[30vh] lg:max-h-none object-cover" src="{{ home_url('/') }}/wp-content/uploads/2019/07/iMac_left-min-6.png" alt="vDentalLab Interface">
+                <img class="w-full h-auto max-h-[30vh] lg:max-h-none object-cover" src="{{ home_url('/wp-content/uploads/2019/07/iMac_left-min-6.png') }}" alt="vDentalLab Interface">
 
             </div>
 
@@ -97,56 +97,103 @@
             </div>
 
             {{-- Testimonials Grid --}}
-            <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-accent-200 scrollbar-track-transparent md:scrollbar-none">
-                {{-- Testimonial 1 --}}
-                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up">
-                    {{-- Avatar --}}
-                    <div class="mb-6">
-                        <img class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Ms. Linh">
+            <div x-data="{ 
+                activeSlide: 0, 
+                scroll() { 
+                    const scrollLeft = this.$refs.slider.scrollLeft;
+                    const width = this.$refs.slider.offsetWidth;
+                    // Calculate active slide based on scroll position (approximate for 85vw items)
+                    this.activeSlide = Math.round(scrollLeft / (width * 0.8));
+                },
+                scrollTo(index) {
+                    const width = this.$refs.slider.offsetWidth;
+                    // Scroll to approx position (index * 85% of width + gap adjustment)
+                    // Or let snap-center handle the precision
+                    // Finding the child element would be better, but this is a quick valid approximation with snap
+                    // Better: standard scroll assuming uniform items
+                    // Let's use simpler logic: 
+                    // Item width is roughly 85vw = width * 0.85 (since container is 100vw effectively with negative margins)
+                    // Actually container allows overflow.
+                    // Let's rely on scrollWidth / 3.
+                    const itemWidth = this.$refs.slider.scrollWidth / 3;
+                    this.$refs.slider.scrollTo({ left: index * itemWidth, behavior: 'smooth' });
+                }
+            }" class="relative">
+                <style>
+                    /* Hide scrollbar for Chrome, Safari and Opera */
+                    .no-scrollbar::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    /* Hide scrollbar for IE, Edge and Firefox */
+                    .no-scrollbar {
+                        -ms-overflow-style: none;
+                        /* IE and Edge */
+                        scrollbar-width: none;
+                        /* Firefox */
+                    }
+                </style>
+                <div x-ref="slider" @scroll.debounce.10ms="scroll()" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar">
+                    {{-- Testimonial 1 --}}
+                    <div class="min-w-[85vw] md:min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                        {{-- Avatar --}}
+                        <div class="mb-6">
+                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Ms. Linh">
+                        </div>
+
+                        {{-- Name & Title --}}
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Ms. Linh</h3>
+                            <p class="text-sm text-primary-600">CEO, Labo Hữu Nguyên</p>
+                        </div>
+
+                        {{-- Testimonial text --}}
+                        <p class="text-gray-700 leading-relaxed">
+                            Phần mềm giúp tôi quản lý chặt chẽ quy trình sản xuất và các kỹ thuật viên. Tôi đã cải thiện hoàn toàn việc quản lý và tiết kiệm thời gian đáng kể.
+                        </p>
                     </div>
 
-                    {{-- Name & Title --}}
-                    <div class="mb-4">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Ms. Linh</h3>
-                        <p class="text-sm text-primary-600">CEO, Labo Hữu Nguyên</p>
+                    {{-- Testimonial 2 --}}
+                    <div class="min-w-[85vw] md:min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                        <div class="mb-6">
+                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
+                        </div>
+
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Alan Nguyễn</h3>
+                            <p class="text-sm text-primary-600">CEO, Labo Thành Tuấn</p>
+                        </div>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            Tôi sử dụng phần mềm ngay từ ngày đầu thành lập Labo. Quản lý đơn hàng rất dễ dàng, đặc biệt là khả năng tra cứu lịch sử và kiểm soát hàng trễ hiệu quả.
+                        </p>
                     </div>
 
-                    {{-- Testimonial text --}}
-                    <p class="text-gray-700 leading-relaxed">
-                        Phần mềm giúp tôi quản lý chặt chẽ quy trình sản xuất và các kỹ thuật viên. Tôi đã cải thiện hoàn toàn việc quản lý và tiết kiệm thời gian đáng kể.
-                    </p>
+                    {{-- Testimonial 3 --}}
+                    <div class="min-w-[85vw] md:min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                        <div class="mb-6">
+                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-cyan-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-westcost.png" alt="Dr. Andrew Tsang">
+                        </div>
+
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Dr. Andrew Tsang</h3>
+                            <p class="text-sm text-primary-600">CEO, Labo Westcoast</p>
+                        </div>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            Sau khi thử nhiều phần mềm nước ngoài, tôi chuyển qua vDentalLab vì phù hợp với đặc thù Việt Nam. Hỗ trợ tốt việc tính lương và quản lý vật liệu.
+                        </p>
+                    </div>
                 </div>
 
-                {{-- Testimonial 2 --}}
-                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mb-6">
-                        <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
-                    </div>
-
-                    <div class="mb-4">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Alan Nguyễn</h3>
-                        <p class="text-sm text-primary-600">CEO, Labo Thành Tuấn</p>
-                    </div>
-
-                    <p class="text-gray-700 leading-relaxed">
-                        Tôi sử dụng phần mềm ngay từ ngày đầu thành lập Labo. Quản lý đơn hàng rất dễ dàng, đặc biệt là khả năng tra cứu lịch sử và kiểm soát hàng trễ hiệu quả.
-                    </p>
-                </div>
-
-                {{-- Testimonial 3 --}}
-                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mb-6">
-                        <img class="w-20 h-20 rounded-full object-cover ring-4 ring-cyan-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-westcost.png" alt="Dr. Andrew Tsang">
-                    </div>
-
-                    <div class="mb-4">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Dr. Andrew Tsang</h3>
-                        <p class="text-sm text-primary-600">CEO, Labo Westcoast</p>
-                    </div>
-
-                    <p class="text-gray-700 leading-relaxed">
-                        Sau khi thử nhiều phần mềm nước ngoài, tôi chuyển qua vDentalLab vì phù hợp với đặc thù Việt Nam. Hỗ trợ tốt việc tính lương và quản lý vật liệu.
-                    </p>
+                {{-- Slider Dots (Mobile Only) --}}
+                <div class="flex md:hidden justify-center items-center gap-2 mt-4">
+                    <template x-for="i in 3">
+                        <button class="h-2 rounded-full transition-all duration-300"
+                            :class="activeSlide === i-1 ? 'w-8 bg-accent-500' : 'w-2 bg-gray-300 hover:bg-gray-400'"
+                            @click="scrollTo(i-1)">
+                        </button>
+                    </template>
                 </div>
             </div>
         </div>
@@ -165,7 +212,7 @@
 
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2 leading-tight">
                         Trải nghiệm phiên bản mới của chúng tôi <br>
-                        <img src="{{ home_url() }}/wp-content/uploads/2026/01/logo.png" alt="DentalSO Logo" class="h-12 md:h-16 lg:h-20 w-auto my-5 block">
+                        <img src="{{ home_url('/wp-content/uploads/2026/01/logo.png') }}" alt="DentalSO Logo" class="h-12 w-auto my-5 block">
                     </h2>
 
                     <p class="text-xs md:text-base text-gray-600 mb-4 leading-relaxed">
@@ -177,9 +224,9 @@
                 <div class="lg:col-start-2 lg:row-start-1 lg:row-span-2 relative" data-aos="fade-left">
                     <div class="m-6 relative">
                         <div class="absolute -inset-4 bg-gradient-to-r from-primary-600 to-cyan-500 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
-                        <img src="{{ home_url('/') }}wp-content/uploads/2026/01/lab.png"
+                        <img src="{{ home_url('/wp-content/uploads/2026/01/lab.png') }}"
                             alt="vDentalLab V2 Interface"
-                            class="p-2 md:p-4 relative rounded-2xl shadow-2xl w-full object-cover border border-gray-200 max-h-[35vh] lg:max-h-[45vh] w-auto mx-auto">
+                            class="p-2 md:p-4 relative rounded-2xl shadow-2xl object-cover border border-gray-200 max-h-[35vh] lg:max-h-[45vh] w-auto mx-auto">
 
                         {{-- Floating Badge --}}
                         <div class="absolute -bottom-6 -right-6 bg-white p-3 rounded-xl shadow-xl border border-gray-100 animate-bounce hidden md:block">
@@ -198,14 +245,14 @@
                     </div>
 
                     {{-- Button to V2 Site (Desktop Only) --}}
-                    <div class="pt-6 hidden lg:flex lg:justify-center">
+                    <!-- <div class="pt-6 hidden lg:flex lg:justify-center">
                         <a href="https://dentalso.com/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:-translate-y-1 text-sm md:text-base mb-4">
                             <span>Truy cập DentalSO</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                             </svg>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
 
                 {{-- 3. Features List: Desktop Col 1, Row 2 --}}
@@ -244,18 +291,16 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-sm md:text-lg font-bold text-gray-900 mb-0.5 md:mb-1">Hiệu năng Vượt trội</h3>
+                            <h3 class="text-sm md:text-lg font-bold text-gray-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
                             <p class="text-xs md:text-sm text-gray-600">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
                         </div>
                     </div>
 
-                    {{-- Button to V2 Site (Mobile Only) --}}
-                    <div class="pt-4 flex justify-center lg:hidden">
+                    {{-- Button to V2 Site--}}
+                    <div class="pt-4 pl-4 flex justify-center lg:justify-start">
                         <a href="https://dentalso.com/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:-translate-y-1 text-sm md:text-base">
                             <span>Truy cập DentalSO</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
+
                         </a>
                     </div>
 
@@ -278,7 +323,7 @@
             <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                 Tham gia cùng 200+ Lab hàng đầu đang sử dụng vDentalLab mỗi ngày
             </p>
-            <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/"
+            <a href="{{ home_url('/phan-mem-dental-lab-mien-phi/') }}"
                 class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md"
                 data-aos="fade-up" data-aos-delay="200">
                 <span>Dùng thử miễn phí</span>

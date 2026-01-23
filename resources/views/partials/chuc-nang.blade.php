@@ -1,10 +1,10 @@
 <style>
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
     }
 </style>
 {{-- Hero Section --}}
-<section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 py-20 overflow-hidden pt-40">
     {{-- Background Decoration --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>

@@ -11,6 +11,9 @@ const config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+      },
       colors: {
         // Brand Color System - Teal/Cyan/Amber Theme
         'primary': {

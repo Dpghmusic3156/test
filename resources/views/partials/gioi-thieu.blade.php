@@ -25,12 +25,12 @@
 
                     {{-- Main Heading --}}
                     <div class="space-y-4 animate-fade-in-up mt-20 md:mt-0">
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-white/90">
-                            Phần mềm Quản lý<br class="md:hidden"> Labo Nha khoa
+                        <h2 class="text-xl md:text-3xl lg:text-4xl font-light tracking-wide text-white/90">
+                            Phần mềm Quản lý<br> Labo Nha khoa
                         </h2>
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight">
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight">
                             <span
-                                class="text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-orange-300">vDentalLab</span>
+                                class="text-4xl md:text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-orange-300">vDentalLab</span>
                         </h1>
                     </div>
 
@@ -169,10 +169,10 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-6">
-                    <div
+                    {{-- <div
                         class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
                         Về chúng tôi
-                    </div>
+                    </div> --}}
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
                         vDental Lab là gì?
                     </h2>
@@ -283,13 +283,13 @@
 
     {{-- Benefit 1: Quản lý sản xuất --}}
     <section
-        class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
+        class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
         <div class="container mx-auto px-4">
             <div class="text-center mb-8">
-                <div
+                {{-- <div
                     class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-semibold text-sm mb-4">
                     Lợi ích
-                </div>
+                </div> --}}
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
                     vDentalLab giúp gì cho <span class="text-primary-600">Labo của bạn?</span>
                 </h2>
@@ -325,7 +325,7 @@
                             </ul>
                         </div>
                         <div>
-                            <img src="{{ home_url() }}/img/circle.png" alt="Quản lý sản xuất"
+                            <img src="{{ home_url('/img/circle.png') }}" alt="Quản lý sản xuất"
                                 class="w-full max-w-sm mx-auto drop-shadow-xl">
                         </div>
                     </div>
@@ -336,14 +336,14 @@
 
     {{-- Benefit 2: Nâng cao hiệu quả --}}
     <section
-        class="container-block pt-20 pb-12 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
+        class="container-block pt-20 pb-12 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
         <div class="container mx-auto px-4">
             <div class="max-w-[1400px] mx-auto">
                 <div
                     class="bg-white rounded-3xl p-10 md:p-16 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div class="order-2 lg:order-1">
-                            <img src="{{ home_url() }}/wp-content/uploads/2019/07/iMac_left-min-6.png"
+                            <img src="{{ home_url('/wp-content/uploads/2019/07/iMac_left-min-6.png') }}"
                                 alt="Nâng cao hiệu quả hoạt động" class="zoom-image w-full drop-shadow-2xl">
                         </div>
                         <div class="order-1 lg:order-2">
@@ -378,7 +378,7 @@
 
     {{-- Benefit 3: Chăm sóc khách hàng --}}
     <section
-        class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col justify-center">
+        class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
         <div class="container mx-auto px-4">
             <div class="max-w-[1400px] mx-auto">
                 <div
@@ -410,7 +410,7 @@
                             </ul>
                         </div>
                         <div>
-                            <img src="{{ home_url() }}/wp-content/uploads/2019/07/bannerpic1-min.png"
+                            <img src="{{ home_url('/wp-content/uploads/2019/07/bannerpic1-min.png') }}"
                                 alt="Chăm sóc khách hàng" class="zoom-image w-full drop-shadow-xl rounded-xl">
                         </div>
                     </div>
@@ -497,10 +497,10 @@
                 <div class="grid lg:grid-cols-2 gap-4 items-center">
                     {{-- Left Column: Text Content --}}
                     <div class="text-left mb-12 lg:mb-0 lg:pl-40">
-                        <div
+                        {{-- <div
                             class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
                             Khách hàng
-                        </div>
+                        </div> --}}
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
                             Khách hàng của chúng tôi
                         </h2>
@@ -522,7 +522,7 @@
 
                     {{-- Right Column: Interactive Vietnam Map --}}
                     <div class="w-full">
-                        <div class="relative group max-w-[47rem] mx-auto">
+                        <div class="relative group mx-auto w-[calc(100%+2rem)] -ml-4 md:w-full md:max-w-[47rem] md:ml-auto">
                             {{-- Inline SVG Map with Clickable Regions --}}
                             <svg width="100%" height="auto" viewBox="0 0 800 800" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-lg">
@@ -576,10 +576,10 @@
                             {{-- Stacked Customer Icons (Avatar Group Style) --}}
 
                             {{-- North Region (Teal) --}}
-                            <div class="absolute top-[8%] left-[50%] transform -translate-x-1/2 flex -space-x-3 hover:space-x-1 transition-all duration-300 p-2 z-10"
+                            <div class="absolute top-[6%] left-[61%] md:left-[60%] transform -translate-x-1/2 flex -space-x-3 duration-300 p-2 z-10"
                                 @click="openRegion('north')">
                                 <template x-for="(customer, index) in regions.north.customers.slice(0, 3)">
-                                    <div class="relative w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-primary-500 bg-white shadow-lg cursor-pointer hover:scale-125 hover:z-20 transition-all duration-300 overflow-hidden group"
+                                    <div class="relative w-[19%] md:w-[17%] aspect-square rounded-full border-2 border-primary-500 bg-white shadow-lg cursor-pointer md:hover:scale-125 md:hover:z-20 transition-all duration-300 overflow-hidden group"
                                         :title="customer.name">
                                         <img :src="customer.logo" :alt="customer.name"
                                             class="w-full h-full object-cover">
@@ -591,10 +591,10 @@
                             </div>
 
                             {{-- Central Region (Amber) --}}
-                            <div class="absolute top-[50%] left-[65%] transform -translate-x-1/2 flex -space-x-3 hover:space-x-1 transition-all duration-300 p-2 z-10"
+                            <div class="absolute top-[53%] left-[74%] md:left-[72%] md:top-[50%] transform -translate-x-1/2 flex -space-x-3 duration-300 p-2 z-10"
                                 @click="openRegion('central')">
                                 <template x-for="(customer, index) in regions.central.customers.slice(0, 3)">
-                                    <div class="relative w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-accent-500 bg-white shadow-lg cursor-pointer hover:scale-125 hover:z-20 transition-all duration-300 overflow-hidden group"
+                                    <div class="relative w-[27%] md:w-[24%] aspect-square rounded-full border-2 border-accent-500 bg-white shadow-lg cursor-pointer md:hover:scale-125 md:hover:z-20 transition-all duration-300 overflow-hidden group"
                                         :title="customer.name">
                                         <img :src="customer.logo" :alt="customer.name"
                                             class="w-full h-full object-cover">
@@ -606,10 +606,10 @@
                             </div>
 
                             {{-- South Region (Cyan) --}}
-                            <div class="absolute top-[70%] left-[60%] transform -translate-x-1/2 flex -space-x-3 hover:space-x-1 transition-all duration-300 p-2 z-10"
+                            <div class="absolute top-[70%] left-[68%] transform -translate-x-1/2 flex -space-x-3 duration-300 p-2 z-10"
                                 @click="openRegion('south')">
                                 <template x-for="(customer, index) in regions.south.customers.slice(0, 3)">
-                                    <div class="relative w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-secondary-500 bg-white shadow-lg cursor-pointer hover:scale-125 hover:z-20 transition-all duration-300 overflow-hidden group"
+                                    <div class="relative w-[21%] md:w-[19%] aspect-square rounded-full border-2 border-secondary-500 bg-white shadow-lg cursor-pointer md:hover:scale-125 md:hover:z-20 transition-all duration-300 overflow-hidden group"
                                         :title="customer.name">
                                         <img :src="customer.logo" :alt="customer.name"
                                             class="w-full h-full object-cover">
@@ -718,7 +718,7 @@
                     <div
                         class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                         <div class="mb-4">
-                            <img src="{{ home_url() }}/img/survey.jpg" alt="Khảo sát tư vấn"
+                            <img src="{{ home_url('/img/survey.jpg') }}" alt="Khảo sát tư vấn"
                                 class="w-20 h-20 rounded-full mx-auto object-cover">
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2 text-center">Khảo sát & Tư vấn</h3>
@@ -728,7 +728,7 @@
                     <div
                         class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                         <div class="mb-4">
-                            <img src="{{ home_url() }}/img/customize.png" alt="Tuỳ biến phần mềm"
+                            <img src="{{ home_url('/img/customize.png') }}" alt="Tuỳ biến phần mềm"
                                 class="w-20 h-20 rounded-full mx-auto object-cover bg-white p-2">
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2 text-center">Tuỳ biến phần mềm</h3>
@@ -738,7 +738,7 @@
                     <div
                         class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                         <div class="mb-4">
-                            <img src="{{ home_url() }}/img/support247.jpg" alt="Hỗ trợ 24/7"
+                            <img src="{{ home_url('/img/support247.jpg') }}" alt="Hỗ trợ 24/7"
                                 class="w-20 h-20 rounded-full mx-auto object-cover">
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2 text-center">Hỗ trợ 24/7</h3>
@@ -880,9 +880,19 @@
             // Reset accumulated delta when starting a scroll
             accumulatedDelta = 0;
 
+            const block = blocks[index];
+            const blockHeight = block.offsetHeight;
+            const windowHeight = window.innerHeight;
+            let targetY = block.offsetTop;
+
+            // Center the block if it's smaller than the viewport
+            if (windowHeight > blockHeight) {
+                targetY = targetY - (windowHeight - blockHeight) / 2;
+            }
+
             gsap.to(window, {
                 scrollTo: {
-                    y: blocks[index],
+                    y: targetY,
                     autoKill: false
                 },
                 duration: 1,
