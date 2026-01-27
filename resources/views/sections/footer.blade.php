@@ -1,14 +1,23 @@
 <footer class="content-info w-full pt-14 bg-gray-50 border-t border-gray-200">
-    @php(dynamic_sidebar('sidebar-footer'))
+    @php
+    dynamic_sidebar('sidebar-footer');
+    @endphp
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         <!--Grid-->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 pt-10 pb-10">
             <div class="col-span-1 sm:col-span-2 lg:col-span-2 mb-10 lg:mb-0">
                 <div class="flex justify-center lg:justify-start mb-1">
-                    @if (has_custom_logo())
+                    @php
+                    $footerLogo = get_theme_mod('footer_logo');
+                    $siteLogo = get_theme_mod('custom_logo');
+                    $logoId = $footerLogo ? attachment_url_to_postid($footerLogo) : $siteLogo;
+                    $logoUrl = $footerLogo ? $footerLogo : wp_get_attachment_image_url($siteLogo, 'full');
+                    @endphp
+
+                    @if ($logoUrl)
                     <a href="{{ home_url('/') }}" class="flex justify-center lg:justify-start">
-                        <img src="{{ wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full') }}" alt="{{ $siteName }}" class="h-10">
+                        <img src="{{ $logoUrl }}" alt="{{ $siteName }}" class="h-10">
                     </a>
                     @endif
                     <a class="flex items-center @if(has_custom_logo()) ml-2 @endif text-gray-800 font-bold text-2xl" href="{{ home_url('/') }}">

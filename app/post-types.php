@@ -11,68 +11,13 @@ namespace App;
  *
  * @return void
  */
+
+
+
+
+
+
 add_action('init', function () {
-    // Lab Logo
-    register_extended_post_type('lab_logo', [
-        'show_in_feed' => true,
-        'archive' => [
-            'nopaging' => true,
-        ],
-        'supports' => ['title', 'thumbnail', 'custom-fields'],
-    ], [
-        'singular' => 'Lab Logo',
-        'plural' => 'Labs Logo',
-        'slug' => 'labs-logo',
-    ]);
-
-    // Customer
-    register_extended_post_type('customer', [
-        'show_in_feed' => true,
-        'show_in_menu' => true,
-        'show_in_nav_menus' => true,
-        'has_archive' => true,
-        'archive' => [
-            'nopaging' => true,
-        ],
-        'supports' => ['title', 'thumbnail', 'custom-fields'],
-    ], [
-        'singular' => 'Customer',
-        'plural' => 'Customers',
-        'slug' => 'customer',
-    ]);
-
-    // Warranty
-    register_extended_post_type('warranty', [
-        'show_in_feed' => true,
-        'show_in_menu' => true,
-        'show_in_nav_menus' => true,
-        'has_archive' => true,
-        'archive' => [
-            'nopaging' => true,
-        ],
-        'supports' => ['title', 'editor', 'excerpt', 'custom-fields'],
-    ], [
-        'singular' => 'Warranty',
-        'plural' => 'Warranties',
-        'slug' => 'warranty',
-    ]);
-
-    // Price
-    register_extended_post_type('price', [
-        'show_in_feed' => true,
-        'show_in_menu' => true,
-        'show_in_nav_menus' => true,
-        'has_archive' => true,
-        'archive' => [
-            'nopaging' => true,
-        ],
-        'supports' => ['title', 'editor', 'excerpt', 'custom-fields', 'thumbnail'],
-    ], [
-        'singular' => 'Bảng giá',
-        'plural' => 'Price',
-        'slug' => 'price',
-    ]);
-
     // Docs (Documentation)
     register_post_type('docs', [
         'show_in_feed' => true,
@@ -128,6 +73,7 @@ add_action('init', function () {
         'rewrite' => ['slug' => 'chuyen-muc-tai-lieu'],
     ]);
 });
+
 
 /**
  * Clear lab_logo transient when a lab_logo post is saved.
