@@ -167,7 +167,7 @@
     {{-- What is vDentalLab Section with Circle Diagram --}}
     {{-- What is vDentalLab Section with Circle Diagram --}}
     <section
-        class="container-block pt-28 pb-8 bg-white relative overflow-hidden min-h-screen flex flex-col justify-center">
+        class="container-block pb-8 bg-white relative overflow-hidden min-h-screen flex flex-col justify-center">
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-6xl mx-auto">
@@ -286,7 +286,7 @@
 
     {{-- Benefit 1: Quản lý sản xuất --}}
     <section
-        class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
+        class="container-block py-12 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
         <div class="container mx-auto px-4">
             <div class="text-center mb-8">
                 {{-- <div
@@ -339,7 +339,7 @@
 
     {{-- Benefit 2: Nâng cao hiệu quả --}}
     <section
-        class="container-block pt-20 pb-12 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
+        class="container-block py-12 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
         <div class="container mx-auto px-4">
             <div class="max-w-[1400px] mx-auto">
                 <div
@@ -381,7 +381,7 @@
 
     {{-- Benefit 3: Chăm sóc khách hàng --}}
     <section
-        class="container-block pt-20 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
+        class="container-block py-12 mb-10 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col justify-center">
         <div class="container mx-auto px-4">
             <div class="max-w-[1400px] mx-auto">
                 <div
@@ -494,8 +494,8 @@
             this.showModal = true;
         }
     }" x-init="$watch('showModal', value => document.body.classList.toggle('overflow-hidden', value)); console.log('Vietnam Map Loaded:', regions)"
-        class="container-block min-h-screen flex flex-col justify-center pt-8">
-        <section class="py-20 bg-white">
+        class="container-block min-h-screen flex flex-col justify-center">
+        <section class="py-5 bg-white">
             <div class="container mx-auto px-4">
                 <div class="grid lg:grid-cols-2 gap-4 items-center">
                     {{-- Left Column: Text Content --}}

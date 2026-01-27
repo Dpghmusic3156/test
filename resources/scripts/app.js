@@ -165,9 +165,30 @@ if (blocks.length > 0) {
 
     accumulatedDelta = 0;
 
+    const block = blocks[index];
+    const blockHeight = block.offsetHeight;
+    const blockTop = block.getBoundingClientRect().top + window.scrollY;
+
+    // Get header height (assuming fixed header)
+    const header = document.querySelector('header') || document.querySelector('.site-header') || document.querySelector('#masthead');
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    // Calculate available viewport height (minus header)
+    const viewportHeight = window.innerHeight - headerHeight;
+
+    // Calculate scroll position to center the block in the available viewport
+    // If block is taller than viewport, scroll to top of block with header offset
+    let scrollPosition;
+    if (blockHeight >= viewportHeight) {
+      scrollPosition = blockTop - headerHeight;
+    } else {
+      // Center the block in the available viewport
+      scrollPosition = blockTop - headerHeight - (viewportHeight - blockHeight) / 2;
+    }
+
     gsap.to(window, {
       scrollTo: {
-        y: blocks[index],
+        y: Math.max(0, scrollPosition),
         autoKill: true
       },
       duration: 0.8,
