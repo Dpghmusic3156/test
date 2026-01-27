@@ -14,9 +14,9 @@
             </div>
 
             <div class="font-extrabold leading-tight mb-6" data-aos="fade-right" data-aos-delay="200">
-                <span class="text-4xl md:text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-orange-500">vDentalLab</span>
-                <span class="text-2xl md:text-4xl block mb-2 text-gray-900">Phần mềm Quản lý</span>
-                <span class="text-2xl md:text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Labo Dental</span>
+                <span class="h1 text-4xl md:text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-orange-500">vDentalLab</span>
+                <span class="h2 text-2xl md:text-4xl block mb-2 text-gray-900">Phần mềm Quản lý</span>
+                <span class="h2 text-2xl md:text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Labo Dental</span>
             </div>
 
             <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed" data-aos="fade-right" data-aos-delay="300">

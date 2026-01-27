@@ -329,6 +329,29 @@ const config = {
   },
   plugins: [
     typography,
+    // Base heading font-weights - Matching dentalso.com
+    function ({ addBase }) {
+      addBase({
+        'h1': {
+          fontWeight: '700', // Bold
+        },
+        'h2': {
+          fontWeight: '600', // Bold
+        },
+        'h3': {
+          fontWeight: '300', // Bold
+        },
+        'h4': {
+          fontWeight: '700', // Bold
+        },
+        'h5': {
+          fontWeight: '400', // Regular
+        },
+        'h6': {
+          fontWeight: '600', // Semi-bold
+        },
+      });
+    },
   ],
 };
 
