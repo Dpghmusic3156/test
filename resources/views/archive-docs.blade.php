@@ -44,7 +44,7 @@
       <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-4">
         📚 Danh mục
       </div>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+      <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-3">
         Khám phá tài liệu
       </h2>
       <p class="text-gray-600 max-w-2xl mx-auto">
@@ -98,7 +98,7 @@
 
               {{-- Post Count Badge --}}
               <div class="flex flex-col">
-                <a href="{{ get_term_link($category) }}" class="text-xl font-bold text-gray-800 group-hover:text-primary-600 transition-colors duration-300">
+                <a href="{{ get_term_link($category) }}" class="text-xl font-semibold text-gray-800 group-hover:text-primary-600 transition-colors duration-300">
                   {{ $category->name }}
                 </a>
                 <span class="inline-flex items-center gap-1 text-sm text-gray-500 mt-1">

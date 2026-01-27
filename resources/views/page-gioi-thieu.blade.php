@@ -45,7 +45,7 @@
                     {{-- CTA Button Group --}}
                     <div class="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up">
                         <a href="/lien-he"
-                            class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
+                            class="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1">
                             <span>Liên hệ tư vấn</span>
                             <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -107,7 +107,7 @@
                             </svg>
                         </div>
                         <div>
-                            <div class="text-2xl font-bold text-gray-800">99.9%</div>
+                            <div class="text-2xl font-medium text-gray-800">99.9%</div>
                             <div class="text-sm text-gray-600">Uptime đảm bảo</div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-6">
                     {{-- <div
-                        class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
+                        class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-medium text-sm mb-6">
                         Về chúng tôi
                     </div> --}}
                     <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-6">
@@ -290,7 +290,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-8">
                 {{-- <div
-                    class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-semibold text-sm mb-4">
+                    class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-medium text-sm mb-4">
                     Lợi ích
                 </div> --}}
                 <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-2">
@@ -501,7 +501,7 @@
                     {{-- Left Column: Text Content --}}
                     <div class="text-left mb-12 lg:mb-0 lg:pl-40">
                         {{-- <div
-                            class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
+                            class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-medium text-sm mb-6">
                             Khách hàng
                         </div> --}}
                         <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-6">
@@ -661,7 +661,7 @@
                     {{-- Modal Header --}}
                     <div class="p-4 border-b border-gray-200" x-show="selectedRegion">
                         <div
-                            :class="'inline-block px-4 py-2 bg-gradient-to-r ' + regions[selectedRegion]?.color + ' text-white rounded-full text-sm font-bold'">
+                            :class="'inline-block px-4 py-2 bg-gradient-to-r ' + regions[selectedRegion]?.color + ' text-white rounded-full text-sm font-medium'">
                             <span x-text="regions[selectedRegion]?.name"></span>
                         </div>
 
@@ -676,7 +676,7 @@
                                         class="bg-white rounded-xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-primary-500 hover:-translate-y-1 group">
                                         <img :src="customer.logo" :alt="customer.name"
                                             class="w-full h-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300">
-                                        <h4 class="font-bold text-gray-900 text-center mb-1" x-text="customer.name">
+                                        <h4 class="font-medium text-gray-900 text-center mb-1" x-text="customer.name">
                                         </h4>
                                         <div class="text-xs text-gray-500 line-clamp-2 text-center"
                                             x-text="customer.location"></div>
@@ -712,7 +712,7 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h2 class="text-4xl md:text-5xl font-medium text-white mb-6">
                         Chúng tôi cung cấp giải pháp <br />phù hợp cho Labo
                     </h2>
                 </div>
@@ -724,7 +724,7 @@
                             <img src="{{ home_url('/img/survey.jpg') }}" alt="Khảo sát tư vấn"
                                 class="w-20 h-20 rounded-full mx-auto object-cover">
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 text-center">Khảo sát & Tư vấn</h3>
+                        <h3 class="text-xl font-medium text-white mb-2 text-center">Khảo sát & Tư vấn</h3>
                         <p class="text-white/80 text-center">Xây dựng giải pháp phù hợp với nhu cầu của Labo</p>
                     </div>
 
@@ -734,7 +734,7 @@
                             <img src="{{ home_url('/img/customize.png') }}" alt="Tuỳ biến phần mềm"
                                 class="w-20 h-20 rounded-full mx-auto object-cover bg-white p-2">
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 text-center">Tuỳ biến phần mềm</h3>
+                        <h3 class="text-xl font-medium text-white mb-2 text-center">Tuỳ biến phần mềm</h3>
                         <p class="text-white/80 text-center">Đáp ứng quy trình quản lý riêng của Labo bạn</p>
                     </div>
 
@@ -744,14 +744,14 @@
                             <img src="{{ home_url('/img/support247.jpg') }}" alt="Hỗ trợ 24/7"
                                 class="w-20 h-20 rounded-full mx-auto object-cover">
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 text-center">Hỗ trợ 24/7</h3>
+                        <h3 class="text-xl font-medium text-white mb-2 text-center">Hỗ trợ 24/7</h3>
                         <p class="text-white/80 text-center">Giải đáp trong suốt thời gian sử dụng</p>
                     </div>
                 </div>
 
                 <div class="text-center">
                     <a href="/lien-he"
-                        class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-accent-500 hover:from-accent-600 hover:to-accent-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-lg">
+                        class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-accent-500 hover:from-accent-600 hover:to-accent-600 text-white font-medium px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-lg">
                         <span>Liên hệ ngay</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

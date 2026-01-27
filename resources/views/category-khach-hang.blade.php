@@ -42,7 +42,7 @@
             <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
                 Khách hàng
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h2 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-4">
                 Khách hàng tiêu biểu
             </h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -85,7 +85,7 @@
                     </div>
                     @endif
 
-                    <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">{{ $customer_name }}</h3>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">{{ $customer_name }}</h3>
 
                     <div class="flex flex-col justify-center items-center text-sm text-gray-600 leading-relaxed line-clamp-4">
                         {!! $customer_content !!}
@@ -127,13 +127,13 @@
 
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
                 Trở thành khách hàng tiếp theo của chúng tôi
             </h2>
             <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Tham gia cùng hơn 200 Lab hàng đầu đang sử dụng vDentalLab mỗi ngày
             </p>
-            <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
+            <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

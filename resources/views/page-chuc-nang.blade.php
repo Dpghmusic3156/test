@@ -22,7 +22,7 @@
             </div> -->
 
             {{-- Heading --}}
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight" data-aos="fade-up"
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight" data-aos="fade-up"
                 data-aos-delay="100">
                 Chức năng của <span
                     class="bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">vDentalLab</span>
@@ -36,7 +36,7 @@
 
             {{-- CTA --}}
             <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1"
                 data-aos="fade-up" data-aos-delay="300">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,10 +52,10 @@
 <section class="py-20 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <!--<div class="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold text-sm mb-6">
+            <!--<div class="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-medium text-sm mb-6">
                 Ưu điểm
             </div>-->
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-4">
                 Ưu điểm của phần mềm
             </h2>
         </div>
@@ -72,7 +72,7 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Số hoá toàn bộ dữ liệu</h3>
+                <h3 class="text-xl font-medium text-gray-800 mb-3">Số hoá toàn bộ dữ liệu</h3>
                 <p class="text-gray-600 leading-relaxed">Số hoá toàn bộ dữ liệu của Labo; Giải quyết những khó khăn khi
                     sử dụng file Excel hoặc sổ sách</p>
             </div>
@@ -87,7 +87,7 @@
                             d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Tăng hiệu quả làm việc</h3>
+                <h3 class="text-xl font-medium text-gray-800 mb-3">Tăng hiệu quả làm việc</h3>
                 <p class="text-gray-600 leading-relaxed">Thông tin chặt chẽ giữa các bộ phận; Tăng hiệu quả làm việc của
                     điều phối, quản lý tài chính, công nợ chặt chẽ; nâng cao dịch vụ chăm sóc khách hàng</p>
             </div>
@@ -102,7 +102,7 @@
                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Tiết kiệm thời gian</h3>
+                <h3 class="text-xl font-medium text-gray-800 mb-3">Tiết kiệm thời gian</h3>
                 <p class="text-gray-600 leading-relaxed">Tiết kiệm hơn 40% khối lượng công việc của các bộ phận</p>
             </div>
         </div>
@@ -113,10 +113,10 @@
 <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100" data-aos="fade-up">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <!--<div class="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full font-semibold text-sm mb-6">
+            <!--<div class="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full font-medium text-sm mb-6">
                 Phân hệ chính
             </div>-->
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-4">
                 Các phân hệ chính của phần mềm
             </h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -138,7 +138,7 @@
                 </div>
                 <a href="{{ home_url() }}/quan-ly-dieu-phoi/">
                     <h3
-                        class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
+                        class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
                         Quản lý điều phối</h3>
                 </a>
                 <p class="text-gray-600 leading-relaxed">Dễ dàng điều tiết hàng hoá vào - ra hợp lý. Theo dõi diện trạng
@@ -160,7 +160,7 @@
                 </div>
                 <a href="{{ home_url() }}/quy-trinh-san-xuat/">
                     <h3
-                        class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
+                        class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
                         Quy trình sản xuất</h3>
                 </a>
                 <p class="text-gray-600 leading-relaxed">Quy trình sản xuất chặt chẽ và thống nhất thông qua mã vạch. Hỗ
@@ -180,7 +180,7 @@
                 </div>
                 <a href="{{ home_url() }}/doanh-so-cong-no/">
                     <h3
-                        class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
+                        class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
                         Tài chính - Công nợ</h3>
                 </a>
                 <p class="text-gray-600 leading-relaxed">Chính xác, tự động và hoàn toàn phù hợp với nghiệp vụ kế toán
@@ -201,7 +201,7 @@
                 </div>
                 <a href="{{ home_url() }}/quan-ly-giao-nhan/">
                     <h3
-                        class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
+                        class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
                         Quản lý giao nhận</h3>
                 </a>
                 <p class="text-gray-600 leading-relaxed">Hàng đợi các yêu cầu giao / nhận hàng được cập nhật liên tục
@@ -222,7 +222,7 @@
                 </div>
                 <a href="{{ home_url() }}/cham-soc-khach-hang">
                     <h3
-                        class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
+                        class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
                         Chăm sóc khách hàng</h3>
                 </a>
                 <p class="text-gray-600 leading-relaxed">Toàn bộ dữ liệu và giao dịch liên quan đến khách hàng đều được
@@ -242,7 +242,7 @@
                 </div>
                 <a href="{{ home_url() }}/bao-cao-tong-hop">
                     <h3
-                        class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
+                        class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors cursor-pointer">
                         Báo cáo tổng hợp</h3>
                 </a>
                 <p class="text-gray-600 leading-relaxed">Phần mềm có đầy đủ các báo cáo cần thiết để phục vụ nhu cầu
@@ -260,7 +260,7 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Dịch vụ
+                <h3 class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Dịch vụ
                     nhắn tin SMS tự động</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">SMS là công cụ chăm sóc khách hàng hiện đại và hiệu quả.
                     Giúp nâng cao uy tín, mức độ chuyên nghiệp trong dịch vụ khách hàng và tạo ưu thế cạnh tranh.</p>
@@ -276,7 +276,7 @@
                             d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Website
+                <h3 class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Website
                     tra cứu dành cho lãnh đạo</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Quản lý hoạt động của Labo mọi lúc, mọi nơi. Nền tảng Web,
                     tương thích với các thiết bị di động; dữ liệu được thống kê theo thời gian thực.</p>
@@ -293,7 +293,7 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Quản lý
+                <h3 class="text-xl font-medium text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">Quản lý
                     gia công hàng nước ngoài</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">Đáp ứng quy trình quản lý hàng nước ngoài với các quy định
                     riêng; đáp ứng các nghiệp vụ về giao nhận hàng hoá qua UPS, tiền tệ, biểu mẫu báo cáo.</p>
@@ -311,7 +311,7 @@
 
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium mb-6">
                 Sẵn sàng trải nghiệm vDentalLab?
             </h2>
             <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">

@@ -332,22 +332,22 @@ const config = {
     // Base heading font-weights - Matching dentalso.com
     function ({ addBase }) {
       addBase({
-        'h1': {
+        'h1, .h1': {
           fontWeight: '700', // Bold
         },
-        'h2': {
-          fontWeight: '600', // Bold
+        'h2, .h2': {
+          fontWeight: '600', // Semi-bold
         },
-        'h3': {
-          fontWeight: '300', // Bold
+        'h3, .h3': {
+          fontWeight: '300', // Light
         },
-        'h4': {
+        'h4, .h4': {
           fontWeight: '700', // Bold
         },
-        'h5': {
+        'h5, .h5': {
           fontWeight: '400', // Regular
         },
-        'h6': {
+        'h6, .h6': {
           fontWeight: '600', // Semi-bold
         },
       });

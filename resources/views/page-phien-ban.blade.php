@@ -18,7 +18,7 @@
             </div>
 
             {{-- Heading --}}
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Bảng giá <span class="bg-gradient-to-r from-accent-300 to-accent-400 bg-clip-text text-transparent">vDentalLab</span>
             </h1>
 
@@ -75,7 +75,7 @@
                 {{-- Basic Plan --}}
                 <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Basic</h3>
+                        <h3 class="text-2xl font-medium text-gray-800 mb-2">Basic</h3>
                         <div class="flex items-baseline gap-2">
                             <span class="text-4xl font-extrabold text-gray-800">11.000.000 đ</span>
                         </div>
@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="mb-8">
-                        <h4 class="font-bold text-gray-800 mb-3">Phù hợp với các Labo nhỏ</h4>
+                        <h4 class="font-medium text-gray-800 mb-3">Phù hợp với các Labo nhỏ</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
                                 <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +114,7 @@
 
                     <div class="space-y-3">
                         <button @click="selectPlan('Basic')"
-                            class="block w-full text-center bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white font-bold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
+                            class="block w-full text-center bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white font-medium py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
                             Chọn gói này
                         </button>
                     </div>
@@ -124,13 +124,13 @@
                 <div class="group relative bg-primary-50 rounded-3xl p-8 border-2 border-primary-400 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 scale-105" data-aos="fade-up" data-aos-delay="200">
                     {{-- Popular Badge --}}
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                        <span class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
                             PHỔ BIẾN NHẤT
                         </span>
                     </div>
 
                     <div class="mb-6 mt-4">
-                        <h3 class="text-2xl font-bold text-gray-700 mb-2">Standard</h3>
+                        <h3 class="text-2xl font-medium text-gray-700 mb-2">Standard</h3>
                         <div class="flex items-baseline gap-2">
                             <span class="text-4xl font-extrabold text-primary-600">48.000.000 đ</span>
                         </div>
@@ -138,7 +138,7 @@
                     </div>
 
                     <div class="mb-8">
-                        <h4 class="font-bold text-gray-700 mb-3">Phù hợp với các Labo có quy mô lớn</h4>
+                        <h4 class="font-medium text-gray-700 mb-3">Phù hợp với các Labo có quy mô lớn</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
                                 <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,7 +169,7 @@
 
                     <div class="space-y-3">
                         <button @click="selectPlan('Standard')"
-                            class="block w-full text-center bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
+                            class="block w-full text-center bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
                             Chọn gói này
                         </button>
                     </div>
@@ -178,7 +178,7 @@
                 {{-- Enterprise Plan --}}
                 <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-accent-200 hover:border-accent-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Enterprise</h3>
+                        <h3 class="text-2xl font-medium text-gray-800 mb-2">Enterprise</h3>
                         <div class="flex items-baseline gap-2">
                             <span class="text-4xl font-extrabold text-accent-500">LIÊN HỆ</span>
                         </div>
@@ -186,7 +186,7 @@
                     </div>
 
                     <div class="mb-8">
-                        <h4 class="font-bold text-gray-800 mb-3">Giải pháp hoàn chỉnh cho Labo lớn</h4>
+                        <h4 class="font-medium text-gray-800 mb-3">Giải pháp hoàn chỉnh cho Labo lớn</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
                                 <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -222,7 +222,7 @@
                     </div>
 
                     <div class="space-y-3">
-                        <a href="{{ home_url('/') }}/dang-ky/" class="block w-full text-center bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <a href="{{ home_url('/') }}/dang-ky/" class="block w-full text-center bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
                             Liên hệ tư vấn
                         </a>
                     </div>
@@ -238,11 +238,11 @@
             <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
                 <div class="p-8 md:p-12">
                     <div class="text-center mb-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full font-semibold text-sm mb-4">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full font-medium text-sm mb-4">
                             <span class="text-gray-500">Đang chọn gói:</span>
-                            <span x-text="selectedPlan" class="font-bold uppercase"></span>
+                            <span x-text="selectedPlan" class="font-medium uppercase"></span>
                         </div>
-                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Hãy chọn số lượng máy tính bạn muốn cài đặt</h2>
+                        <h2 class="text-3xl font-medium text-gray-800 mb-4">Hãy chọn số lượng máy tính bạn muốn cài đặt</h2>
 
                     </div>
 
@@ -251,7 +251,7 @@
                         <div>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-gray-700 font-medium">Số lượng máy:</span>
-                                <span class="text-3xl font-bold text-primary-600" x-text="count"></span>
+                                <span class="text-3xl font-medium text-primary-600" x-text="count"></span>
                             </div>
                             <input type="range" :min="minCount" max="50" x-model.number="count"
                                 class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary-600 hover:accent-primary-700 transition-all">
@@ -277,10 +277,10 @@
                                 </div>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                                <button @click="scrollToPricing()" class="px-6 py-4 border-2 border-accent-300 text-accent-600 rounded-xl hover:bg-accent-100 hover:border-accent-400  transition-all duration-300 whitespace-nowrap font-semibold">
+                                <button @click="scrollToPricing()" class="px-6 py-4 border-2 border-accent-300 text-accent-600 rounded-xl hover:bg-accent-100 hover:border-accent-400  transition-all duration-300 whitespace-nowrap font-medium">
                                     Chọn gói khác
                                 </button>
-                                <a href="{{ home_url() }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
+                                <a href="{{ home_url() }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
                                     Đăng ký gói này
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -298,10 +298,10 @@
     <section class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <div class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-semibold text-sm mb-6">
+                <div class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-medium text-sm mb-6">
                     So sánh
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-4">
                     So sánh các phiên bản
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -314,7 +314,7 @@
 
                     <thead class="bg-gray-100">
                         <tr>
-                            <td colspan="3" class="text-center py-3 px-6 font-bold text-gray-800">Khách hàng – Giao nhận</td>
+                            <td colspan="3" class="text-center py-3 px-6 font-medium text-gray-800">Khách hàng – Giao nhận</td>
                         </tr>
                     </thead>
 
@@ -392,7 +392,7 @@
 
                     <thead class="bg-gray-100">
                         <tr>
-                            <td colspan="3" class="text-center py-3 px-6 font-bold text-gray-800">Điều phối</td>
+                            <td colspan="3" class="text-center py-3 px-6 font-medium text-gray-800">Điều phối</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -502,7 +502,7 @@
                     {{-- Sản xuất --}}
                     <thead class="bg-gray-100">
                         <tr>
-                            <td colspan="3" class="text-center py-3 px-6 font-bold text-gray-800">Sản xuất</td>
+                            <td colspan="3" class="text-center py-3 px-6 font-medium text-gray-800">Sản xuất</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -552,7 +552,7 @@
                     {{-- Tài chính --}}
                     <thead class="bg-gray-100">
                         <tr>
-                            <td colspan="3" class="text-center py-3 px-6 font-bold text-gray-800">Tài chính</td>
+                            <td colspan="3" class="text-center py-3 px-6 font-medium text-gray-800">Tài chính</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -649,10 +649,10 @@
     <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-semibold text-sm mb-6">
+                <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-medium text-sm mb-6">
                     Ưu điểm chung
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-4">
                     Ưu điểm chung của các phiên bản
                 </h2>
             </div>
@@ -663,7 +663,7 @@
                     <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                         <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_chat_89_69.png" alt="Support" class="w-12 h-12">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Hỗ trợ miễn phí 12 tháng</h3>
+                    <h3 class="text-xl font-medium text-gray-800 mb-3">Hỗ trợ miễn phí 12 tháng</h3>
                     <p class="text-gray-600 leading-relaxed">Tại labo hoặc qua điện thoại, chat, email. Hướng dẫn nhân viên mới sử dụng</p>
                 </div>
 
@@ -672,7 +672,7 @@
                     <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                         <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_bao_mat_89_69.png" alt="Security" class="w-12 h-12">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Phân quyền và bảo mật</h3>
+                    <h3 class="text-xl font-medium text-gray-800 mb-3">Phân quyền và bảo mật</h3>
                     <p class="text-gray-600 leading-relaxed">Nhân viên có tài khoản đăng nhập, truy cập vào những chức năng được cấp quyền</p>
                 </div>
 
@@ -681,7 +681,7 @@
                     <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
                         <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_row_chat_89_69.png" alt="Backup" class="w-12 h-12">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Tự động sao lưu dữ liệu</h3>
+                    <h3 class="text-xl font-medium text-gray-800 mb-3">Tự động sao lưu dữ liệu</h3>
                     <p class="text-gray-600 leading-relaxed">Chức năng sao lưu tự động mỗi ngày. Dữ liệu sản xuất của Labo tuyệt đối an toàn</p>
                 </div>
             </div>
@@ -698,13 +698,13 @@
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-4xl mx-auto text-center text-white">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium mb-6">
                     Bắt đầu với bản dùng thử miễn phí
                 </h2>
                 <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                     Trải nghiệm đầy đủ tính năng của vDentalLab miễn phí. Hỗ trợ đầy đủ ngay cả khi dùng thử.
                 </p>
-                <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md">
+                <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md">
                     <span>Dùng thử miễn phí</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

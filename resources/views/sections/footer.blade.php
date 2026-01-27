@@ -9,9 +9,9 @@
                     @if (has_custom_logo())
                     <a href="{{ home_url('/') }}" class="flex justify-center lg:justify-start">
                         <img src="{{ wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full') }}" alt="{{ $siteName }}" class="h-10">
-                    </a>
+                    </a>    
                     @endif
-                    <a class="flex items-center @if(has_custom_logo()) ml-2 @endif text-gray-800 font-bold text-2xl" href="{{ home_url('/') }}">
+                    <a class="flex items-center @if(has_custom_logo()) ml-2 @endif text-gray-800 font-medium text-2xl" href="{{ home_url('/') }}">
                         {!! $siteName !!}
                     </a>
                 </div>
@@ -19,14 +19,14 @@
                     xây dựng chuyên biệt cho ngành Labo Nha Khoa.</p>
                 <div class="text-center lg:text-left">
                     <a href="/lien-he"
-                        class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-6 py-4 rounded-lg transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/50 transform hover:-translate-y-0.5 text-md">
+                        class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium px-6 py-4 rounded-lg transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/50 transform hover:-translate-y-0.5 text-md">
                         Liên hệ tư vấn
                     </a>
                 </div>
             </div>
             <!--End Col-->
             <div class="text-left">
-                <h4 class="text-lg text-gray-900 font-bold mb-7">Thông tin liên hệ</h4>
+                <h4 class="text-lg text-gray-900 font-medium mb-7">Thông tin liên hệ</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6">
                         <a class="flex items-start gap-3 text-gray-600">
@@ -61,7 +61,7 @@
             </div>
             <!--End Col-->
             <div class="text-left">
-                <h4 class="text-lg text-gray-900 font-bold mb-7">Chức năng
+                <h4 class="text-lg text-gray-900 font-medium mb-7">Chức năng
                 </h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a href="{{ home_url('/') }}docs/quan-ly-dieu-phoi/" class="text-gray-600 hover:text-primary-600">Điều phối hoạt động</a></li>
@@ -74,7 +74,7 @@
             </div>
             <!--End Col-->
             <div class="text-left">
-                <h4 class="text-lg text-gray-900 font-bold mb-7">Video hướng dẫn</h4>
+                <h4 class="text-lg text-gray-900 font-medium mb-7">Video hướng dẫn</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6"><a
                             href="{{ home_url('/') }}phan-mem-quan-ly-labo-vdentallab/"
