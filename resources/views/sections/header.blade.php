@@ -2,9 +2,9 @@
     <header class="banner">
         <div class="container">
             <div class="brand-wrapper">
-                @if (get_theme_mod('logo'))
+                @if (has_custom_logo())
                 <a class="custom-logo-link" href="{{ home_url('/') }}">
-                    <img src="{{ get_theme_mod('logo') }}" alt="{{ $siteName }}" class="custom-logo my-2">
+                    <img src="{{ wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full') }}" alt="{{ $siteName }}" class="custom-logo my-2">
                 </a>
                 @endif
 

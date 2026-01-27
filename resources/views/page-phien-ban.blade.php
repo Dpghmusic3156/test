@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 {{-- Hero Section --}}
 <section class="relative bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative py-20 overflow-hidden">
     {{-- Background Decoration --}}
@@ -711,3 +714,4 @@
         </div>
     </section>
 </div>
+@endsection

@@ -47,9 +47,6 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
-        'dentallab_navigation' => __('Dental Lab Navigation', 'sage'),
-        'dentalclinic_navigation' => __('Dental Clinic Navigation', 'sage'),
-        'warranty_navigation' => __('Warranty Navigation', 'sage'),
     ]);
 
     /**
