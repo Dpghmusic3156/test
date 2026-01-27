@@ -33,25 +33,35 @@
 <div x-data="{
     selectedPlan: 'Basic',
     count: 1,
-    get rate() { return this.selectedPlan === 'Basic' ? 11000000 : 6000000; },
+    showPlanSelector: false,
     get minCount() { return this.selectedPlan === 'Basic' ? 1 : 8; },
     init() {
         this.$watch('count', value => {
             if (value < this.minCount) this.count = this.minCount;
         });
     },
+    calculateTotal() {
+        if (this.selectedPlan === 'Basic') {
+            // First machine 11m, subsequent 4.5m
+            return 11000000 + (Math.max(0, this.count - 1) * 4500000);
+        } else {
+            // First 8 machines 48m, subsequent 4.5m
+            return 48000000 + (Math.max(0, this.count - 8) * 4500000);
+        }
+    },
     selectPlan(plan) {
         this.selectedPlan = plan;
+        this.showPlanSelector = false;
         
         // Force update count based on new plan rules
         if (plan === 'Standard') {
-                if (this.count < 8) this.count = 8;
+                this.count = 8;
         } else {
-                // Basic plan, default to 1
+                // Basic plan, reset to 1
                 this.count = 1;
         }
         
-        // Scroll to section
+        // Scroll to section (optional, keeping it smooth)
         const section = document.getElementById('cost-estimator');
         if (section) {
             const yOffset = -150; 
@@ -238,9 +248,30 @@
             <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
                 <div class="p-8 md:p-12">
                     <div class="text-center mb-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full font-medium text-sm mb-4">
-                            <span class="text-gray-500">Đang chọn gói:</span>
-                            <span x-text="selectedPlan" class="font-medium uppercase"></span>
+                        <div class="relative inline-block text-left mb-4">
+                            <button @click="showPlanSelector = !showPlanSelector" @click.away="showPlanSelector = false" class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full font-medium text-sm hover:bg-primary-100 transition-colors">
+                                <span class="text-gray-500">Đang chọn gói:</span>
+                                <span x-text="selectedPlan" class="font-medium uppercase"></span>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="showPlanSelector" style="display: none;" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 origin-top"
+                                x-transition:enter="transition ease-out duration-100"
+                                x-transition:enter-start="opacity-0 scale-95"
+                                x-transition:enter-end="opacity-100 scale-100"
+                                x-transition:leave="transition ease-in duration-75"
+                                x-transition:leave-start="opacity-100 scale-100"
+                                x-transition:leave-end="opacity-0 scale-95">
+                                <div class="py-1" role="menu" aria-orientation="vertical">
+                                    <button @click="selectPlan('Basic')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 font-medium border-b border-gray-100 last:border-0" role="menuitem">
+                                        Basic
+                                    </button>
+                                    <button @click="selectPlan('Standard')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 font-medium" role="menuitem">
+                                        Standard
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <h2 class="text-3xl font-medium text-gray-800 mb-4">Hãy chọn số lượng máy tính bạn muốn cài đặt</h2>
 
@@ -266,7 +297,7 @@
                             <div class="text-center md:text-left">
                                 <div class="text-gray-500 text-sm mb-1">Tổng chi phí ước tính</div>
                                 <div class="text-4xl font-extrabold text-gray-900">
-                                    <span x-text="(count * rate).toLocaleString('vi-VN')"></span>
+                                    <span x-text="calculateTotal().toLocaleString('vi-VN')"></span>
                                     <span class="text-2xl text-gray-500 font-medium">đ</span>
                                 </div>
                                 <div class="text-xs text-green-600 mt-2 font-medium flex items-center justify-center md:justify-start gap-1">
@@ -277,9 +308,7 @@
                                 </div>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                                <button @click="scrollToPricing()" class="px-6 py-4 border-2 border-accent-300 text-accent-600 rounded-xl hover:bg-accent-100 hover:border-accent-400  transition-all duration-300 whitespace-nowrap font-medium">
-                                    Chọn gói khác
-                                </button>
+                                {{-- Button removed --}}
                                 <a href="{{ home_url() }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
                                     Đăng ký gói này
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
