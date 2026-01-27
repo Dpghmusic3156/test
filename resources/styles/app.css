@@ -5,6 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1, h2, h3, h4 {
+    @apply font-bold; /* font-weight: 700 */
+  }
+  h5 {
+    @apply font-normal; /* font-weight: 400 */
+  }
+  h6 {
+    @apply font-semibold; /* font-weight: 600 */
+  }
+}
 @layer utilities {
   .bg-gradient-animate {
     background-size: 200% 200%;
