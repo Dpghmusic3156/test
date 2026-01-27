@@ -25,7 +25,7 @@
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight" data-aos="fade-up"
                 data-aos-delay="100">
                 Chức năng của <span
-                    class="bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">vDentalLab</span>
+                    class="bg-gradient-to-r from-amber-300 via-amber-400 to-accent-500 bg-clip-text text-transparent">vDentalLab</span>
             </h1>
 
             <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto" data-aos="fade-up"

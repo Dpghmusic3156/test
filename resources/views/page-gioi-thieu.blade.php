@@ -164,10 +164,10 @@
         </template>
     </div>
 
-    {{-- What is vDentalLab Section with Circle Diagram --}}
+
     {{-- What is vDentalLab Section with Circle Diagram --}}
     <section
-        class="container-block pb-8 bg-white relative overflow-hidden min-h-screen flex flex-col justify-center">
+        class="container-block pb-8 bg-white relative -hidden min-h-screen flex flex-col justify-center">
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-6xl mx-auto">
@@ -294,7 +294,7 @@
                     Lợi ích
                 </div> --}}
                 <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-2">
-                    vDentalLab giúp gì cho <span class="text-primary-600">Labo của bạn?</span>
+                    <span class="text-accent-500">vDentalLab</span> giúp gì cho <span class="text-primary-600">Labo của bạn?</span>
                 </h2>
             </div>
 
