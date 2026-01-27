@@ -126,7 +126,10 @@ nav ul li::after {
   transition: width 0.3s ease;
 }
 
-nav ul li:hover::after {
+nav ul li:hover::after,
+nav ul li.current-menu-item::after,
+nav ul li.current_page_item::after,
+nav ul li.current-menu-ancestor::after {
   width: 100%;
 }
 
@@ -436,7 +439,10 @@ nav ul .sub-menu li::after {
     transform: translateX(4px);
   }
 
-  nav ul li a:hover::before {
+  nav ul li a:hover::before,
+  nav ul li.current-menu-item > a::before,
+  nav ul li.current_page_item > a::before,
+  nav ul li.current-menu-ancestor > a::before {
     transform: scaleY(1);
   }
 
