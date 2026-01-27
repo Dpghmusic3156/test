@@ -91,7 +91,7 @@
             {{-- Header --}}
             <div class="text-center mb-8 md:mb-16">
 
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium text-black-900 mb-6 whitespace-nowrap">
+                <h2 class="text-2xl lg:text-5xl font-medium text-black-900 mb-6 whitespace-nowrap">
                     Phản hồi từ khách hàng
                 </h2>
             </div>
@@ -113,7 +113,7 @@
                         </div>
 
                         {{-- Testimonial text --}}
-                        <p class="text-black-700 leading-relaxed">
+                        <p class="text-lg lg:text-xl text-black-600 font-normal">
                             Phần mềm giúp tôi quản lý chặt chẽ quy trình sản xuất và các kỹ thuật viên. Tôi đã cải thiện hoàn toàn việc quản lý và tiết kiệm thời gian đáng kể.
                         </p>
                     </div>
@@ -129,7 +129,7 @@
                             <p class="text-sm text-primary-600">CEO, Labo Thành Tuấn</p>
                         </div>
 
-                        <p class="text-black-700 leading-relaxed">
+                        <p class="text-lg lg:text-xl text-black-600 font-normal">
                             Tôi sử dụng phần mềm ngay từ ngày đầu thành lập Labo. Quản lý đơn hàng rất dễ dàng, đặc biệt là khả năng tra cứu lịch sử và kiểm soát hàng trễ hiệu quả.
                         </p>
                     </div>
@@ -145,7 +145,7 @@
                             <p class="text-sm text-primary-600">CEO, Labo Westcoast</p>
                         </div>
 
-                        <p class="text-black-700 leading-relaxed">
+                        <p class="text-lg lg:text-xl text-black-600 font-normal">
                             Sau khi thử nhiều phần mềm nước ngoài, tôi chuyển qua vDentalLab vì phù hợp với đặc thù Việt Nam. Hỗ trợ tốt việc tính lương và quản lý vật liệu.
                         </p>
                     </div>
@@ -165,7 +165,7 @@
                         <img src="{{ home_url('/wp-content/uploads/2026/01/logo.png') }}" alt="DentalSO Logo" class="h-12 w-auto my-5 block">
                     </h2>
 
-                    <p class="text-base md:text-base text-black-600 mb-4 leading-relaxed">
+                    <p class="text-lg md:text-xl text-black-600 mb-4 leading-relaxed">
                         Phiên bản nâng cấp toàn diện mang đến sức mạnh quản lý vượt trội. <br class="hidden lg:block">Tối ưu hóa quy trình, nâng cao trải nghiệm người dùng.
                     </p>
                 </div>
@@ -205,11 +205,12 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-base md:text-lg font-semibold text-black-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
-                            <p class="text-sm md:text-base text-black-600">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo <br class="hidden lg:block">mọi lúc mọi nơi.</p>
+                            <h3 class="text-xl lg:text-2xl font-medium text-black-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
+                            <p class="text-lg lg:text-xl text-black-600 font-normal">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo <br class="hidden lg:block">mọi lúc mọi nơi.</p>
                         </div>
                     </div>
 
+                    <div class="h-px bg-black-100 w-full"></div>
                     {{-- Feature 2 --}}
                     <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
                         <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600">
@@ -218,11 +219,12 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-base md:text-lg font-medium text-black-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
-                            <p class="text-sm md:text-base text-black-600">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
+                            <h3 class="text-xl lg:text-2xl font-medium text-black-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
+                            <p class="text-lg lg:text-xl text-black-600 font-normal">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
                         </div>
                     </div>
 
+                    <div class="h-px bg-black-100 w-full"></div>
                     {{-- Feature 3 --}}
                     <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
                         <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-accent-100 flex items-center justify-center text-accent-600">
@@ -231,8 +233,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-base md:text-lg font-medium text-black-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
-                            <p class="text-sm md:text-base text-black-600">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
+                            <h3 class="text-xl lg:text-2xl font-medium text-black-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
+                            <p class="text-lg lg:text-xl text-black-600 font-normal">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
                         </div>
                     </div>
 
