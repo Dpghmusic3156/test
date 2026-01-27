@@ -55,20 +55,20 @@
             <div class="absolute -bottom-20 right-2 lg:-bottom-8 lg:-left-8 lg:right-auto bg-white rounded-2xl shadow-2xl p-4 lg:p-6 border border-primary-100 scale-85 lg:scale-100 animate-floating" data-aos="fade-up">
                 {{-- Customer Avatars --}}
                 <div class="flex -space-x-3 mb-3">
-                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                    <a href="category/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
                         <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo_new_smile_lab-removebg-XdclsaZoxPJDTfvxl2Ub.png" alt="Customer">
                     </a>
-                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
-                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://phanmemlabo.com/wp-content/uploads/2024/05/z5276532952194_2d396fbde325544879a50e96744952bd.jpg" alt="Customer">
+                    <a href="category/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="{{ home_url('/wp-content/uploads/2024/05/z5276532952194_2d396fbde325544879a50e96744952bd.jpg') }}" alt="Customer">
                     </a>
-                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
-                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://phanmemlabo.com/wp-content/uploads/2024/05/logo-medical-lab-SgYwbApXgrbxnByVNadu.jpg" alt="Customer">
+                    <a href="category/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="{{ home_url('/wp-content/uploads/2024/05/logo-medical-lab-SgYwbApXgrbxnByVNadu.jpg') }}" alt="Customer">
                     </a>
-                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
-                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Customer">
+                    <a href="category/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="{{ home_url('/wp-content/uploads/2021/03/ceo-huu-nguyen.png') }}" alt="Customer">
                     </a>
-                    <a href="/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
-                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Customer">
+                    <a href="category/khach-hang" class="block transition-transform hover:scale-110 hover:z-10">
+                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md hover:brightness-110" src="{{ home_url('/wp-content/uploads/2021/03/ceo-thanh-tuan.png') }}" alt="Customer">
                     </a>
                 </div>
 
@@ -87,7 +87,7 @@
         <div class="text-center text-lg md:text-xl text-black-900/80 max-w-3xl mx-auto mb-8 md:mb-16">
             Chúng tôi muốn<span class="text-accent-500 font-medium"> đóng góp vào sự phát triển </span>của <br class="hidden lg:block"> ngành <span class="text-accent-500 font-medium">Labo Nha khoa</span> Việt Nam
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 relative z-10 w-full">
             {{-- Header --}}
             <div class="text-center mb-8 md:mb-16">
 
@@ -103,7 +103,7 @@
                     <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
                         {{-- Avatar --}}
                         <div class="mb-6">
-                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Ms. Linh">
+                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-huu-nguyen.png') }}" alt="Ms. Linh">
                         </div>
 
                         {{-- Name & Title --}}
@@ -121,7 +121,7 @@
                     {{-- Testimonial 2 --}}
                     <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
                         <div class="mb-6">
-                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
+                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-thanh-tuan.png') }}" alt="Alan Nguyễn">
                         </div>
 
                         <div class="mb-4">
@@ -137,7 +137,7 @@
                     {{-- Testimonial 3 --}}
                     <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
                         <div class="mb-6">
-                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-cyan-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-westcost.png" alt="Dr. Andrew Tsang">
+                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-cyan-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-westcost.png') }}" alt="Dr. Andrew Tsang">
                         </div>
 
                         <div class="mb-4">
@@ -251,7 +251,7 @@
     </section>
 
     {{-- CTA Section --}}
-    <section class="container-block py-12 md:py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden lg:min-h-screen flex flex-col justify-center">
+    <section class="container-block py-16 md:py-20 bg-gradient-to-br from-primary-600 via-cyan-600 to-primary-700 relative overflow-hidden lg:min-h-screen flex flex-col justify-center">
         {{-- Background decoration --}}
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>

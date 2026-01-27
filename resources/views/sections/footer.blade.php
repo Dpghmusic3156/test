@@ -6,7 +6,7 @@
 
         <!--Grid-->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 pt-10 pb-10">
-            <div class="col-span-1 sm:col-span-2 lg:col-span-2 mb-10 lg:mb-0">
+            <div class="col-span-1 sm:col-span-2 lg:col-span-2">
                 <div class="flex justify-center lg:justify-start mb-1">
                     @php
                     $footerLogo = get_theme_mod('footer_logo');
@@ -16,11 +16,11 @@
                     @endphp
 
                     @if ($logoUrl)
-                    <a href="{{ home_url('/') }}" class="flex justify-center lg:justify-start">
-                        <img src="{{ $logoUrl }}" alt="{{ $siteName }}" class="h-10">
+                    <a href="{{ home_url('/') }}" class="flex justify-center lg:justify-start ">
+                        <img src="{{ $logoUrl }}" alt="{{ $siteName }}" class="h-10 ">
                     </a>
                     @endif
-                    <a class="flex items-center @if(has_custom_logo()) ml-2 @endif text-gray-800 font-medium text-2xl" href="{{ home_url('/') }}">
+                    <a class="flex items-center @if(has_custom_logo()) ml-2 @endif text-accent-500 font-medium text-2xl" href="{{ home_url('/') }}">
                         {!! $siteName !!}
                     </a>
                 </div>
@@ -32,8 +32,7 @@
                         Liên hệ tư vấn
                     </a>
                 </div>
-                {{-- Mobile Divider --}}
-                <div class="block lg:hidden w-full h-px bg-gray-200 my-8"></div>
+                <div class="block lg:hidden w-full h-px bg-gray-300 my-8"></div> {{-- Divider --}}
             </div>
             <!--End Col-->
             <div class="text-left">
@@ -71,6 +70,7 @@
                 </ul>
             </div>
             <!--End Col-->
+            <div class="block lg:hidden w-full h-px bg-gray-300"></div> {{-- Divider --}}
             <div class="text-left">
                 <h4 class="text-lg text-gray-900 font-medium mb-7">Chức năng
                 </h4>
@@ -83,6 +83,7 @@
                     <li class="mb-6"><a href="{{ home_url('/') }}bao-cao-tong-hop/" class="text-gray-600 hover:text-primary-600">Báo cáo kinh doanh</a></li>
                 </ul>
             </div>
+            <div class="block lg:hidden w-full h-px bg-gray-300"></div> {{-- Divider --}}
             <!--End Col-->
             <div class="text-left">
                 <h4 class="text-lg text-gray-900 font-medium mb-7">Video hướng dẫn</h4>
@@ -124,7 +125,7 @@
         <!--Grid-->
         <div class="py-7 border-t border-gray-200">
             <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-                <span class="text-sm text-gray-500 ">©<a href="{{ home_url('/') }}">vDentalLab</a></span>
+                <span class="text-sm text-gray-500 ">©<a href="{{ home_url('/') }}">{!! $siteName !!}</a></span>
                 <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
                     @if(get_theme_mod('facebook'))
                     <a href="{{ get_theme_mod('facebook') }}"
