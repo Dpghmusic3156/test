@@ -210,7 +210,6 @@
                         </div>
                     </div>
 
-                    <div class="h-px bg-black-100 w-full"></div>
                     {{-- Feature 2 --}}
                     <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
                         <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600">
@@ -223,8 +222,6 @@
                             <p class="text-lg lg:text-xl text-black-600 font-normal">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
                         </div>
                     </div>
-
-                    <div class="h-px bg-black-100 w-full"></div>
                     {{-- Feature 3 --}}
                     <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
                         <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-accent-100 flex items-center justify-center text-accent-600">
