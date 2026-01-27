@@ -119,8 +119,9 @@ domReady(async () => {
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 
 
@@ -134,14 +135,86 @@ window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
 
-// Initialize ScrollSmoother if wrapper exists
+// Initialize ScrollSmoother if wrapper exists (skip on gioi-thieu page)
 const smoothWrapper = document.getElementById('smooth-wrapper');
-if (smoothWrapper) {
+const isGioiThieuPage = document.body.className.includes('gioi-thieu');
+
+if (smoothWrapper && !isGioiThieuPage) {
   ScrollSmoother.create({
     wrapper: '#smooth-wrapper',
     content: '#smooth-content',
     smooth: 0.8,
     effects: true
+  });
+}
+
+// Custom Scroll Snap Logic for pages with container-block sections
+// This runs independently of ScrollSmoother for both front-page and gioi-thieu
+const blocks = document.querySelectorAll('.container-block');
+
+if (blocks.length > 0) {
+  console.log('[ScrollSnap] Found', blocks.length, 'container-block elements. Initializing scroll snap...');
+
+  let currentIndex = 0;
+  let accumulatedDelta = 0;
+  const scrollThreshold = 270;
+  let resetDeltaTimeout;
+
+  function scrollToBlock(index) {
+    if (index < 0 || index >= blocks.length) return;
+
+    accumulatedDelta = 0;
+
+    gsap.to(window, {
+      scrollTo: {
+        y: blocks[index],
+        autoKill: true
+      },
+      duration: 0.8,
+      ease: "power2.out",
+      overwrite: true
+    });
+  }
+
+  function handleScroll(event) {
+    if (window.innerWidth < 1024) return;
+    if (document.body.classList.contains('overflow-hidden')) return;
+
+    event.preventDefault();
+
+    clearTimeout(resetDeltaTimeout);
+    resetDeltaTimeout = setTimeout(() => {
+      accumulatedDelta = 0;
+    }, 100);
+
+    accumulatedDelta += event.deltaY;
+
+    if (Math.abs(accumulatedDelta) < scrollThreshold) return;
+
+    if (accumulatedDelta > 0) {
+      if (currentIndex < blocks.length - 1) {
+        currentIndex++;
+        scrollToBlock(currentIndex);
+      }
+    } else if (accumulatedDelta < 0) {
+      if (currentIndex > 0) {
+        currentIndex--;
+        scrollToBlock(currentIndex);
+      }
+    }
+    accumulatedDelta = 0;
+  }
+
+  window.addEventListener('wheel', handleScroll, { passive: false });
+
+  blocks.forEach((block, i) => {
+    ScrollTrigger.create({
+      trigger: block,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => currentIndex = i,
+      onEnterBack: () => currentIndex = i
+    });
   });
 }
 

@@ -509,17 +509,13 @@
         const blocks = document.querySelectorAll('.container-block');
         if (blocks.length === 0) return;
 
-        let isScrolling = false;
-        let currentIndex = 0;
-
         // Track accumulated delta to require "intent"
         let accumulatedDelta = 0;
-        const scrollThreshold = 150; // Threshold to trigger scroll (higher = harder to trigger)
+        const scrollThreshold = 270; // Increased threshold to reduce sensitivity
         let resetDeltaTimeout;
 
         function scrollToBlock(index) {
             if (index < 0 || index >= blocks.length) return;
-            isScrolling = true;
 
             // Reset accumulated delta when starting a scroll
             accumulatedDelta = 0;
@@ -527,13 +523,11 @@
             gsap.to(window, {
                 scrollTo: {
                     y: blocks[index],
-                    autoKill: false
+                    autoKill: true // Allow user to interrupt if needed (though we preventDefault)
                 },
-                duration: 1,
-                ease: "power2.inOut",
-                onComplete: () => {
-                    isScrolling = false;
-                }
+                duration: 0.8, // Faster duration
+                ease: "power2.out", // Snappier ease
+                overwrite: true // Ensure new scrolls overwrite old ones immediately
             });
         }
 
@@ -548,8 +542,6 @@
 
             // Prevent default to control scroll
             event.preventDefault();
-
-            if (isScrolling) return;
 
             // Reset accumulator if paused
             clearTimeout(resetDeltaTimeout);
