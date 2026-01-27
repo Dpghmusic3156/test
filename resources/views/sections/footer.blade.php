@@ -32,6 +32,8 @@
                         Liên hệ tư vấn
                     </a>
                 </div>
+                {{-- Mobile Divider --}}
+                <div class="block lg:hidden w-full h-px bg-gray-200 my-8"></div>
             </div>
             <!--End Col-->
             <div class="text-left">

@@ -84,58 +84,23 @@
     <section class="container-block py-8 md:py-24 relative overflow-hidden lg:min-h-screen flex flex-col justify-center pt-20">
         {{-- Background decorative elements --}}
 
-
+        <div class="text-center text-lg md:text-xl text-black-900/80 max-w-3xl mx-auto mb-8 md:mb-16">
+            Chúng tôi muốn<span class="text-accent-500 font-medium"> đóng góp vào sự phát triển </span>của <br class="hidden lg:block"> ngành <span class="text-accent-500 font-medium">Labo Nha khoa</span> Việt Nam
+        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             {{-- Header --}}
             <div class="text-center mb-8 md:mb-16">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-black-900 mb-6">
+
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium text-black-900 mb-6 whitespace-nowrap">
                     Phản hồi từ khách hàng
                 </h2>
-                <p class="text-lg md:text-xl text-black-900/80 max-w-3xl mx-auto">
-                    <span class="text-accent-500 font-medium">Chúng tôi</span> muốn đóng góp vào sự phát triển của <span class="text-accent-500 font-medium">ngành Labo Nha khoa Việt Nam</span>
-                </p>
             </div>
 
             {{-- Testimonials Grid --}}
-            <div x-data="{ 
-                activeSlide: 0, 
-                scroll() { 
-                    const scrollLeft = this.$refs.slider.scrollLeft;
-                    const width = this.$refs.slider.offsetWidth;
-                    // Calculate active slide based on scroll position (approximate for 85vw items)
-                    this.activeSlide = Math.round(scrollLeft / (width * 0.8));
-                },
-                scrollTo(index) {
-                    const width = this.$refs.slider.offsetWidth;
-                    // Scroll to approx position (index * 85% of width + gap adjustment)
-                    // Or let snap-center handle the precision
-                    // Finding the child element would be better, but this is a quick valid approximation with snap
-                    // Better: standard scroll assuming uniform items
-                    // Let's use simpler logic: 
-                    // Item width is roughly 85vw = width * 0.85 (since container is 100vw effectively with negative margins)
-                    // Actually container allows overflow.
-                    // Let's rely on scrollWidth / 3.
-                    const itemWidth = this.$refs.slider.scrollWidth / 3;
-                    this.$refs.slider.scrollTo({ left: index * itemWidth, behavior: 'smooth' });
-                }
-            }" class="relative">
-                <style>
-                    /* Hide scrollbar for Chrome, Safari and Opera */
-                    .no-scrollbar::-webkit-scrollbar {
-                        display: none;
-                    }
-
-                    /* Hide scrollbar for IE, Edge and Firefox */
-                    .no-scrollbar {
-                        -ms-overflow-style: none;
-                        /* IE and Edge */
-                        scrollbar-width: none;
-                        /* Firefox */
-                    }
-                </style>
-                <div x-ref="slider" @scroll.debounce.10ms="scroll()" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar">
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {{-- Testimonial 1 --}}
-                    <div class="min-w-[85vw] md:min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
                         {{-- Avatar --}}
                         <div class="mb-6">
                             <img class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-huu-nguyen.png" alt="Ms. Linh">
@@ -154,7 +119,7 @@
                     </div>
 
                     {{-- Testimonial 2 --}}
-                    <div class="min-w-[85vw] md:min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
                         <div class="mb-6">
                             <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-thanh-tuan.png" alt="Alan Nguyễn">
                         </div>
@@ -170,7 +135,7 @@
                     </div>
 
                     {{-- Testimonial 3 --}}
-                    <div class="min-w-[85vw] md:min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
                         <div class="mb-6">
                             <img class="w-20 h-20 rounded-full object-cover ring-4 ring-cyan-200" src="https://www.phanmemlabo.com/wp-content/uploads/2021/03/ceo-westcost.png" alt="Dr. Andrew Tsang">
                         </div>
@@ -185,16 +150,6 @@
                         </p>
                     </div>
                 </div>
-
-                {{-- Slider Dots (Mobile Only) --}}
-                <div class="flex md:hidden justify-center items-center gap-2 mt-4">
-                    <template x-for="i in 3">
-                        <button class="h-2 rounded-full transition-all duration-300"
-                            :class="activeSlide === i-1 ? 'w-8 bg-accent-500' : 'w-2 bg-black-300 hover:bg-black-400'"
-                            @click="scrollTo(i-1)">
-                        </button>
-                    </template>
-                </div>
             </div>
         </div>
     </section>
@@ -206,12 +161,12 @@
                 {{-- 1. Header Info: Desktop Col 1, Row 1 --}}
                 <div class="lg:col-start-1 lg:row-start-1" data-aos="fade-right">
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium text-black-900 mb-2 leading-tight">
-                        Trải nghiệm phiên bản mới của chúng tôi <br>
+                        Trải nghiệm phiên bản mới <br class="hidden lg:block"> của chúng tôi <br>
                         <img src="{{ home_url('/wp-content/uploads/2026/01/logo.png') }}" alt="DentalSO Logo" class="h-12 w-auto my-5 block">
                     </h2>
 
-                    <p class="text-xs md:text-base text-black-600 mb-4 leading-relaxed">
-                        Phiên bản nâng cấp toàn diện mang đến sức mạnh quản lý vượt trội. Tối ưu hóa quy trình, nâng cao trải nghiệm người dùng.
+                    <p class="text-base md:text-base text-black-600 mb-4 leading-relaxed">
+                        Phiên bản nâng cấp toàn diện mang đến sức mạnh quản lý vượt trội. <br class="hidden lg:block">Tối ưu hóa quy trình, nâng cao trải nghiệm người dùng.
                     </p>
                 </div>
 
@@ -238,9 +193,6 @@
                             </div>
                         </div>
                     </div>
-
-                    {{-- Button to V2 Site (Desktop Only) --}}
-                    {{-- Button removed --}}
                 </div>
 
                 {{-- 3. Features List: Desktop Col 1, Row 2 --}}
@@ -253,8 +205,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-sm md:text-lg font-semibold text-black-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
-                            <p class="text-xs md:text-sm text-black-600">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo mọi lúc mọi nơi.</p>
+                            <h3 class="text-base md:text-lg font-semibold text-black-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
+                            <p class="text-sm md:text-base text-black-600">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo <br class="hidden lg:block">mọi lúc mọi nơi.</p>
                         </div>
                     </div>
 
@@ -266,8 +218,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-sm md:text-lg font-medium text-black-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
-                            <p class="text-xs md:text-sm text-black-600">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
+                            <h3 class="text-base md:text-lg font-medium text-black-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
+                            <p class="text-sm md:text-base text-black-600">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
                         </div>
                     </div>
 
@@ -279,8 +231,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-sm md:text-lg font-medium text-black-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
-                            <p class="text-xs md:text-sm text-black-600">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
+                            <h3 class="text-base md:text-lg font-medium text-black-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
+                            <p class="text-sm md:text-base text-black-600">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
                         </div>
                     </div>
 
@@ -305,7 +257,7 @@
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
-            <h2 class="text-4xl md:text-5xl font- text-white mb-6" data-aos="fade-up">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white mb-6" data-aos="fade-up">
                 Sẵn sàng để bắt đầu?
             </h2>
             <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
