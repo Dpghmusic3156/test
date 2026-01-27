@@ -157,7 +157,7 @@ if (blocks.length > 0) {
 
   let currentIndex = 0;
   let accumulatedDelta = 0;
-  const scrollThreshold = 270;
+  const scrollThreshold = 300;
   let resetDeltaTimeout;
 
   function scrollToBlock(index) {
