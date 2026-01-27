@@ -73,7 +73,7 @@
                 </div>
 
                 {{-- Text --}}
-                <p class="text-sm lg:text-base text-black-700 font-medium">Được <span class="text-accent-500 font-semibold">200+ labs</span> tin dùng</p>
+                <p class="text-sm lg:text-base text-black-700 font-medium">Được <a href="category/khach-hang" class="text-accent-500 font-semibold">200+ labs</a> tin dùng</p>
             </div>
         </div>
 
