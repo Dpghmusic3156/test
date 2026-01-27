@@ -88,7 +88,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             {{-- Header --}}
             <div class="text-center mb-8 md:mb-16">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium text-black-900 mb-6">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-black-900 mb-6">
                     Phản hồi từ khách hàng
                 </h2>
                 <p class="text-lg md:text-xl text-black-900/80 max-w-3xl mx-auto">
@@ -205,11 +205,6 @@
             <div class="grid lg:grid-cols-2 gap-4 lg:gap-x-12 lg:gap-y-2 items-center">
                 {{-- 1. Header Info: Desktop Col 1, Row 1 --}}
                 <div class="lg:col-start-1 lg:row-start-1" data-aos="fade-right">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-100 text-accent-700 rounded-full font-medium text-xs mb-2 md:mb-4 w-fit">
-                        <span class="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></span>
-                        Phiên bản mới
-                    </div>
-
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium text-black-900 mb-2 leading-tight">
                         Trải nghiệm phiên bản mới của chúng tôi <br>
                         <img src="{{ home_url('/wp-content/uploads/2026/01/logo.png') }}" alt="DentalSO Logo" class="h-12 w-auto my-5 block">
