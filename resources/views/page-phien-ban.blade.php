@@ -298,9 +298,9 @@
     <section class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <div class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-medium text-sm mb-6">
+                {{-- <div class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-medium text-sm mb-6">
                     So sánh
-                </div>
+                </div> --}}
                 <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-4">
                     So sánh các phiên bản
                 </h2>
@@ -649,9 +649,9 @@
     <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-medium text-sm mb-6">
+                {{-- <div class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-medium text-sm mb-6">
                     Ưu điểm chung
-                </div>
+                </div> --}}
                 <h2 class="text-4xl md:text-5xl font-medium text-gray-800 mb-4">
                     Ưu điểm chung của các phiên bản
                 </h2>
