@@ -4,7 +4,7 @@
 <section class="relative bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 py-20 overflow-hidden">
     {{-- Background Decoration --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-teal-300/10 rounded-full blur-3xl"></div>
     </div>
 
@@ -12,13 +12,13 @@
         <div class="max-w-4xl mx-auto text-center text-white">
             {{-- Badge --}}
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
-                <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                <span class="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></span>
                 <span class="text-sm font-medium">Liên hệ với chúng tôi</span>
             </div>
 
             {{-- Heading --}}
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                Hãy để chúng tôi <span class="bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">hỗ trợ bạn</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Hãy để chúng tôi <span class="bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500 bg-clip-text text-transparent">hỗ trợ bạn</span>
             </h1>
 
             <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -37,7 +37,7 @@
                 {{-- Contact Form --}}
                 <div class="lg:col-span-3">
                     <div class="bg-white rounded-2xl shadow-lg p-8">
-                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Gửi tin nhắn cho chúng tôi</h2>
+                        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Gửi tin nhắn cho chúng tôi</h2>
 
                         {{-- Message display area --}}
                         <div id="form-message" class="mb-6 hidden"></div>
@@ -100,7 +100,7 @@
 
                             {{-- Submit Button --}}
                             <button type="submit"
-                                class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/50 transform hover:-translate-y-1">
+                                class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/50 transform hover:-translate-y-1">
                                 <div class="flex items-center justify-center gap-2">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -126,7 +126,7 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-bold text-gray-800 mb-2">Địa chỉ</h3>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Địa chỉ</h3>
                                 <a href="{{ get_theme_mod('address_link') }}" class="text-gray-600">{{ get_theme_mod('address') }}</a>
                             </div>
                         </div>
@@ -137,13 +137,13 @@
                     @if(get_theme_mod('phone'))
                     <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
                         <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent-500 to-orange-500 rounded-lg flex items-center justify-center">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-bold text-gray-800 mb-2">Hotline</h3>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Hotline</h3>
                                 <a href="tel:{{ get_theme_mod('phone') }}" class="text-teal-600 hover:text-teal-700 font-semibold text-lg">
                                     {{ get_theme_mod('phone') }}
                                 </a>
@@ -165,7 +165,7 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-bold text-gray-800 mb-2">Email</h3>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
                                 <a href="mailto:{{ get_theme_mod('email1') }}" class="text-teal-600 hover:text-teal-700 block">
                                     {{ get_theme_mod('email1') }}
                                 </a>
@@ -189,7 +189,7 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-bold text-gray-800 mb-2">Facebook</h3>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Facebook</h3>
                                 <a href="{{ get_theme_mod('facebook') }}" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">
                                     Theo dõi chúng tôi trên Facebook
                                 </a>
@@ -215,7 +215,7 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-bold text-gray-800 mb-2">Skype</h3>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Skype</h3>
                                 <a href="{{ get_theme_mod('skype') }}" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">
                                     Theo dõi chúng tôi trên Skype
                                 </a>
@@ -234,7 +234,7 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 href="{{ get_theme_mod('zalo') }}" class="text-lg font-bold text-gray-800 mb-2">Zalo</h3>
+                                <h3 href="{{ get_theme_mod('zalo') }}" class="text-lg font-semibold text-gray-800 mb-2">Zalo</h3>
                                 <a href="{{ get_theme_mod('zalo') }}" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">
                                     Liên hệ với chúng tôi qua Zalo
                                 </a>
@@ -252,19 +252,19 @@
 <section class="py-20 bg-gradient-to-br from-teal-500 via-teal-600 to-cyan-700 relative overflow-hidden">
     {{-- Background Decoration --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-20 right-20 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 right-20 w-64 h-64 bg-accent-400/10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-20 left-20 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
                 Bạn đã sẵn sàng?
             </h2>
             <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Dùng thử miễn phí ngay. Hỗ trợ đầy đủ ngay từ khi bắt đầu.
             </p>
-            <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 text-lg">
+            <a href="{{ home_url() }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-semibold px-10 py-5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-lg">
                 <span>Dùng thử miễn phí</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
