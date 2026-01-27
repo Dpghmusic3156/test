@@ -16,7 +16,7 @@
             <div class=" leading-tight mb-6" data-aos="fade-right" data-aos-delay="200">
                 <span class="font-semibold text-4xl md:text-6xl block mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-orange-500">vDentalLab</span>
                 <span class="font-medium text-2xl md:text-4xl block mb-2 text-black-900">Phần mềm Quản lý</span>
-                <span class="font-medium text-2xl md:text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Labo Dental</span>
+                <span class="font-medium text-2xl md:text-4xl block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Nha Khoa</span>
             </div>
 
             <p class="text-lg md:text-xl text-black-600 mb-10 max-w-lg leading-relaxed" data-aos="fade-right" data-aos-delay="300">
@@ -205,7 +205,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl lg:text-2xl font-medium text-black-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
+                            <h3 class="text-xl lg:text-xl font-medium text-black-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
                             <p class="text-lg lg:text-xl text-black-600 font-normal">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo <br class="hidden lg:block">mọi lúc mọi nơi.</p>
                         </div>
                     </div>
@@ -218,7 +218,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl lg:text-2xl font-medium text-black-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
+                            <h3 class="text-xl lg:text-xl font-medium text-black-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
                             <p class="text-lg lg:text-xl text-black-600 font-normal">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
                         </div>
                     </div>
@@ -230,7 +230,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl lg:text-2xl font-medium text-black-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
+                            <h3 class="text-xl lg:text-xl font-medium text-black-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
                             <p class="text-lg lg:text-xl text-black-600 font-normal">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
                         </div>
                     </div>
