@@ -167,7 +167,7 @@
 
     {{-- What is vDentalLab Section with Circle Diagram --}}
     <section
-        class="container-block pb-8 bg-white relative -hidden min-h-screen flex flex-col justify-center">
+        class="container-block py-12 bg-white relative -hidden min-h-screen flex flex-col justify-center">
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-6xl mx-auto">
