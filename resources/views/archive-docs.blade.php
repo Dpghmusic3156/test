@@ -61,7 +61,7 @@
     @endphp
 
     @if(!empty($categories) && !is_wp_error($categories))
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
       @foreach($categories as $index => $category)
       @php
       // Get parent posts in this category
@@ -81,7 +81,7 @@
       @endphp
 
       {{-- Modern Category Card --}}
-      <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+      <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-md" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
         {{-- Hover Gradient Overlay --}}
         <div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-cyan-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
