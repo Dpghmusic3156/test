@@ -81,71 +81,70 @@
     </section>
 
     {{-- Testimonials Section - Teal/Cyan Theme --}}
-    <section class="container-block py-8 md:py-24 relative overflow-hidden lg:min-h-screen flex flex-col justify-center pt-20">
+    <section class="container-block py-6 lg:py-10 relative overflow-hidden lg:min-h-screen flex flex-col justify-center pt-16 lg:pt-20">
         {{-- Background decorative elements --}}
 
-        <div class="text-center text-lg md:text-xl text-black-900/80 max-w-3xl mx-auto mb-8 md:mb-16">
+        <div class="text-center text-base lg:text-lg text-black-900/80 max-w-3xl mx-auto mb-4 lg:mb-8">
             Chúng tôi muốn<span class="text-accent-500 font-medium"> đóng góp vào sự phát triển </span>của <br class="hidden lg:block"> ngành <span class="text-accent-500 font-medium">Labo Nha khoa</span> Việt Nam
         </div>
-        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="max-w-7xl mx-auto px-4 py-4 lg:py-6 sm:px-6 lg:px-8 relative z-10 w-full">
             {{-- Header --}}
-            <div class="text-center mb-8 md:mb-16">
-
-                <h2 class="text-2xl lg:text-5xl font-medium text-black-900 mb-6 whitespace-nowrap">
+            <div class="text-center mb-4 lg:mb-8">
+                <h2 class="text-2xl lg:text-4xl font-medium text-black-900 mb-2 lg:mb-4 whitespace-nowrap">
                     Phản hồi từ khách hàng
                 </h2>
             </div>
 
             {{-- Testimonials Grid --}}
             <div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                     {{-- Testimonial 1 --}}
-                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
                         {{-- Avatar --}}
-                        <div class="mb-6">
-                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-huu-nguyen.png') }}" alt="Ms. Linh">
+                        <div class="mb-3 lg:mb-4">
+                            <img class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover ring-4 ring-primary-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-huu-nguyen.png') }}" alt="Ms. Linh">
                         </div>
 
                         {{-- Name & Title --}}
-                        <div class="mb-4">
-                            <h3 class="text-xl font-medium text-black-900 mb-1">Ms. Linh</h3>
-                            <p class="text-sm text-primary-600">CEO, Labo Hữu Nguyên</p>
+                        <div class="mb-2 lg:mb-3">
+                            <h3 class="text-lg lg:text-xl font-medium text-black-900 mb-0.5">Ms. Linh</h3>
+                            <p class="text-xs lg:text-sm text-primary-600">CEO, Labo Hữu Nguyên</p>
                         </div>
 
                         {{-- Testimonial text --}}
-                        <p class="text-lg lg:text-xl text-black-600 font-normal">
+                        <p class="text-sm lg:text-base text-black-600 font-normal leading-relaxed">
                             Phần mềm giúp tôi quản lý chặt chẽ quy trình sản xuất và các kỹ thuật viên. Tôi đã cải thiện hoàn toàn việc quản lý và tiết kiệm thời gian đáng kể.
                         </p>
                     </div>
 
                     {{-- Testimonial 2 --}}
-                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
-                        <div class="mb-6">
-                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-accent-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-thanh-tuan.png') }}" alt="Alan Nguyễn">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                        <div class="mb-3 lg:mb-4">
+                            <img class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover ring-4 ring-accent-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-thanh-tuan.png') }}" alt="Alan Nguyễn">
                         </div>
 
-                        <div class="mb-4">
-                            <h3 class="text-xl font-medium text-black-900 mb-1">Alan Nguyễn</h3>
-                            <p class="text-sm text-primary-600">CEO, Labo Thành Tuấn</p>
+                        <div class="mb-2 lg:mb-3">
+                            <h3 class="text-lg lg:text-xl font-medium text-black-900 mb-0.5">Alan Nguyễn</h3>
+                            <p class="text-xs lg:text-sm text-primary-600">CEO, Labo Thành Tuấn</p>
                         </div>
 
-                        <p class="text-lg lg:text-xl text-black-600 font-normal">
+                        <p class="text-sm lg:text-base text-black-600 font-normal leading-relaxed">
                             Tôi sử dụng phần mềm ngay từ ngày đầu thành lập Labo. Quản lý đơn hàng rất dễ dàng, đặc biệt là khả năng tra cứu lịch sử và kiểm soát hàng trễ hiệu quả.
                         </p>
                     </div>
 
                     {{-- Testimonial 3 --}}
-                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
-                        <div class="mb-6">
-                            <img class="w-20 h-20 rounded-full object-cover ring-4 ring-cyan-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-westcost.png') }}" alt="Dr. Andrew Tsang">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-accent-300 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-500/20 shadow-lg">
+                        <div class="mb-3 lg:mb-4">
+                            <img class="w-14 h-14 lg:w-16 lg:h-16 rounded-full object-cover ring-4 ring-cyan-200" src="{{ home_url('/wp-content/uploads/2021/03/ceo-westcost.png') }}" alt="Dr. Andrew Tsang">
                         </div>
 
-                        <div class="mb-4">
-                            <h3 class="text-xl font-medium text-black-900 mb-1">Dr. Andrew Tsang</h3>
-                            <p class="text-sm text-primary-600">CEO, Labo Westcoast</p>
+                        <div class="mb-2 lg:mb-3">
+                            <h3 class="text-lg lg:text-xl font-medium text-black-900 mb-0.5">Dr. Andrew Tsang</h3>
+                            <p class="text-xs lg:text-sm text-primary-600">CEO, Labo Westcoast</p>
                         </div>
 
-                        <p class="text-lg lg:text-xl text-black-600 font-normal">
+                        <p class="text-sm lg:text-base text-black-600 font-normal leading-relaxed">
                             Sau khi thử nhiều phần mềm nước ngoài, tôi chuyển qua vDentalLab vì phù hợp với đặc thù Việt Nam. Hỗ trợ tốt việc tính lương và quản lý vật liệu.
                         </p>
                     </div>
@@ -155,28 +154,28 @@
     </section>
 
     {{-- Version 2 Introduction Section --}}
-    <section class="container-block py-2 md:py-6 lg:pt-20 lg:pb-4 bg-gradient-to-br from-black-50 to-white relative overflow-hidden lg:min-h-screen flex flex-col justify-center scroll-mt-24 pb-6">
+    <section class="container-block py-2 lg:py-6 bg-gradient-to-br from-black-50 to-white relative overflow-hidden lg:min-h-screen flex flex-col justify-center scroll-mt-24 pt-16 lg:pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-2 gap-4 lg:gap-x-12 lg:gap-y-2 items-center">
                 {{-- 1. Header Info: Desktop Col 1, Row 1 --}}
                 <div class="lg:col-start-1 lg:row-start-1" data-aos="fade-right">
-                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium text-black-900 mb-2 leading-tight">
+                    <h2 class="text-xl lg:text-3xl font-medium text-black-900 mb-1 lg:mb-2 leading-tight">
                         Trải nghiệm phiên bản mới <br class="hidden lg:block"> của chúng tôi <br>
-                        <img src="{{ home_url('/wp-content/uploads/2026/01/logo.png') }}" alt="DentalSO Logo" class="h-12 w-auto my-5 block">
+                        <img src="{{ home_url('/wp-content/uploads/2026/01/logo.png') }}" alt="DentalSO Logo" class="h-8 lg:h-10 w-auto my-2 lg:my-3 block">
                     </h2>
 
-                    <p class="text-lg md:text-xl text-black-600 mb-4 leading-relaxed">
+                    <p class="text-sm lg:text-base text-black-600 mb-2 lg:mb-3 leading-relaxed">
                         Phiên bản nâng cấp toàn diện mang đến sức mạnh quản lý vượt trội. <br class="hidden lg:block">Tối ưu hóa quy trình, nâng cao trải nghiệm người dùng.
                     </p>
                 </div>
 
                 {{-- 2. Image: Desktop Col 2, Row 1-2 (Spans height) --}}
                 <div class="lg:col-start-2 lg:row-start-1 lg:row-span-2 relative" data-aos="fade-left">
-                    <div class="m-6 relative">
-                        <div class="absolute -inset-4 bg-gradient-to-r from-primary-600 to-cyan-500 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
+                    <div class="m-2 lg:m-4 relative">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-primary-600 to-cyan-500 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
                         <img src="{{ home_url('/wp-content/uploads/2026/01/lab.png') }}"
                             alt="vDentalLab V2 Interface"
-                            class="p-2 md:p-4 relative rounded-2xl shadow-2xl object-cover border border-black-200 max-h-[35vh] lg:max-h-[45vh] w-auto mx-auto">
+                            class="p-1 lg:p-2 relative rounded-2xl shadow-2xl object-cover border border-black-200 max-h-[25vh] lg:max-h-[40vh] w-auto mx-auto">
 
                         {{-- Floating Badge --}}
                         <div class="absolute -bottom-6 -right-6 bg-white p-3 rounded-xl shadow-xl border border-black-100 animate-bounce hidden md:block">
@@ -196,48 +195,45 @@
                 </div>
 
                 {{-- 3. Features List: Desktop Col 1, Row 2 --}}
-                <div class="lg:col-start-1 lg:row-start-2 space-y-2 md:space-y-3" data-aos="fade-right" data-aos-delay="100">
-                    {{-- Feature 1 --}}
-                    <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
-                        <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600">
-                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="lg:col-start-1 lg:row-start-2 space-y-1 lg:space-y-2" data-aos="fade-right" data-aos-delay="100">
+                    <div class="flex items-start gap-2 lg:gap-3 p-1 lg:p-2 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
+                        <div class="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600">
+                            <svg class="w-3.5 h-3.5 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl lg:text-xl font-medium text-black-900 mb-0.5 md:mb-1">Quản lý trên Mobile</h3>
-                            <p class="text-lg lg:text-xl text-black-600 font-normal">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo <br class="hidden lg:block">mọi lúc mọi nơi.</p>
+                            <h3 class="text-base lg:text-lg font-medium text-black-900 mb-0">Quản lý trên Mobile</h3>
+                            <p class="text-sm lg:text-base text-black-600 font-normal">Theo dõi tiến độ, duyệt đơn hàng và xem báo cáo <br class="hidden lg:block">mọi lúc mọi nơi.</p>
                         </div>
                     </div>
 
-                    {{-- Feature 2 --}}
-                    <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
-                        <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600">
-                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-start gap-2 lg:gap-3 p-1 lg:p-2 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
+                        <div class="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600">
+                            <svg class="w-3.5 h-3.5 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl lg:text-xl font-medium text-black-900 mb-0.5 md:mb-1">Giao diện Thân thiện</h3>
-                            <p class="text-lg lg:text-xl text-black-600 font-normal">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
+                            <h3 class="text-base lg:text-lg font-medium text-black-900 mb-0">Giao diện Thân thiện</h3>
+                            <p class="text-sm lg:text-base text-black-600 font-normal">Thiết kế UI/UX hiện đại, trực quan giúp thao tác nhanh chóng.</p>
                         </div>
                     </div>
-                    {{-- Feature 3 --}}
-                    <div class="flex items-start gap-3 p-2 md:p-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
-                        <div class="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-lg bg-accent-100 flex items-center justify-center text-accent-600">
-                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-start gap-2 lg:gap-3 p-1 lg:p-2 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-black-100">
+                        <div class="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-lg bg-accent-100 flex items-center justify-center text-accent-600">
+                            <svg class="w-3.5 h-3.5 lg:w-4 lg:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl lg:text-xl font-medium text-black-900 mb-0.5 md:mb-1">Truy cập mọi lúc, mọi nơi</h3>
-                            <p class="text-lg lg:text-xl text-black-600 font-normal">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
+                            <h3 class="text-base lg:text-lg font-medium text-black-900 mb-0">Truy cập mọi lúc, mọi nơi</h3>
+                            <p class="text-sm lg:text-base text-black-600 font-normal">Tốc độ xử lý nhanh gấp 2 lần, ổn định hơn trên mọi nền tảng.</p>
                         </div>
                     </div>
 
                     {{-- Button to V2 Site--}}
-                    <div class="pt-4 pl-4 flex justify-center lg:justify-start">
-                        <a href="https://dentalso.com/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:-translate-y-1 text-sm md:text-base">
+                    <div class="pt-2 lg:pt-3 pl-2 flex justify-center lg:justify-start">
+                        <a href="https://dentalso.com/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-4 py-2 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-xl hover:-translate-y-1 text-sm">
                             <span>Truy cập DentalSO</span>
 
                         </a>
