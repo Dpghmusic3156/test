@@ -5,23 +5,23 @@
 @php the_post(); @endphp
 
 @php
-    $post_id      = get_the_ID();
-    $author_id    = get_the_author_meta('ID');
-    $author_name  = get_the_author();
-    $author_bio   = get_the_author_meta('description');
-    $author_avatar= get_avatar_url($author_id, ['size' => 80]);
-    $cats         = get_the_category();
-    $cat          = !empty($cats) ? $cats[0] : null;
-    $read_time    = max(1, ceil(str_word_count(strip_tags(get_the_content())) / 200));
-    $thumbnail    = has_post_thumbnail() ? get_the_post_thumbnail_url(null, 'full') : null;
+$post_id = get_the_ID();
+$author_id = get_the_author_meta('ID');
+$author_name = get_the_author();
+$author_bio = get_the_author_meta('description');
+$author_avatar= get_avatar_url($author_id, ['size' => 80]);
+$cats = get_the_category();
+$cat = !empty($cats) ? $cats[0] : null;
+$read_time = max(1, ceil(str_word_count(strip_tags(get_the_content())) / 200));
+$thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url(null, 'full') : null;
 
-    /* Related posts */
-    $related = get_posts([
-        'posts_per_page'      => 3,
-        'post__not_in'        => [$post_id],
-        'category__in'        => wp_get_post_categories($post_id),
-        'ignore_sticky_posts' => 1,
-    ]);
+/* Related posts */
+$related = get_posts([
+'posts_per_page' => 3,
+'post__not_in' => [$post_id],
+'category__in' => wp_get_post_categories($post_id),
+'ignore_sticky_posts' => 1,
+]);
 @endphp
 
 {{-- ============================================================
@@ -29,27 +29,27 @@
      ============================================================ --}}
 <section class="post-hero relative overflow-hidden {{ $thumbnail ? '' : 'post-hero--no-image' }}">
     @if($thumbnail)
-        <div class="post-hero__bg" style="background-image: url('{{ $thumbnail }}')"></div>
-        <div class="post-hero__overlay"></div>
+    <div class="post-hero__bg" style="background-image: url('{{ $thumbnail }}')"></div>
+    <div class="post-hero__overlay"></div>
     @else
-        <div class="post-hero__bg-plain"></div>
+    <div class="post-hero__bg-plain"></div>
     @endif
 
     <div class="apple-container relative z-10 post-hero__content">
         {{-- Breadcrumb --}}
         <nav class="post-breadcrumb" aria-label="Breadcrumb">
-            <a href="{{ home_url('/') }}" class="post-breadcrumb__link">Home</a>
+            <a href="{{ home_url('/') }}" class="post-breadcrumb__link">Trang chủ</a>
             <span class="post-breadcrumb__sep">›</span>
-            <a href="{{ home_url('/blog/') }}" class="post-breadcrumb__link">Blog</a>
+            <a href="{{ home_url('/blog/') }}" class="post-breadcrumb__link">Bài viết</a>
             @if($cat)
-                <span class="post-breadcrumb__sep">›</span>
-                <span class="post-breadcrumb__current">{{ $cat->name }}</span>
+            <span class="post-breadcrumb__sep">›</span>
+            <span class="post-breadcrumb__current">{{ $cat->name }}</span>
             @endif
         </nav>
 
         {{-- Category pill --}}
         @if($cat)
-            <span class="post-cat-pill">{{ $cat->name }}</span>
+        <span class="post-cat-pill">{{ $cat->name }}</span>
         @endif
 
         {{-- Title --}}
@@ -63,7 +63,7 @@
                 <span class="post-meta-dot">·</span>
                 <span class="post-meta-date">{{ get_the_date('F j, Y') }}</span>
                 <span class="post-meta-dot">·</span>
-                <span class="post-meta-read">{{ $read_time }} min read</span>
+                <span class="post-meta-read">{{ $read_time }} phút đọc</span>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
         @if($tags)
         <div class="post-tags">
             @foreach($tags as $tag)
-                <a href="{{ get_tag_link($tag) }}" class="post-tag">{{ $tag->name }}</a>
+            <a href="{{ get_tag_link($tag) }}" class="post-tag">{{ $tag->name }}</a>
             @endforeach
         </div>
         @endif
@@ -94,10 +94,10 @@
         <div class="post-author-box">
             <img src="{{ $author_avatar }}" alt="{{ $author_name }}" class="post-author-box__avatar" loading="lazy">
             <div>
-                <p class="post-author-box__label">Written by</p>
+                <p class="post-author-box__label">Viết bởi</p>
                 <p class="post-author-box__name">{{ $author_name }}</p>
                 @if($author_bio)
-                    <p class="post-author-box__bio">{{ $author_bio }}</p>
+                <p class="post-author-box__bio">{{ $author_bio }}</p>
                 @endif
             </div>
         </div>
@@ -109,14 +109,14 @@
 
         {{-- Post Navigation --}}
         @php
-            $prev_post = get_previous_post();
-            $next_post = get_next_post();
+        $prev_post = get_previous_post();
+        $next_post = get_next_post();
         @endphp
         @if($prev_post || $next_post)
-        <nav class="post-pagination" aria-label="Post Navigation">
+        <nav class="post-pagination" aria-label="Điều hướng bài viết">
             @if($prev_post)
             <a href="{{ get_permalink($prev_post) }}" class="post-pagination__link post-pagination__link--prev">
-                <span class="post-pagination__label">← Previous</span>
+                <span class="post-pagination__label">← Trước</span>
                 <span class="post-pagination__title">{{ $prev_post->post_title }}</span>
             </a>
             @else
@@ -124,7 +124,7 @@
             @endif
             @if($next_post)
             <a href="{{ get_permalink($next_post) }}" class="post-pagination__link post-pagination__link--next">
-                <span class="post-pagination__label">Next →</span>
+                <span class="post-pagination__label">Tiếp →</span>
                 <span class="post-pagination__title">{{ $next_post->post_title }}</span>
             </a>
             @endif
@@ -137,24 +137,24 @@
         <div class="post-sidebar__sticky">
             {{-- Table of contents (auto-built by JS) --}}
             <div class="post-toc" id="post-toc">
-                <p class="post-toc__heading">On this page</p>
+                <p class="post-toc__heading">Trong bài viết này</p>
                 <ul class="post-toc__list" id="toc-list"></ul>
             </div>
 
             {{-- Continue Reading --}}
             @if(count($related) > 0)
             <div class="post-sidebar-related">
-                <p class="post-toc__heading">Continue Reading</p>
+                <p class="post-toc__heading">Đọc tiếp</p>
                 <div class="post-sidebar-related__list">
                     @foreach($related as $rp)
                     @php $rp_thumb = has_post_thumbnail($rp->ID) ? get_the_post_thumbnail_url($rp->ID, 'thumbnail') : null; @endphp
                     <a href="{{ get_permalink($rp) }}" class="post-sidebar-related__item group">
                         @if($rp_thumb)
-                            <img src="{{ $rp_thumb }}" alt="{{ $rp->post_title }}" class="post-sidebar-related__thumb" loading="lazy">
+                        <img src="{{ $rp_thumb }}" alt="{{ $rp->post_title }}" class="post-sidebar-related__thumb" loading="lazy">
                         @else
-                            <div class="post-sidebar-related__thumb post-sidebar-related__thumb--placeholder">
-                                <span class="material-symbols-outlined">article</span>
-                            </div>
+                        <div class="post-sidebar-related__thumb post-sidebar-related__thumb--placeholder">
+                            <span class="material-symbols-outlined">article</span>
+                        </div>
                         @endif
                         <div class="post-sidebar-related__text">
                             <span class="post-sidebar-related__date">{{ get_the_date('M d, Y', $rp) }}</span>
@@ -169,9 +169,9 @@
             {{-- CTA card --}}
             <div class="post-sidebar-cta">
                 <span class="material-symbols-outlined post-sidebar-cta__icon">rocket_launch</span>
-                <p class="post-sidebar-cta__title">Ready to streamline your lab?</p>
-                <p class="post-sidebar-cta__body">Book a free demo and see DentalSO in action.</p>
-                <a href="{{ home_url('phan-mem-dental-lab-mien-phi/') }}" class="post-sidebar-cta__btn">Book a Demo</a>
+                <p class="post-sidebar-cta__title">Sẵn sàng tối ưu hoá Labo?</p>
+                <p class="post-sidebar-cta__body">Đặt lịch demo miễn phí và trải nghiệm ngay.</p>
+                <a href="{{ home_url('phan-mem-dental-lab-mien-phi/') }}" class="post-sidebar-cta__btn">Dùng thử miễn phí</a>
             </div>
 
             {{-- Share buttons --}}
@@ -188,53 +188,61 @@
 <div class="post-progress" id="post-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
 <script>
-/* ---- Reading progress bar ---- */
-const progressBar = document.getElementById('post-progress');
-window.addEventListener('scroll', () => {
-    const doc = document.documentElement;
-    const scrolled = doc.scrollTop;
-    const total = doc.scrollHeight - doc.clientHeight;
-    const pct = total > 0 ? (scrolled / total) * 100 : 0;
-    if (progressBar) {
-        progressBar.style.width = pct + '%';
-        progressBar.setAttribute('aria-valuenow', Math.round(pct));
-    }
-});
-
-/* ---- Auto Table of Contents ---- */
-document.addEventListener('DOMContentLoaded', () => {
-    const content  = document.getElementById('post-content');
-    const tocList  = document.getElementById('toc-list');
-    const tocWrap  = document.getElementById('post-toc');
-    if (!content || !tocList) return;
-
-    const headings = content.querySelectorAll('h2, h3');
-    if (headings.length < 2) { if (tocWrap) tocWrap.style.display = 'none'; return; }
-
-    headings.forEach((h, i) => {
-        if (!h.id) h.id = 'heading-' + i;
-        const li = document.createElement('li');
-        li.className = 'post-toc__item post-toc__item--' + h.tagName.toLowerCase();
-        const a = document.createElement('a');
-        a.href = '#' + h.id;
-        a.textContent = h.textContent;
-        a.className = 'post-toc__link';
-        a.addEventListener('click', e => {
-            e.preventDefault();
-            document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-        li.appendChild(a);
-        tocList.appendChild(li);
+    /* ---- Reading progress bar ---- */
+    const progressBar = document.getElementById('post-progress');
+    window.addEventListener('scroll', () => {
+        const doc = document.documentElement;
+        const scrolled = doc.scrollTop;
+        const total = doc.scrollHeight - doc.clientHeight;
+        const pct = total > 0 ? (scrolled / total) * 100 : 0;
+        if (progressBar) {
+            progressBar.style.width = pct + '%';
+            progressBar.setAttribute('aria-valuenow', Math.round(pct));
+        }
     });
 
-    /* Highlight active heading */
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const link = tocList.querySelector(`a[href="#${entry.target.id}"]`);
-            if (link) link.classList.toggle('is-active', entry.isIntersecting);
+    /* ---- Auto Table of Contents ---- */
+    document.addEventListener('DOMContentLoaded', () => {
+        const content = document.getElementById('post-content');
+        const tocList = document.getElementById('toc-list');
+        const tocWrap = document.getElementById('post-toc');
+        if (!content || !tocList) return;
+
+        const headings = content.querySelectorAll('h2, h3');
+        if (headings.length < 2) {
+            if (tocWrap) tocWrap.style.display = 'none';
+            return;
+        }
+
+        headings.forEach((h, i) => {
+            if (!h.id) h.id = 'heading-' + i;
+            const li = document.createElement('li');
+            li.className = 'post-toc__item post-toc__item--' + h.tagName.toLowerCase();
+            const a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent;
+            a.className = 'post-toc__link';
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.getElementById(h.id)?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+            li.appendChild(a);
+            tocList.appendChild(li);
         });
-    }, { rootMargin: '-10% 0% -80% 0%' });
-    headings.forEach(h => observer.observe(h));
-});
+
+        /* Highlight active heading */
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const link = tocList.querySelector(`a[href="#${entry.target.id}"]`);
+                if (link) link.classList.toggle('is-active', entry.isIntersecting);
+            });
+        }, {
+            rootMargin: '-10% 0% -80% 0%'
+        });
+        headings.forEach(h => observer.observe(h));
+    });
 </script>
 @endsection
