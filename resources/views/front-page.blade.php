@@ -20,7 +20,7 @@
             </div>
 
             <p class="text-lg md:text-xl text-black-600 mb-10 max-w-lg leading-relaxed" data-aos="fade-right" data-aos-delay="300">
-                Hơn <a href="{{ home_url('/khach-hang') }}" class="font-semibold text-accent-500">200+ Lab</a> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
+                Hơn <a href="{{ home_url('/category/khach-hang') }}" class="font-semibold text-accent-500">200+ Lab</a> đã cài đặt & sử dụng hàng ngày cho hoạt động sản xuất kinh doanh.
             </p>
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8 lg:mb-12" data-aos="fade-right" data-aos-delay="400">
