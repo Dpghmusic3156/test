@@ -171,7 +171,7 @@
                 <span class="material-symbols-outlined post-sidebar-cta__icon">rocket_launch</span>
                 <p class="post-sidebar-cta__title">Ready to streamline your lab?</p>
                 <p class="post-sidebar-cta__body">Book a free demo and see DentalSO in action.</p>
-                <a href="{{ home_url('request-demo/') }}" class="post-sidebar-cta__btn">Book a Demo</a>
+                <a href="{{ home_url('phan-mem-dental-lab-mien-phi/') }}" class="post-sidebar-cta__btn">Book a Demo</a>
             </div>
 
             {{-- Share buttons --}}
