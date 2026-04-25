@@ -31,10 +31,17 @@
 
 {{-- Pricing Cards Section --}}
 <div x-data="{
+    // ===== CẤU HÌNH GIÁ - CHỈ CẦN SỬA Ở ĐÂY =====
+    basicPrice: 11000000,        // Giá gói Basic (máy đầu tiên)
+    standardPrice: 50000000,     // Giá gói Standard (8 máy đầu)
+    extraMachinePrice: 4500000,  // Giá mỗi máy thêm
+    standardMinMachines: 8,      // Số máy tối thiểu gói Standard
+    // ================================================
+
     selectedPlan: 'Basic',
     count: 1,
     showPlanSelector: false,
-    get minCount() { return this.selectedPlan === 'Basic' ? 1 : 8; },
+    get minCount() { return this.selectedPlan === 'Basic' ? 1 : this.standardMinMachines; },
     init() {
         this.$watch('count', value => {
             if (value < this.minCount) this.count = this.minCount;
@@ -42,12 +49,13 @@
     },
     calculateTotal() {
         if (this.selectedPlan === 'Basic') {
-            // First machine 11m, subsequent 4.5m
-            return 11000000 + (Math.max(0, this.count - 1) * 4500000);
+            return this.basicPrice + (Math.max(0, this.count - 1) * this.extraMachinePrice);
         } else {
-            // First 8 machines 48m, subsequent 4.5m
-            return 48000000 + (Math.max(0, this.count - 8) * 4500000);
+            return this.standardPrice + (Math.max(0, this.count - this.standardMinMachines) * this.extraMachinePrice);
         }
+    },
+    formatPrice(value) {
+        return value.toLocaleString('vi-VN');
     },
     selectPlan(plan) {
         this.selectedPlan = plan;
@@ -55,7 +63,7 @@
         
         // Force update count based on new plan rules
         if (plan === 'Standard') {
-                this.count = 8;
+                this.count = this.standardMinMachines;
         } else {
                 // Basic plan, reset to 1
                 this.count = 1;
@@ -87,7 +95,7 @@
                     <div class="mb-6">
                         <h3 class="text-2xl font-medium text-gray-800 mb-2">Basic</h3>
                         <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-extrabold text-gray-800">11.000.000 đ</span>
+                            <span class="text-4xl font-extrabold text-gray-800" x-text="formatPrice(basicPrice) + ' đ'"></span>
                         </div>
                         <p class="text-sm text-gray-600 mt-1">/ máy đầu tiên</p>
                     </div>
@@ -142,9 +150,9 @@
                     <div class="mb-6 mt-4">
                         <h3 class="text-2xl font-medium text-gray-700 mb-2">Standard</h3>
                         <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-extrabold text-primary-600">48.000.000 đ</span>
+                            <span class="text-4xl font-extrabold text-primary-600" x-text="formatPrice(standardPrice) + ' đ'"></span>
                         </div>
-                        <p class="text-sm text-gray-600 mt-1">/ 8 máy</p>
+                        <p class="text-sm text-gray-600 mt-1" x-text="'/ ' + standardMinMachines + ' máy'"></p>
                     </div>
 
                     <div class="mb-8">
