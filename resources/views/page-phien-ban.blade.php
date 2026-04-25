@@ -12,14 +12,16 @@
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
             {{-- Badge --}}
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
                 <span class="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></span>
                 <span class="text-sm font-medium">Chọn gói phù hợp</span>
             </div>
 
             {{-- Heading --}}
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Bảng giá <span class="bg-gradient-to-r from-accent-300 to-accent-400 bg-clip-text text-transparent">vDentalLab</span>
+                Bảng giá <span
+                    class="bg-gradient-to-r from-accent-300 to-accent-400 bg-clip-text text-transparent">vDentalLab</span>
             </h1>
 
             <p class="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
@@ -31,7 +33,7 @@
 
 {{-- Pricing Cards Section --}}
 <div x-data="{
-    // ===== CẤU HÌNH GIÁ - CHỈ CẦN SỬA Ở ĐÂY =====
+    // ===== CẤU HÌNH GIÁ =====
     basicPrice: 11000000,        // Giá gói Basic (máy đầu tiên)
     standardPrice: 50000000,     // Giá gói Standard (8 máy đầu)
     extraMachinePrice: 4500000,  // Giá mỗi máy thêm
@@ -91,11 +93,13 @@
             <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
                 {{-- Basic Plan --}}
-                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-gray-200 hover:border-gray-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-6">
                         <h3 class="text-2xl font-medium text-gray-800 mb-2">Basic</h3>
                         <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-extrabold text-gray-800" x-text="formatPrice(basicPrice) + ' đ'"></span>
+                            <span class="text-4xl font-extrabold text-gray-800"
+                                x-text="formatPrice(basicPrice) + ' đ'"></span>
                         </div>
                         <p class="text-sm text-gray-600 mt-1">/ máy đầu tiên</p>
                     </div>
@@ -104,28 +108,38 @@
                         <h4 class="font-medium text-gray-800 mb-3">Phù hợp với các Labo nhỏ</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700">Cách nhanh nhất để ứng dụng phần mềm vào quản lý Labo</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <span class="text-gray-700">Tăng hiệu quả làm việc của điều phối, quản lý tài chính</span>
+                                <span class="text-gray-700">Tăng hiệu quả làm việc của điều phối, quản lý tài
+                                    chính</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700">Giảm thiểu chi phí đầu tư ban đầu</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <span class="text-gray-700">Dễ dàng áp dụng; tải về & cài đặt là sử dụng được ngay</span>
+                                <span class="text-gray-700">Dễ dàng áp dụng; tải về & cài đặt là sử dụng được
+                                    ngay</span>
                             </li>
                         </ul>
                     </div>
@@ -139,10 +153,12 @@
                 </div>
 
                 {{-- Standard Plan (Featured) --}}
-                <div class="group relative bg-primary-50 rounded-3xl p-8 border-2 border-primary-400 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 scale-105" data-aos="fade-up" data-aos-delay="200">
+                <div class="group relative bg-primary-50 rounded-3xl p-8 border-2 border-primary-400 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 scale-105"
+                    data-aos="fade-up" data-aos-delay="200">
                     {{-- Popular Badge --}}
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+                        <span
+                            class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
                             PHỔ BIẾN NHẤT
                         </span>
                     </div>
@@ -150,7 +166,8 @@
                     <div class="mb-6 mt-4">
                         <h3 class="text-2xl font-medium text-gray-700 mb-2">Standard</h3>
                         <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-extrabold text-primary-600" x-text="formatPrice(standardPrice) + ' đ'"></span>
+                            <span class="text-4xl font-extrabold text-primary-600"
+                                x-text="formatPrice(standardPrice) + ' đ'"></span>
                         </div>
                         <p class="text-sm text-gray-600 mt-1" x-text="'/ ' + standardMinMachines + ' máy'"></p>
                     </div>
@@ -159,26 +176,35 @@
                         <h4 class="font-medium text-gray-700 mb-3">Phù hợp với các Labo có quy mô lớn</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-600">Số hoá toàn bộ dữ liệu của Labo</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <span class="text-gray-600">Đầy đủ các module: giao nhận, điều phối, sản xuất, tài chính</span>
+                                <span class="text-gray-600">Đầy đủ các module: giao nhận, điều phối, sản xuất, tài
+                                    chính</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-600">Triển khai nhanh – chỉ mất 2-3 ngày để làm quen</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-600">Tiết kiệm hơn 40% khối lượng công việc văn phòng</span>
                             </li>
@@ -194,7 +220,8 @@
                 </div>
 
                 {{-- Enterprise Plan --}}
-                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-accent-200 hover:border-accent-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border-2 border-accent-200 hover:border-accent-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="mb-6">
                         <h3 class="text-2xl font-medium text-gray-800 mb-2">Enterprise</h3>
                         <div class="flex items-baseline gap-2">
@@ -207,32 +234,42 @@
                         <h4 class="font-medium text-gray-800 mb-3">Giải pháp hoàn chỉnh cho Labo lớn</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700">Quản lý kho, định mức nguyên vật liệu</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700">Quản lý sản xuất hàng nước ngoài</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700">Website báo cáo và tra cứu thông tin nha khoa</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700">Khảo sát tận nơi, tư vấn giải pháp riêng</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <svg class="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 <span class="text-gray-700">Điều chỉnh phần mềm theo nhu cầu riêng</span>
                             </li>
@@ -240,7 +277,8 @@
                     </div>
 
                     <div class="space-y-3">
-                        <a href="{{ home_url('/') }}/dang-ky/" class="block w-full text-center bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <a href="{{ home_url('/') }}/dang-ky/"
+                            class="block w-full text-center bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
                             Liên hệ tư vấn
                         </a>
                     </div>
@@ -258,14 +296,17 @@
                 <div class="p-8 md:p-12">
                     <div class="text-center mb-10">
                         <div class="relative inline-block text-left mb-4">
-                            <button @click="showPlanSelector = !showPlanSelector" @click.away="showPlanSelector = false" class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full font-medium text-sm hover:bg-primary-100 transition-colors">
+                            <button @click="showPlanSelector = !showPlanSelector" @click.away="showPlanSelector = false"
+                                class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full font-medium text-sm hover:bg-primary-100 transition-colors">
                                 <span class="text-gray-500">Đang chọn gói:</span>
                                 <span x-text="selectedPlan" class="font-medium uppercase"></span>
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div x-show="showPlanSelector" style="display: none;" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 origin-top"
+                            <div x-show="showPlanSelector" style="display: none;"
+                                class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 origin-top"
                                 x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="opacity-0 scale-95"
                                 x-transition:enter-end="opacity-100 scale-100"
@@ -273,16 +314,21 @@
                                 x-transition:leave-start="opacity-100 scale-100"
                                 x-transition:leave-end="opacity-0 scale-95">
                                 <div class="py-1" role="menu" aria-orientation="vertical">
-                                    <button @click="selectPlan('Basic')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 font-medium border-b border-gray-100 last:border-0" role="menuitem">
+                                    <button @click="selectPlan('Basic')"
+                                        class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 font-medium border-b border-gray-100 last:border-0"
+                                        role="menuitem">
                                         Basic
                                     </button>
-                                    <button @click="selectPlan('Standard')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 font-medium" role="menuitem">
+                                    <button @click="selectPlan('Standard')"
+                                        class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 font-medium"
+                                        role="menuitem">
                                         Standard
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <h2 class="text-3xl font-medium text-gray-800 mb-4">Hãy chọn số lượng máy tính bạn muốn cài đặt</h2>
+                        <h2 class="text-3xl font-medium text-gray-800 mb-4">Hãy chọn số lượng máy tính bạn muốn cài đặt
+                        </h2>
 
                     </div>
 
@@ -302,26 +348,31 @@
                         </div>
 
                         {{-- Result --}}
-                        <div class="bg-primary-50 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-primary-100">
+                        <div
+                            class="bg-primary-50 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-primary-100">
                             <div class="text-center md:text-left">
                                 <div class="text-gray-500 text-sm mb-1">Tổng chi phí ước tính</div>
                                 <div class="text-4xl font-extrabold text-gray-900">
                                     <span x-text="calculateTotal().toLocaleString('vi-VN')"></span>
                                     <span class="text-2xl text-gray-500 font-medium">đ</span>
                                 </div>
-                                <div class="text-xs text-green-600 mt-2 font-medium flex items-center justify-center md:justify-start gap-1">
+                                <div
+                                    class="text-xs text-green-600 mt-2 font-medium flex items-center justify-center md:justify-start gap-1">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span>Bản quyền vĩnh viễn; Áp dụng cho mỗi Labo, chi nhánh.</span>
                                 </div>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                                 {{-- Button removed --}}
-                                <a href="{{ home_url() }}/dang-ky/" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
+                                <a href="{{ home_url() }}/dang-ky/"
+                                    class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1 whitespace-nowrap">
                                     Đăng ký gói này
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                     </svg>
                                 </a>
                             </div>
@@ -352,7 +403,8 @@
 
                     <thead class="bg-gray-100">
                         <tr>
-                            <td colspan="3" class="text-center py-3 px-6 font-medium text-gray-800">Khách hàng – Giao nhận</td>
+                            <td colspan="3" class="text-center py-3 px-6 font-medium text-gray-800">Khách hàng – Giao
+                                nhận</td>
                         </tr>
                     </thead>
 
@@ -366,12 +418,16 @@
                             <td class="py-3 pl-6 text-gray-700">1. Danh mục khách hàng</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -379,12 +435,16 @@
                             <td class="py-3 pl-6 text-gray-700">2. Danh mục bác sĩ</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -393,7 +453,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -402,7 +464,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -411,7 +475,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -420,7 +486,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -443,12 +511,16 @@
                             <td class="py-3 pl-6 text-gray-700">1. Đơn hàng sản xuất</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -456,12 +528,16 @@
                             <td class="py-3 pl-6 text-gray-700">2. Phân loại đơn hàng</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -469,12 +545,16 @@
                             <td class="py-3 pl-6 text-gray-700">3. In phiếu chỉ định</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -483,7 +563,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -491,12 +573,16 @@
                             <td class="py-3 pl-6 text-gray-700">5. Theo dõi hàng nhận</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -504,12 +590,16 @@
                             <td class="py-3 pl-6 text-gray-700">6. Cảnh báo hàng trễ</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -517,12 +607,16 @@
                             <td class="py-3 pl-6 text-gray-700">7. Xác nhận hoàn tất đơn hàng</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -531,7 +625,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -554,7 +650,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -563,7 +661,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -572,7 +672,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -581,7 +683,9 @@
                             <td class="py-3 px-6 text-center">—</td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -603,12 +707,16 @@
                             <td class="py-3 pl-6 text-gray-700">1. Quản lý bảng giá từng khách hàng</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -616,12 +724,16 @@
                             <td class="py-3 pl-6 text-gray-700">2. Duyệt đơn hàng: sửa số lượng, giá, chiết khấu…</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -629,12 +741,16 @@
                             <td class="py-3 pl-6 text-gray-700">3. Quản lý doanh số</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -642,12 +758,16 @@
                             <td class="py-3 pl-6 text-gray-700">4. Xuất & in hoá đơn (giấy báo công nợ)</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -655,12 +775,16 @@
                             <td class="py-3 pl-6 text-gray-700">5. Quản lý công nợ</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -668,12 +792,16 @@
                             <td class="py-3 pl-6 text-gray-700">6. Thu công nợ</td>
                             <td class="py-3 px-6 text-center">
                                 <svg class="w-6 h-6 text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                             <td class="py-3 px-6 text-center bg-primary-100">
                                 <svg class="w-6 h-6 text-primary-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </td>
                         </tr>
@@ -697,37 +825,50 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {{-- Support --}}
-                <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
-                        <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_chat_89_69.png" alt="Support" class="w-12 h-12">
+                <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
+                        <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_chat_89_69.png" alt="Support"
+                            class="w-12 h-12">
                     </div>
                     <h3 class="text-xl font-medium text-gray-800 mb-3">Hỗ trợ miễn phí 12 tháng</h3>
-                    <p class="text-gray-600 leading-relaxed">Tại labo hoặc qua điện thoại, chat, email. Hướng dẫn nhân viên mới sử dụng</p>
+                    <p class="text-gray-600 leading-relaxed">Tại labo hoặc qua điện thoại, chat, email. Hướng dẫn nhân
+                        viên mới sử dụng</p>
                 </div>
 
                 {{-- Security --}}
-                <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
-                        <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_bao_mat_89_69.png" alt="Security" class="w-12 h-12">
+                <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
+                        <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_bao_mat_89_69.png" alt="Security"
+                            class="w-12 h-12">
                     </div>
                     <h3 class="text-xl font-medium text-gray-800 mb-3">Phân quyền và bảo mật</h3>
-                    <p class="text-gray-600 leading-relaxed">Nhân viên có tài khoản đăng nhập, truy cập vào những chức năng được cấp quyền</p>
+                    <p class="text-gray-600 leading-relaxed">Nhân viên có tài khoản đăng nhập, truy cập vào những chức
+                        năng được cấp quyền</p>
                 </div>
 
                 {{-- Backup --}}
-                <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
-                        <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_row_chat_89_69.png" alt="Backup" class="w-12 h-12">
+                <div class="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-20 h-20 bg-accent-50 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300">
+                        <img src="{{ home_url('/') }}/wp-content/uploads/2017/08/icon_row_chat_89_69.png" alt="Backup"
+                            class="w-12 h-12">
                     </div>
                     <h3 class="text-xl font-medium text-gray-800 mb-3">Tự động sao lưu dữ liệu</h3>
-                    <p class="text-gray-600 leading-relaxed">Chức năng sao lưu tự động mỗi ngày. Dữ liệu sản xuất của Labo tuyệt đối an toàn</p>
+                    <p class="text-gray-600 leading-relaxed">Chức năng sao lưu tự động mỗi ngày. Dữ liệu sản xuất của
+                        Labo tuyệt đối an toàn</p>
                 </div>
             </div>
         </div>
     </section>
 
     {{-- CTA Section --}}
-    <section class="py-20 bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-700 relative overflow-hidden" data-aos="fade-up">
+    <section class="py-20 bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-700 relative overflow-hidden"
+        data-aos="fade-up">
         {{-- Background Decoration --}}
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
             <div class="absolute top-20 right-20 w-64 h-64 bg-accent-400/10 rounded-full blur-3xl"></div>
@@ -742,10 +883,12 @@
                 <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                     Trải nghiệm đầy đủ tính năng của vDentalLab miễn phí. Hỗ trợ đầy đủ ngay cả khi dùng thử.
                 </p>
-                <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md">
+                <a href="{{ home_url('/') }}/phan-mem-dental-lab-mien-phi/"
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-600 hover:to-orange-600 text-white font-medium px-6 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/50 transform hover:-translate-y-1 text-md">
                     <span>Dùng thử miễn phí</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
             </div>
